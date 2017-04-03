@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://nlp2rdf.lod2.eu/nif-ws.php#char=0,40> 
+    rdf:type nif:RFC5147String , nif:Context ;
+    nif:beginIndex "0" ;
+    nif:endIndex "40" ;
+    nif:isString "My favourite actress is Natalie Portman." . 
