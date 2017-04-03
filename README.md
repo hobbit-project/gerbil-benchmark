@@ -1,6 +1,6 @@
-# Gerbil Evaluation Module
+# Gerbil Benchmark
 
-This is the implementation of the EvaluationModule of Hobbit using the evaluation of Gerbil.
+This is an implementation of the GERBIL benchmark in Hobbit. 
 
 The same metrics (micro/macro) Recall, Precision and F-Measure will be used.
 
