@@ -34,19 +34,33 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // ex:hasNumberOfDocuments "200"^^xsd:unsignedInt;
         // ex:hasExperimentType ex:A2KB;
         NodeIterator iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
-                .getProperty("http://example.org/hasNumberOfDocuments"));
-        int numberOfDocuments = -1;
-        if (iterator.hasNext()) {
+                .getProperty("http://example.org/hasDatasetName"));
+        String datasetName="";
+        if(iterator.hasNext()){
             try {
-                numberOfDocuments = iterator.next().asLiteral().getInt();
+        	datasetName = iterator.next().asLiteral().getString();
             } catch (Exception e) {
-                LOGGER.error("Exception while parsing parameter.", e);
+        	LOGGER.error("Exception while parsing parameter.", e);
             }
         }
-        if (numberOfDocuments < 0) {
-            LOGGER.error("Couldn't get the number of documents from the parameter model. Using the default value.");
-            numberOfDocuments = 100;
+        if(datasetName.isEmpty()){
+            LOGGER.error("Could not get the dataset name. Using Derczynski.");
+            datasetName = "Derczynski";
         }
+        // TODO either Gerbil or Bengal
+//        int numberOfDocuments = -1;
+//        if (iterator.hasNext()) {
+//            try {
+//                numberOfDocuments = iterator.next().asLiteral().getInt();
+//            } catch (Exception e) {
+//                LOGGER.error("Exception while parsing parameter.", e);
+//            }
+//        }
+//        if (numberOfDocuments < 0) {
+//            LOGGER.error("Couldn't get the number of documents from the parameter model. Using the default value.");
+//            numberOfDocuments = 100;
+//        }
+        
         iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
                 .getProperty("http://example.org/hasExperimentType"));
         experimentType = null;
@@ -67,9 +81,10 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
         // such a component here
 
+        //TODO use GERBIL DataLoader not Bengal for now
         createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
-                CONSTANTS.GERBIL_DATA_GENERATOR_NUMBER_OF_DOCUMENTS_KEY + "=" + numberOfDocuments,
-                CONSTANTS.GERBIL_DATA_GENERATOR_SEED_KEY + "=" + seed });
+                CONSTANTS.GERBIL_DATASET_TO_TEST_NAME + "=" + datasetName,
+                CONSTANTS.GERBIL_EXPERIMENT_TYPE + "=" + experimentType });
 
         createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
                 new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });

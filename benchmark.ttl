@@ -12,7 +12,7 @@ ex:GerbilBenchmark	a	hobbit:Benchmark;
 			hobbit:hasApi	ex:GerbilApi;
 			hobbit:hasImageName	"gerbil_controller";
 			hobbit:hasParameter	ex:ExperimentType;
-			hobbit:hasParameter	ex:NumberOfDocuments .
+			hobbit:hasParameter	ex:DatasetName .
 
 ex:hasNumberOfDocuments	a	hobbit:BenchmarkParameter;
 			rdfs:label	"Number of documents"@en;
@@ -20,6 +20,13 @@ ex:hasNumberOfDocuments	a	hobbit:BenchmarkParameter;
 			rdfs:domain	hobbit:Benchmark;
 			rdfs:range	xsd:unsignedInt;
 			hobbit:hasDefaultValue	"100"^^xsd:unsignedInt .
+
+ex:hasDatasetName	a	hobbit:BenchmarkParameter;
+			rdfs:label	"Dataset name"@en;
+			rdfs:comment	"The dataset which should be tested."@en;
+			rdfs:domain	hobbit:Benchmark;
+			rdfs:range	xsd:string;
+
 
 ex:hasExperimentType	a	hobbit:BenchmarkParameter;
 			rdfs:label	"Type of experiment"@en;

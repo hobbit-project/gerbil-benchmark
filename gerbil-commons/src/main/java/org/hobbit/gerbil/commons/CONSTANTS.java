@@ -15,4 +15,7 @@ public class CONSTANTS {
     
     public final static String GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY = "gerbil.experimentType";
 
+    public static final String GERBIL_DATASET_TO_TEST_NAME = "gerbil-benchmark.datasetName";
+    public static final String GERBIL_EXPERIMENT_TYPE = "gerbil-benchmark.experimentType";
+
 }

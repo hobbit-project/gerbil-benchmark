@@ -12,12 +12,11 @@ import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.gerbil.web.config.DatasetsConfig;
 import org.hobbit.core.components.AbstractDataGenerator;
 import org.hobbit.core.rabbit.RabbitMQUtils;
+import org.hobbit.gerbil.commons.CONSTANTS;
 
 public class GerbilDataGenerator extends AbstractDataGenerator {
 
-    private static final String GERBIL_DATASET_TO_TEST_NAME = "gerbil-benchmark.datasetName";
-    private static final Object GERBIL_EXPERIMENT_TYPE = "gerbil-benchmark.experimentType";
-    private String datasetName;
+       private String datasetName;
 
     private NIFWriter writer = new TurtleNIFWriter();
     private ExperimentType experimentType;
@@ -27,9 +26,9 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
     public void init() throws Exception {
 	super.init();
 	Map<String, String> envVariables = System.getenv();
-	// FIXME set correct envVariables
-	datasetName = envVariables.get(GERBIL_DATASET_TO_TEST_NAME);
-	experimentType = ExperimentType.valueOf(envVariables.get(GERBIL_EXPERIMENT_TYPE));
+	
+	datasetName = envVariables.get(CONSTANTS.GERBIL_DATASET_TO_TEST_NAME);
+	experimentType = ExperimentType.valueOf(envVariables.get(CONSTANTS.GERBIL_EXPERIMENT_TYPE));
 	//TODO add properties?, add SAS and ECM?
 	configs = DatasetsConfig.datasets(null, null).getAdaptersForName(datasetName);
     }
@@ -46,10 +45,4 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	}
     }
 
-//    private DatasetConfiguration getDatasetConfig(EntityCheckerManager entityCheckerManager, SameAsRetriever globalRetriever){
-//	return new SingletonDatasetConfigImpl(datasetName,
-//		cacheable, constructor, constructorArgs, type,
-//		entityCheckerManager, globalRetriever);
-//    }
-    
 }

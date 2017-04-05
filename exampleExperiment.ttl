@@ -1,4 +1,4 @@
 ex:BenchmarkRun_123	rdf:type	hobbit:BenchmarkRun;
-			ex:hasNumberOfDocuments	"200"^^xsd:unsignedInt;
+			ex:hasDatasetName	"Derczynski";
 			ex:hasExperimentType	ex:A2KB .
 			
