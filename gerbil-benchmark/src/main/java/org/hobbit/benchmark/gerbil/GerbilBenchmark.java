@@ -43,23 +43,21 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         	LOGGER.error("Exception while parsing parameter.", e);
             }
         }
-        if(datasetName.isEmpty()){
-            LOGGER.error("Could not get the dataset name. Using Derczynski.");
-            datasetName = "Derczynski";
+
+        iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
+                .getProperty("http://example.org/hasNumberOfDocuments"));
+        int numberOfDocuments = -1;
+        if (iterator.hasNext()) {
+            try {
+                numberOfDocuments = iterator.next().asLiteral().getInt();
+            } catch (Exception e) {
+                LOGGER.error("Exception while parsing parameter.", e);
+            }
         }
-        // TODO either Gerbil or Bengal
-//        int numberOfDocuments = -1;
-//        if (iterator.hasNext()) {
-//            try {
-//                numberOfDocuments = iterator.next().asLiteral().getInt();
-//            } catch (Exception e) {
-//                LOGGER.error("Exception while parsing parameter.", e);
-//            }
-//        }
-//        if (numberOfDocuments < 0) {
-//            LOGGER.error("Couldn't get the number of documents from the parameter model. Using the default value.");
-//            numberOfDocuments = 100;
-//        }
+        if (numberOfDocuments < 0 && datasetName.isEmpty()) {
+            LOGGER.error("Couldn't get the number of documents from the parameter model. Using the default value.");
+            numberOfDocuments = 100;
+        }
         
         iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
                 .getProperty("http://example.org/hasExperimentType"));
@@ -81,11 +79,16 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
         // such a component here
 
-        //TODO use GERBIL DataLoader not Bengal for now
-        createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
-                CONSTANTS.GERBIL_DATASET_TO_TEST_NAME + "=" + datasetName,
-                CONSTANTS.GERBIL_EXPERIMENT_TYPE + "=" + experimentType });
-
+        if(!datasetName.isEmpty()){
+            createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
+        	    CONSTANTS.GERBIL_DATASET_TO_TEST_NAME + "=" + datasetName,
+        	    CONSTANTS.GERBIL_EXPERIMENT_TYPE + "=" + experimentType });
+        }else{
+            createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
+        	    CONSTANTS.GERBIL_DATA_GENERATOR_NUMBER_OF_DOCUMENTS_KEY + "=" + numberOfDocuments,
+        	    CONSTANTS.GERBIL_DATA_GENERATOR_SEED_KEY + "=" + seed });
+        }
+        
         createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
                 new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
 

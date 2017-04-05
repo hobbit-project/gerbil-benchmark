@@ -29,7 +29,7 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	
 	datasetName = envVariables.get(CONSTANTS.GERBIL_DATASET_TO_TEST_NAME);
 	experimentType = ExperimentType.valueOf(envVariables.get(CONSTANTS.GERBIL_EXPERIMENT_TYPE));
-	//TODO add properties?, add SAS and ECM?
+	//TODO add SAS and ECM?
 	configs = DatasetsConfig.datasets(null, null).getAdaptersForName(datasetName);
     }
 
