@@ -4,6 +4,7 @@ import org.aksw.gerbil.datatypes.ExperimentType;
 import org.aksw.gerbil.semantic.vocabs.GERBIL;
 import org.apache.jena.rdf.model.NodeIterator;
 import org.hobbit.core.Commands;
+import org.hobbit.core.Constants;
 import org.hobbit.core.components.AbstractBenchmarkController;
 import org.hobbit.gerbil.commons.CONSTANTS;
 import org.slf4j.Logger;
@@ -92,7 +93,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
                 new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
 
-        createEvaluationStorage();
+//        createEvaluationStorage();
+        createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE, new String[] { Constants.ACKNOWLEDGEMENT_FLAG_KEY+"=true"});
 //        createEvaluationStorage(EVALUATION_STORE_CONTAINER_IMAGE, new String[] { "HOBBIT_RABBIT_HOST="
 //                + connection.getAddress().toString() });
 

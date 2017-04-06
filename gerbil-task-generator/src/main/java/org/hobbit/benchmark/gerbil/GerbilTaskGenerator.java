@@ -11,12 +11,12 @@ import org.aksw.gerbil.io.nif.NIFWriter;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.transfer.nif.Document;
-import org.hobbit.core.components.AbstractTaskGenerator;
+import org.hobbit.core.components.AbstractSequencingTaskGenerator;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GerbilTaskGenerator extends AbstractTaskGenerator {
+public class GerbilTaskGenerator extends AbstractSequencingTaskGenerator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GerbilTaskGenerator.class);
 

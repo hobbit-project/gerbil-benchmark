@@ -5,11 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.aksw.gerbil.dataset.DatasetConfiguration;
+import org.aksw.gerbil.dataset.check.EntityCheckerManager;
 import org.aksw.gerbil.datatypes.ExperimentType;
 import org.aksw.gerbil.io.nif.NIFWriter;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
+import org.aksw.gerbil.semantic.sameas.SameAsRetriever;
 import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.gerbil.web.config.DatasetsConfig;
+import org.aksw.gerbil.web.config.RootConfig;
 import org.hobbit.core.components.AbstractDataGenerator;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.hobbit.gerbil.commons.CONSTANTS;
@@ -29,8 +32,10 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	
 	datasetName = envVariables.get(CONSTANTS.GERBIL_DATASET_TO_TEST_NAME);
 	experimentType = ExperimentType.valueOf(envVariables.get(CONSTANTS.GERBIL_EXPERIMENT_TYPE));
-	//TODO add SAS and ECM?
-	configs = DatasetsConfig.datasets(null, null).getAdaptersForName(datasetName);
+
+	SameAsRetriever retriever = RootConfig.createSameAsRetriever();
+	EntityCheckerManager entityCheckerManager = RootConfig.getEntityCheckerManager();
+	configs = DatasetsConfig.datasets(entityCheckerManager, retriever).getAdaptersForName(datasetName);
     }
 
     @Override
