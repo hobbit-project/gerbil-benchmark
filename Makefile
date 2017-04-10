@@ -17,6 +17,6 @@ dockerize:
 push:
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilcontroller
 	docker push git.project-hobbit.eu:4567/gerbil/gerbildatagenerator
-	docker push git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator	
+	docker push git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator
 	docker push git.project-hobbit.eu:4567/gerbil/gerbil-evaluation-module
 	docker push git.project-hobbit.eu:4567/gerbil/gerbiltestsystem

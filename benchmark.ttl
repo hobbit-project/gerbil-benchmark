@@ -14,18 +14,11 @@ ex:GerbilBenchmark	a	hobbit:Benchmark;
 			hobbit:hasParameter	ex:ExperimentType;
 			hobbit:hasParameter	ex:DatasetName .
 
-ex:hasNumberOfDocuments	a	hobbit:BenchmarkParameter;
-			rdfs:label	"Number of documents"@en;
-			rdfs:comment	"The number of documents that will be generated."@en;
-			rdfs:domain	hobbit:Benchmark;
-			rdfs:range	xsd:unsignedInt;
-			hobbit:hasDefaultValue	"100"^^xsd:unsignedInt .
-
 ex:hasDatasetName	a	hobbit:BenchmarkParameter;
 			rdfs:label	"Dataset name"@en;
 			rdfs:comment	"The dataset which should be tested."@en;
 			rdfs:domain	hobbit:Benchmark;
-			rdfs:range	xsd:string;
+			rdfs:range	gerbil:Datasets;
 
 
 ex:hasExperimentType	a	hobbit:BenchmarkParameter;
@@ -37,4 +30,197 @@ ex:hasExperimentType	a	hobbit:BenchmarkParameter;
 
 gerbil:ExperimentTypes	a owl:Class;
 			owl:oneOf (gerbil:A2KB gerbil:C2KB gerbil:D2KB gerbil:OKE2015_Task1 gerbil:OKE2015_Task2 gerbil:ERec gerbil:ETyping) .
+
+gerbil:Datasets a rdfs:Class, owl:Class . 
+
+gerbil:ACE2004 a gerbil:Datasets;
+		rdfs:label "ACE2004"@en;
+		rdfs:comment "using the ACE2004 Dataset"@en .
+
+gerbil:AIDA-CoNLL-Complete a gerbil:Datasets;
+		rdfs:label "AIDA/CoNLL-Complete"@en;
+		rdfs:comment "using the AIDA/CoNLL-Complete Dataset"@en .
+
+gerbil:AIDA-CoNLL-Train a gerbil:Datasets;
+		rdfs:label "AIDA/CoNLL-Train"@en;
+		rdfs:comment "using the AIDA/CoNLL-Train Dataset"@en .
+
+gerbil:AIDA-CoNLL-TestA a gerbil:Datasets;
+		rdfs:label "AIDA/CoNLL-TestA"@en;
+		rdfs:comment "using the AIDA/CoNLL-TestA Dataset"@en .
+
+gerbil:AIDA-CoNLL-TestB a gerbil:Datasets;
+		rdfs:label "AIDA/CoNLL-TestB"@en;
+		rdfs:comment "using the AIDA/CoNLL-TestB Dataset"@en .
+
+gerbil:AQUAINT a gerbil:Datasets;
+		rdfs:label "AQUAINT"@en;
+		rdfs:comment "using the AQUAINT Dataset"@en .
+
+gerbil:Derczynski a gerbil:Datasets;
+		rdfs:label "Derczynski"@en;
+		rdfs:comment "using the Derczynski Dataset"@en .
+
+gerbil:DBpediaSpotlight a gerbil:Datasets;
+		rdfs:label "DBpediaSpotlight"@en;
+		rdfs:comment "using the DBpediaSpotlight Dataset"@en .
+
+gerbil:GERDAQ-Dev a gerbil:Datasets;
+		rdfs:label "GERDAQ-Dev"@en;
+		rdfs:comment "using the GERDAQ-Dev Dataset"@en .
+
+gerbil:GERDAQ-TrainA a gerbil:Datasets;
+		rdfs:label "GERDAQ-TrainingA"@en;
+		rdfs:comment "using the GERDAQ-TrainA Dataset"@en .
+
+gerbil:GERDAQ-TrainB a gerbil:Datasets;
+		rdfs:label "GERDAQ-TrainingB"@en;
+		rdfs:comment "using the GERDAQ-TrainB Dataset"@en .
+
+gerbil:GERDAQ-Test a gerbil:Datasets;
+		rdfs:label "GERDAQ-Test"@en;
+		rdfs:comment "using the GERDAQ-Test Dataset"@en .
+
+gerbil:ERD2014 a gerbil:Datasets;
+		rdfs:label "ERD2014"@en;
+		rdfs:comment "using the ERD2014 Dataset"@en .
+
+gerbil:IITB a gerbil:Datasets;
+		rdfs:label "IITB"@en;
+		rdfs:comment "using the IITB Dataset"@en .
+
+gerbil:Kore50 a gerbil:Datasets;
+		rdfs:label "Kore50"@en;
+		rdfs:comment "using the Kore50 Dataset"@en .
+
+gerbil:MSNBC a gerbil:Datasets;
+		rdfs:label "MSNBC"@en;
+		rdfs:comment "using the MSNBC Dataset"@en .
+
+gerbil:Microposts2016-Train a gerbil:Datasets;
+		rdfs:label "Microposts2016-Train"@en;
+		rdfs:comment "using the Microposts2016-Train Dataset"@en .
+
+gerbil:Microposts2016-Test a gerbil:Datasets;
+		rdfs:label "Microposts2016-Test"@en;
+		rdfs:comment "using the Microposts2016-Test Dataset"@en .
+
+gerbil:Microposts2016-Dev a gerbil:Datasets;
+		rdfs:label "Microposts2016-Dev"@en;
+		rdfs:comment "using the Microposts2016-Dev Dataset"@en .
+
+gerbil:Microposts2015-Train a gerbil:Datasets;
+		rdfs:label "Microposts2015-Train"@en;
+		rdfs:comment "using the Microposts2015-Train Dataset"@en .
+
+gerbil:Microposts2015-Test a gerbil:Datasets;
+		rdfs:label "Microposts2015-Test"@en;
+		rdfs:comment "using the Microposts2015-Test Dataset"@en .
+
+gerbil:Microposts2015-Dev a gerbil:Datasets;
+		rdfs:label "Microposts2015-Dev"@en;
+		rdfs:comment "using the Microposts2015-Dev Dataset"@en .
+
+gerbil:Microposts2014-Train a gerbil:Datasets;
+		rdfs:label "Microposts2014-Train"@en;
+		rdfs:comment "using the Microposts2014-Train Dataset"@en .
+
+gerbil:Microposts2014-Test a gerbil:Datasets;
+		rdfs:label "Microposts2014-Test"@en;
+		rdfs:comment "using the Microposts2014-Test Dataset"@en .
+
+gerbil:Microposts2013-Train a gerbil:Datasets;
+		rdfs:label "Microposts2013-Train"@en;
+		rdfs:comment "using the Microposts2013-Train Dataset"@en .
+
+gerbil:Microposts2013-Test a gerbil:Datasets;
+		rdfs:label "Microposts2013-Test"@en;
+		rdfs:comment "using the Microposts2013-Test Dataset"@en .
+
+gerbil:N3-Collection-Reuters128 a gerbil:Datasets;
+		rdfs:label "N3-Reuters-128"@en;
+		rdfs:comment "using the N3-Reuters-128 Dataset"@en .
+
+gerbil:N3-Collection-RSS-500 a gerbil:Datasets;
+		rdfs:label "N3-RSS-500"@en;
+		rdfs:comment "using the N3-RSS-500 Dataset"@en .
+
+gerbil:N3-Collection-News-100 a gerbil:Datasets;
+		rdfs:label "N3-News-100"@en;
+		rdfs:comment "using the N3-News-100 Dataset"@en .
+
+gerbil:OKE2015-1-example a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 1 example set"@en;
+		rdfs:comment "using the OKE 2015 Task 1 example set Dataset"@en .
+
+gerbil:OKE2015-1-gold a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 1 gold standard sample"@en;
+		rdfs:comment "using the OKE 2015 Task 1 gold standard sample Dataset"@en .
+
+gerbil:OKE2015-1-eval a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 1 evaluation dataset"@en;
+		rdfs:comment "using the OKE 2015 Task 1 evaluation dataset Dataset"@en .
+
+gerbil:OKE2015-2-example a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 2 example set"@en;
+		rdfs:comment "using the OKE 2015 Task 2 example set Dataset"@en .
+
+gerbil:OKE2015-2-gold a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 2 gold standard sample"@en;
+		rdfs:comment "using the OKE 2015 Task 2 gold standard sample Dataset"@en .
+
+gerbil:OKE2015-2-eval a gerbil:Datasets;
+		rdfs:label "OKE 2015 Task 2 evaluation dataset"@en;
+		rdfs:comment "using the OKE 2015 Task 2 evaluation dataset Dataset"@en .
+
+gerbil:OKE2016-1-example a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 1 example set"@en;
+		rdfs:comment "using the OKE 2016 Task 1 example set Dataset"@en .
+
+gerbil:OKE2016-1-gold a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 1 gold standard sample"@en;
+		rdfs:comment "using the OKE 2016 Task 1 gold standard sample Dataset"@en .
+
+gerbil:OKE2016-1-eval a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 1 evaluation dataset"@en;
+		rdfs:comment "using the OKE 2016 Task 1 evaluation dataset Dataset"@en .
+
+gerbil:OKE2016-2-example a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 2 example set"@en;
+		rdfs:comment "using the OKE 2016 Task 2 example set Dataset"@en .
+
+gerbil:OKE2016-2-gold a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 2 gold standard sample"@en;
+		rdfs:comment "using the OKE 2016 Task 2 gold standard sample Dataset"@en .
+
+gerbil:OKE2016-2-eval a gerbil:Datasets;
+		rdfs:label "OKE 2016 Task 2 evaluation dataset"@en;
+		rdfs:comment "using the OKE 2016 Task 2 evaluation dataset Dataset"@en .
+
+
+
+
+gerbil:Ritter a gerbil:Datasets;
+		rdfs:label "Ritter"@en;
+		rdfs:comment "using the Ritter Dataset"@en .
+
+gerbil:Senseval2 a gerbil:Datasets;
+		rdfs:label "Senseval 2"@en;
+		rdfs:comment "using the Senseval 2 Dataset"@en .
+
+gerbil:Senseval3 a gerbil:Datasets;
+		rdfs:label "Senseval 3"@en;
+		rdfs:comment "using the Senseval 3 Dataset"@en .
+
+gerbil:UMBC-Test a gerbil:Datasets;
+		rdfs:label "UMBC-Test"@en;
+		rdfs:comment "using the UMBC-Test Dataset"@en .
+
+gerbil:UMBC-Train a gerbil:Datasets;
+		rdfs:label "UMBC-Train"@en;
+		rdfs:comment "using the UMBC-Train Dataset"@en .
+
+gerbil:WSDM2012 a gerbil:Datasets;
+		rdfs:label "WSDM 2012"@en;
+		rdfs:comment "using the WSDM 2012 Dataset"@en .
 
