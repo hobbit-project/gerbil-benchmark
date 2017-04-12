@@ -14,9 +14,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GerbilBenchmark.class);
 
-    private static final String DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbilbenchmark/gerbildatagenerator";
-    private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbilbenchmark/gerbiltaskgenerator";
-    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbilbenchmark/gerbil-evaluation-module";
+    private static final String DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbildatagenerator";
+    private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator";
+    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbil-evaluation-module";
 //     private static final String EVALUATION_STORE_CONTAINER_IMAGE =
 //     "hobbit/evaluation_store";
 //    private static final String EVALUATION_STORE_CONTAINER_IMAGE = "in_memory_evaluation_storage";
