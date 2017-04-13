@@ -15,7 +15,7 @@ dockerize:
 #	docker build -f in_memory_evaluation_storage.docker -t hobbit/in_memory_evaluation_storage .
 
 indexes:
-	cd gerbil-data-generator && chmod +x ./index.sh && ./index.sh
+	cd gerbil-evaluation-module && chmod +x ./index.sh && ./index.sh
 
 push:
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilcontroller

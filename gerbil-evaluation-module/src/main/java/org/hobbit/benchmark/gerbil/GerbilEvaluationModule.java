@@ -23,6 +23,8 @@ import org.aksw.gerbil.exceptions.GerbilException;
 import org.aksw.gerbil.io.nif.NIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.matching.Matching;
+import org.aksw.gerbil.semantic.sameas.SameAsRetriever;
+import org.aksw.gerbil.semantic.sameas.SameAsRetrieverUtils;
 import org.aksw.gerbil.semantic.vocabs.GERBIL;
 import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.gerbil.transfer.nif.Marking;
@@ -31,6 +33,7 @@ import org.aksw.gerbil.transfer.nif.MeaningSpan;
 import org.aksw.gerbil.transfer.nif.Span;
 import org.aksw.gerbil.transfer.nif.TypedSpan;
 import org.aksw.gerbil.transfer.nif.data.TypedNamedEntity;
+import org.aksw.gerbil.web.config.RootConfig;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.hobbit.core.components.AbstractEvaluationModule;
@@ -55,6 +58,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     private Matching matching;
     private LongArrayList runtimes = new LongArrayList();
     private int errorCount = 0;
+
+    private SameAsRetriever globalRetriever;
     
     @Override
     public void init() throws Exception {
@@ -79,6 +84,13 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
        generateMatcher();
 
        generateEvaluators();
+       
+       generateRetriever();
+    }
+    
+    protected void generateRetriever(){
+	//FIXME write the createSameAsRetriever method in another Class and just use it in the RootConfig
+	globalRetriever = RootConfig.createSameAsRetriever();
     }
     
     @SuppressWarnings("deprecation")
@@ -114,8 +126,17 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     	if(receivedData.length==0){
     		this.errorCount++;
     	}
-        expectedDocuments.add(parseDocument(expectedData));
-        receivedDocuments.add(parseDocument(receivedData));
+    	Document expectedDocument = parseDocument(expectedData);
+    	Document receivedDocument = parseDocument(receivedData);
+    	if(expectedData.length>0){
+    	    SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, expectedDocument.getMarkings());
+    	}
+    	if(receivedData.length>0){
+    	    SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, receivedDocument.getMarkings());
+    	}
+
+    	expectedDocuments.add(expectedDocument);
+        receivedDocuments.add(receivedDocument);
         runtimes.add(responseReceivedTimestamp - responseReceivedTimestamp);
     }
 
@@ -187,7 +208,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         List<List<T>> markings = new ArrayList<List<T>>(documents.size());
    
         for (Document document : documents) {
-            if (document != null) {
+            if (document != null) {        	
                 markings.add(document.getMarkings(clazz));
             } else {
                 markings.add(new ArrayList<T>());
@@ -199,6 +220,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     @SuppressWarnings("unchecked")
     protected <T extends Marking> EvaluationResult evaluate(List<Evaluator<? extends Marking>> evaluators,
             List<List<T>> annotatorResults, List<List<T>> goldStandard) {
+		
         EvaluationResultContainer evalResults = new EvaluationResultContainer();
         for (Evaluator<? extends Marking> e : evaluators) {
             ((Evaluator<T>) e).evaluate(annotatorResults, goldStandard, evalResults);

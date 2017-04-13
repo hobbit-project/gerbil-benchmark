@@ -1,5 +1,7 @@
 FROM java
 
+ADD indexes /gerbil/indexes
+
 ADD target/gerbil-evaluation-module-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
 
 WORKDIR /gerbil

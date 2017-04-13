@@ -20,6 +20,7 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
 		eval.type=ExperimentType.A2KB;
 		eval.generateMatcher();
 		eval.generateEvaluators();
+		eval.generateRetriever();
 		
 		byte[] expectedData=null;
 		byte[] receivedData=new byte[0];
