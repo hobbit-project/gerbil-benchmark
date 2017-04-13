@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.aksw.gerbil.dataset.impl.derczysnki.DerczynskiDataset;
+import org.aksw.gerbil.dataset.impl.micro.Microposts2016Dataset;
+import org.aksw.gerbil.exceptions.GerbilException;
 import org.aksw.gerbil.io.nif.NIFParser;
 import org.aksw.gerbil.io.nif.NIFWriter;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
@@ -20,6 +23,7 @@ public class DummySystemAdapter extends AbstractSystemAdapter {
 
     protected NIFParser reader = new TurtleNIFParser();
     protected NIFWriter writer = new TurtleNIFWriter();
+    private int i=0;
 
     @Override
     public void receiveGeneratedData(byte[] data) {
@@ -30,7 +34,19 @@ public class DummySystemAdapter extends AbstractSystemAdapter {
     public void receiveGeneratedTask(String taskId, byte[] data) {
         List<Document> documents = reader.parseNIF(RabbitMQUtils.readString(data));
         Document document = documents.get(0);
-        document.setDocumentURI("http://example.org/DummyResponse_" + taskId);
+        DerczynskiDataset dataset = new DerczynskiDataset(ClassLoader.getSystemResource("data.test").getFile());
+        try {
+	    dataset.init();
+	} catch (GerbilException e1) {
+	    LOGGER.error("Could not initialize Derzynski Dataset");
+	}
+
+        for(Document doc : dataset.getInstances()){
+            if(doc.getText().equals(document.getText())){
+        	document = doc;
+        	break;
+            }
+        }
         LOGGER.info("Sending document " + document.toString());
         try {
             sendResultToEvalStorage(taskId, RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document))));

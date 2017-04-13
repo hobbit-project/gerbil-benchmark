@@ -8,11 +8,14 @@ build:
 
 dockerize:
 	cd gerbil-benchmark && docker build -f gerbil_controller.docker -t git.project-hobbit.eu:4567/gerbil/gerbilcontroller .
-	cd gerbil-data-generator && docker build -f gerbil_data_generator.docker -t git.project-hobbit.eu:4567/gerbil/gerbildatagenerator .
+	cd gerbil-data-generator && chmod +x init.sh && ./init.sh && docker build -f gerbil_data_generator.docker -t git.project-hobbit.eu:4567/gerbil/gerbildatagenerator .
 	cd gerbil-task-generator && docker build -f gerbil_task_generator.docker -t git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator .
 	cd gerbil-evaluation-module && docker build -f gerbil_evaluation_module.docker -t git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule .
 	cd gerbil-benchmark && docker build -f gerbil_dummy_system.docker -t git.project-hobbit.eu:4567/gerbil/gerbiltestsystem .
 #	docker build -f in_memory_evaluation_storage.docker -t hobbit/in_memory_evaluation_storage .
+
+indexes:
+	cd gerbil-data-generator && chmod +x ./index.sh && ./index.sh
 
 push:
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilcontroller

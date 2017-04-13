@@ -1,5 +1,9 @@
 FROM java
 
+ADD gerbil_data /gerbil/gerbil_data
+
+ADD indexes /gerbil/indexes
+
 ADD target/gerbil-data-generator-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
 
 WORKDIR /gerbil
