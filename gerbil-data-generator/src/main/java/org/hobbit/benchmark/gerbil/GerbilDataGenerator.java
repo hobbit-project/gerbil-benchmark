@@ -44,8 +44,8 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	this.experimentType = experimentType;
 	LOGGER.info("Using dataset {{}} and experimentType {{}}", datasetName, experimentType);
 
-	SameAsRetriever retriever = RootConfig.createSameAsRetriever();
-	EntityCheckerManager entityCheckerManager = RootConfig.getEntityCheckerManager();
+	SameAsRetriever retriever = null;
+	EntityCheckerManager entityCheckerManager = null;
 	configs = DatasetsConfig.datasets(entityCheckerManager, retriever).getAdaptersForName(datasetName);
 	
 	LOGGER.info("Initialization of Gerbil Data Generator done.");
@@ -60,9 +60,7 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	    byte[] data;
 	    for (Document document : config.getDataset(experimentType).getInstances()) {
 		data = RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document)));
-		LOGGER.info("Sending data {{}} ...", document.getDocumentURI());
 		sendDataToTaskGenerator(data);
-		LOGGER.info("...done sending data");
 	    }
 	}
     }

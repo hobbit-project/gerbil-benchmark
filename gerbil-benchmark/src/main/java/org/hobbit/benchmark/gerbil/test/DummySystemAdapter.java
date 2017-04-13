@@ -34,7 +34,7 @@ public class DummySystemAdapter extends AbstractSystemAdapter {
     public void receiveGeneratedTask(String taskId, byte[] data) {
         List<Document> documents = reader.parseNIF(RabbitMQUtils.readString(data));
         Document document = documents.get(0);
-        DerczynskiDataset dataset = new DerczynskiDataset(ClassLoader.getSystemResource("data.test").getFile());
+        DerczynskiDataset dataset = new DerczynskiDataset("data.test");
         try {
 	    dataset.init();
 	} catch (GerbilException e1) {
