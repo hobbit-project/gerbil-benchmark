@@ -1,6 +1,7 @@
 #NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
-#Wed Apr 12 16:33:44 CEST 2017
+#Tue May 09 00:31:06 CEST 2017
 gerbil-1.2.5-jena3.1.jar>=
 gerbil-1.2.5-jena3.1-sources.jar>=
 gerbil-1.2.5-jena3.1.pom>=
+gerbil-1.2.5-jena3.1.war>=
 gerbil-1.2.5-jena3.1-javadoc.jar>=
