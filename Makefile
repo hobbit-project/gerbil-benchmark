@@ -13,6 +13,7 @@ dockerize:
 	cd gerbil-evaluation-module && docker build -f gerbil_evaluation_module.docker -t git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule .
 	cd gerbil-benchmark && docker build -f gerbil_dummy_system.docker -t git.project-hobbit.eu:4567/gerbil/gerbiltestsystem .
 #	docker build -f in_memory_evaluation_storage.docker -t hobbit/in_memory_evaluation_storage .
+	cd gerbil-nif-system-adapter && docker build -f gerbil_nif_system_adapter.docker -t git.project-hobbit.eu:4567/gerbil/gerbilnifsystemadapter .
 
 indexes:
 	cd gerbil-evaluation-module && chmod +x ./index.sh && ./index.sh
@@ -23,3 +24,4 @@ push:
 	docker push git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule
 	docker push git.project-hobbit.eu:4567/gerbil/gerbiltestsystem
+	docker push git.project-hobbit.eu:4567/gerbil/gerbilnifsystemadapter
