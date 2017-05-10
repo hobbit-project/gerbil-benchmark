@@ -14,8 +14,11 @@ import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.hobbit.benchmark.gerbil.systems.HobbitAnnotator;
 import org.hobbit.benchmark.gerbil.systems.impl.AIDAWrapper;
+import org.hobbit.benchmark.gerbil.systems.impl.AgdistisWrapper;
 import org.hobbit.benchmark.gerbil.systems.impl.FOXWrapper;
 import org.hobbit.benchmark.gerbil.systems.impl.FREDWrapper;
+import org.hobbit.benchmark.gerbil.systems.impl.NERDWrapper;
+import org.hobbit.benchmark.gerbil.systems.impl.SpotlightWrapper;
 import org.hobbit.benchmark.gerbil.systems.impl.TagMeWrapper;
 import org.hobbit.benchmark.gerbil.systems.impl.XLisaWrapper;
 import org.hobbit.core.components.AbstractSystemAdapter;
@@ -41,17 +44,38 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		super.init();
     		String systemName = this.systemParamModel.listObjectsOfProperty(name).next().asLiteral().getString();
     		switch(systemName){
-    		case "Aida":
-    		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate");
+    		case "Aida-AC2KB-ERec":
+    		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate", false);
+    		    break;
+    		case "Aida-D2KB":
+    		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate", true);
+    		    break;
+    		case "Agdisits":
+    		    annotator = new AgdistisWrapper("139.18.2.164", "8080");
     		    break;
     		case "FOX":
-    		    annotator = new FOXWrapper();
+    		    annotator = new FOXWrapper("http://139.18.2.164:4444/call/ner/entities");
     		    break;
     		case "FRED":
     		    annotator = new FREDWrapper("http://wit.istc.cnr.it/stlab-tools/fred");
     		    break;
-    		case "TagMe":
-    		    annotator = new TagMeWrapper("https://tagme.d4science.org/tagme/tag", "https://tagme.d4science.org/tagme/spot");
+    		case "NERD":
+    		    annotator = new NERDWrapper("http://nerd.eurecom.fr/api/");
+    		    break;
+    		case "Spotlight-ACRT2KB-OKET1":
+    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 0);
+    		    break;
+    		case "Spotlight-D2KB-ETyping":
+    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 1);
+    		    break;
+    		case "Spotlight-ERec":
+    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 2);
+    		    break;
+    		case "TagMe-ACD2KB":
+    		    annotator = new TagMeWrapper("https://tagme.d4science.org/tagme/tag", "https://tagme.d4science.org/tagme/spot", true);
+    		    break;
+    		case "TagMe-ERec":
+    		    annotator = new TagMeWrapper("https://tagme.d4science.org/tagme/tag", "https://tagme.d4science.org/tagme/spot", false);
     		    break;
     		case "xLisaNER":
     		    annotator = new XLisaWrapper("en","en","dbedia","NER");

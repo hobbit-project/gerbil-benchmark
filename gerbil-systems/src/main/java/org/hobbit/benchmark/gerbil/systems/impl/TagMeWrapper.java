@@ -9,15 +9,18 @@ import org.hobbit.benchmark.gerbil.systems.HobbitAnnotator;
 public class TagMeWrapper extends TagMeAnnotator implements HobbitAnnotator{
 
     
-    public TagMeWrapper(String annotationUrl, String spotUrl)
+    private boolean annotate;
+
+    public TagMeWrapper(String annotationUrl, String spotUrl,boolean annotate)
 	    throws GerbilException {
 	super(annotationUrl, spotUrl);
+	this.annotate = annotate;
     }
 
     @Override
     public Document annotate(Document document) throws GerbilException {
 	//TODO
-	return this.performRequest(document, true);
+	return this.performRequest(document, annotate);
     }
 
 }

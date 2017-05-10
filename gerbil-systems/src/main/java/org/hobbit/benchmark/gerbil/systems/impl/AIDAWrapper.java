@@ -9,14 +9,17 @@ import org.hobbit.benchmark.gerbil.systems.HobbitAnnotator;
 public class AIDAWrapper extends AidaAnnotator implements HobbitAnnotator{
 
     
-    public AIDAWrapper(String service) throws GerbilException {
+    private boolean containsMentioning;
+
+    public AIDAWrapper(String service, boolean containsMentioning) throws GerbilException {
 	super(service);
+	this.containsMentioning=containsMentioning;
     }
     
     @Override
     public Document annotate(Document document) throws GerbilException {
 	//TODO
-	return this.requestAnnotations(document.getDocumentURI(), document.getText(), false);
+	return this.requestAnnotations(document.getDocumentURI(), document.getText(), this.containsMentioning);
     }
 
 }
