@@ -1,0 +1,3979 @@
+#Astros	http://dbpedia.org/resource/Houston_Astros	B-sportsteam	HT
+lineup		O	NN
+for		O	IN
+tonight		O	NN
+.		O	0
+Keppinger	http://dbpedia.org/resource/Jeff_Keppinger	B-person	NNP
+sits		O	VBZ
+,		O	,
+Downs	http://dbpedia.org/resource/Brodie_Downs	B-person	NNP
+plays		O	VBZ
+2B		O	NN
+,		O	,
+CJ	NIL	B-person	NNP
+bats		O	VBZ
+5th		O	JJ
+.		O	0
+@alysonfooter		O	USR
+http://bit.ly/bHvgCS		O	URL
+			
+If		O	IN
+you		O	PRP
+are		O	VBP
+staying		O	VBG
+in		O	IN
+Gainesville	http://dbpedia.org/resource/Gainesville,_Florida	B-geo-loc	NNP
+,		O	,
+come		O	VB
+check		O	VB
+out		O	RP
+Costa	NIL	B-facility	NNP
+Lounge	NIL	I-facility	NNP
+TONIGHT		O	NN
+!		O	0
+Say		O	VB
+you		O	PRP
+are		O	VBP
+with		O	IN
+salsa	NIL	B-person	NNP
+caliente	NIL	I-person	NNP
+and		O	CC
+get		O	VB
+in		O	IN
+...		O	:
+http://fb.me/FZVzm8H9		O	URL
+			
+JV		B-sportsteam	NN
+soccer		I-sportsteam	NN
+leads		O	VBZ
+4-1		O	JJ
+after		O	IN
+Benitez	NIL	B-person	NNP
+scores		O	VBZ
+again		O	RB
+,		O	,
+less		O	JJR
+than		O	IN
+7		O	CD
+mins		O	NNS
+to		O	TO
+play		O	VB
+			
+Ah		O	
+a		O	
+Friday		O	
+night		O	
+free		O	
+!		O	
+Avin		O	
+a		O	
+drink		O	
+with		O	
+friends		O	
+.		O	
+Lent		O	
+the		O	
+T4		O	
+to		O	
+friend		O	
+to		O	
+camp		O	
+in		O	
+.		O	
+Off		O	
+camping		O	
+to		O	
+Robinhoods	http://dbpedia.org/resource/Robin_Hood_Bay	B-geo-loc	
+bay	http://dbpedia.org/resource/Robin_Hood_Bay	I-geo-loc	
+In		O	
+Jasmin	NIL	B-geo-loc	
+.		O	
+Good		O	
+weekend		O	
+			
+Last		O	
+film		O	
+I		O	
+can		O	
+watch		O	
+on		O	
+a		O	
+decent		O	
+telly		O	
+for		O	
+a		O	
+while		O	
+tonight		O	
+.		O	
+Kick-Ass	http://dbpedia.org/resource/Kick-Ass_%28film%29	B-movie	
+is		O	
+very		O	
+tempting		O	
+indeed		O	
+.		O	
+			
+After		O	IN
+I		O	PRP
+pet		O	VBP
+a		O	DT
+kitten		O	NN
+on		O	IN
+JFK	http://dbpedia.org/resource/John_F._Kennedy_International_Airport	B-person	NNP
+,		O	,
+the		O	DT
+owners		O	NNS
+informed		O	VBD
+me		O	PRP
+it		O	PRP
+'s		O	VBZ
+'		O	''
+double-pawed		O	JJ
+'		O	''
+(		O	(
+polydactyl)		O	NN
+,		O	,
+which		O	WDT
+is		O	VBZ
+"		O	''
+a		O	DT
+form		O	NN
+of		O	IN
+retardation		O	NN
+in		O	IN
+the		O	DT
+animal		O	NN
+kingdom		O	NN
+"		O	''
+			
+@vogueglamGIRL		O	USR
+Ah		O	UH
+I		O	PRP
+know		O	VBP
+!		O	0
+She		O	PRP
+is		O	VBZ
+simply		O	RB
+the		O	DT
+best		O	JJS
+in		O	IN
+The		O	DT
+Sept		O	NNP
+Issue		O	NN
+.		O	0
+My		O	PRP$
+boyfriend		O	NN
+'s		O	POS
+aunt		O	NN
+worked		O	VBD
+for		O	IN
+Anna	http://dbpedia.org/resource/Anna_Wintour‎	B-person	NNP
+Wintor	http://dbpedia.org/resource/Anna_Wintour‎	I-person	NNP
+in		O	IN
+NY		O	NNP
+.		O	0
+			
+Time		O	
+to		O	
+begin		O	
+looking		O	
+for		O	
+somewhere		O	
+to		O	
+live		O	
+around		O	
+Coolum	http://dbpedia.org/resource/Coolum_Beach,_Queensland	B-geo-loc	
+.		O	
+Sun		O	
+,		O	
+sand		O	
+,		O	
+surf		O	
+and		O	
+bikinis		O	
+.		O	
+Looking		O	
+forward		O	
+to		O	
+my		O	
+new		O	
+phase		O	
+in		O	
+life		O	
+.		O	
+			
+Costa		O	JJ
+Rican		O	JJ
+group		O	NN
+CocoFunka	NIL	B-musicartist	NNP
+power		O	VBP
+this		O	DT
+week		O	NN
+'s		O	POS
+Indiesent	NIL	B-tvshow	NNP
+Exposure	NIL	I-tvshow	NNP
+http://ht.ly/2G4nS		O	URL
+by		O	IN
+@fuseboxradio		O	USR
+on		O	IN
+@planetill		O	USR
+			
+@Phoebe1_		O	USR
+and		O	CC
+i		O	PRP
+also		O	RB
+loved		O	VBD
+the		O	DT
+last		O	JJ
+years		O	NNS
+eurovision		O	NN
+entry		O	NN
+!!		O	0
+hoppaa		O	UH
+!		O	0
+they		O	PRP
+were		O	VBD
+cool		O	JJ
+too		O	RB
+!!		O	0
+			
+@Mys_Perdita		O	
+ha		O	
+ye		O	
+theyr		O	
+may		O	
+be		O	
+severe		O	
+consiquences		O	
+of		O	
+our		O	
+meeting		O	
+like		O	
+the		O	
+waypeople		O	
+talk		O	
+bout		O	
+theday		O	
+sum1		O	
+told		O	
+adolf		O	
+he		O	
+wasnt		O	
+blond		O	
+enuf		O	
+:		O	
+S		O	
+			
+When		O	
+the		O	
+last		O	
+time		O	
+you		O	
+ran		O	
+into		O	
+Rick	http://dbpedia.org/resource/Rick_Ross	B-person	
+Ross	http://dbpedia.org/resource/Rick_Ross	I-person	
+and		O	
+Drake	http://dbpedia.org/resource/Drake_(rapper)	B-person	
+twice		O	
+in		O	
+the		O	
+same		O	
+day		O	
+at		O	
+2		O	
+diff		O	
+video		O	
+shoot		O	
+locations		O	
+.		O	
+Today		O	
+I		O	
+did		O	
+!		O	
+			
+Aggressive		O	JJ
+Kids		O	NNS
+With		O	IN
+ADHD	http://dbpedia.org/resource/Attention_deficit_hyperactivity_disorder	B-other	NNP
+May		O	MD
+Not		O	RB
+Need		O	VB
+Antipsychotic		O	JJ
+Meds		O	NNS
+http://t.co/JfGm0uH		O	URL
+			
+Today		O	NN
+I		O	PRP
+got		O	VBD
+a		O	DT
+promotion		O	NN
+at		O	IN
+work		O	NN
+,		O	,
+and		O	CC
+tomorrow		O	NN
+I		O	PRP
+'m		O	VBP
+going		O	VBG
+home		O	NN
+to		O	TO
+Wisconsin	http://dbpedia.org/resource/Wisconsin	B-geo-loc	NNP
+for		O	IN
+a		O	DT
+few		O	JJ
+days		O	NNS
+.		O	0
+So		O	UH
+content		O	JJ
+with		O	IN
+life		O	NN
+right		O	RB
+now		O	RB
+.		O	0
+:)		O	UH
+			
+Columbus	http://dbpedia.org/resource/Columbus,_Georgia	B-geo-loc	NNP
+,		O	,
+GA	http://dbpedia.org/resource/Georgia_(U.S._state)	B-geo-loc	NNP
+:		O	:
+@TimmNintey146		O	USR
+and		O	CC
+'ll		O	MD
+be		O	VB
+mixing		O	VBG
+an		O	DT
+80		O	CD
+'s		O	POS
+and		O	CC
+other		O	JJ
+throwbacks		O	NNS
+dance		O	NN
+party		O	NN
+tonight		O	NN
+at		O	IN
+eighty-five		O	JJ
+.		O	0
+Come		O	VB
+kickit		O	VB
+!		O	0
+			
+Oh		O	
+before		O	
+I		O	
+forget		O	
+good		O	
+luck		O	
+also		O	
+to		O	
+the		O	
+cherry		O	
+and		O	
+whites		O	
+against		O	
+London	http://dbpedia.org/resource/London_Irish‎	B-sportsteam	
+Irish	http://dbpedia.org/resource/London_Irish‎	I-sportsteam	
+.		O	
+Only		O	
+a		O	
+win		O	
+will		O	
+do		O	
+.		O	
+Gives		O	
+me		O	
+more		O	
+excuses		O	
+to		O	
+celebrate		O	
+!		O	
+			
+Yo		O	UH
+kids		O	NNS
+!		O	0
+Today		O	NN
+'s		O	POS
+ACF	NIL	B-other	NNP
+Friday	NIL	I-other	NNP
+Large	NIL	I-other	NNP
+Group	NIL	I-other	NNP
+is		O	VBZ
+at		O	IN
+PITT	http://dbpedia.org/resource/University_of_Pittsburgh	B-facility	NNP
+University	http://dbpedia.org/resource/University_of_Pittsburgh	I-facility	NNP
+!		O	0
+It		O	PRP
+'s		O	VBZ
+at		O	IN
+Cathedral	http://dbpedia.org/resource/Cathedral_of_Learning	B-facility	NNP
+of	http://dbpedia.org/resource/Cathedral_of_Learning	I-facility	NNP
+Learning	http://dbpedia.org/resource/Cathedral_of_Learning	I-facility	NNP
+G24	http://dbpedia.org/resource/Cathedral_of_Learning	I-facility	NNP
+at		O	IN
+7pm		O	CD
+!		O	0
+Be		O	VB
+sure		O	JJ
+to		O	TO
+check		O	VB
+it		O	PRP
+out		O	RP
+!		O	0
+			
+dude		O	
+got		O	
+gucci	http://dbpedia.org/resource/Gucci	B-company	
+symbol		O	
+tatted		O	
+all		O	
+over		O	
+his		O	
+face		O	
+http://mediacheckout.blogspot.com/2010/09/nuh-uhhhhhhh-yesterday-we-showed-you.html		O	
+			
+RT		O	RT
+@DaymiCarolina		O	USR
+:		O	:
+Yayaayayay		O	UH
+kings	http://dbpedia.org/resource/Kings_of_Leon	B-musicartist	NNP
+of	http://dbpedia.org/resource/Kings_of_Leon	I-musicartist	IN
+leon	http://dbpedia.org/resource/Kings_of_Leon	I-musicartist	NNP
+tonight		O	NN
+!!!		O	0
+			
+RT		O	RT
+@therbertson		O	USR
+:		O	:
+Just		O	RB
+saw		O	VBD
+the		O	DT
+worst		O	JJS
+movie		O	NN
+in		O	IN
+years		O	NNS
+...		O	:
+Piranha	http://dbpedia.org/resource/Piranha_3D	B-movie	NNP
+3D	http://dbpedia.org/resource/Piranha_3D	I-movie	NNP
+just		O	RB
+exceeded		O	VBN
+the		O	DT
+limits		O	NNS
+of		O	IN
+crappyness		O	NN
+.		O	0
+|		O	:
+Glad		O	JJ
+you		O	PRP
+enjoyed		O	VBD
+it		O	PRP
+.		O	0
+			
+@pjames		O	USR
+Add		O	VB
+a		O	DT
+little		O	JJ
+Belanger		O	NNP
+,		O	,
+and		O	CC
+you		O	PRP
+'ve		O	VBP
+got		O	VBN
+it		O	PRP
+!		O	0
+Of		O	IN
+course		O	NN
+...		O	:
+after		O	IN
+his		O	PRP$
+household		O	NN
+items		O	NNS
+arrive		O	VBP
+from		O	IN
+D		O	NNP
+.		O	0
+C		O	NNP
+.		O	0
+			
+@bookpage		O	USR
+We		O	PRP
+should		O	MD
+'ve		O	VB
+scheduled		O	VBN
+a		O	DT
+meeting		O	NN
+with		O	IN
+Trisha	NIL	B-person	NNP
+in		O	IN
+Paris	NIL	B-geo-loc	NNP
+for		O	IN
+this		O	DT
+week		O	NN
+...		O	:
+#deau		O	HT
+			
+@BenArch		O	
+100-		O	
+Tim	NIL	B-person	
+Bulmer	NIL	I-person	
+had		O	
+a		O	
+100%		O	
+likelihood		O	
+of		O	
+getting		O	
+his		O	
+YPF		O	
+detail		O	
+form		O	
+in		O	
+this		O	
+week		O	
+.		O	
+Punctuality		O	
+.		O	
+			
+RT		O	RT
+@ajc		O	USR
+:		O	:
+Today		O	NN
+'s		O	VBZ
+the		O	DT
+102nd		O	JJ
+birthday		O	NN
+of		O	IN
+the		O	DT
+American	http://dbpedia.org/resource/National_Football_League	B-other	NNP
+Professional	http://dbpedia.org/resource/National_Football_League	I-other	NNP
+Football	http://dbpedia.org/resource/National_Football_League	I-other	NNP
+Association	http://dbpedia.org/resource/National_Football_League	I-other	NNP
+(		O	(
+we		O	PRP
+call		O	VBP
+it		O	PRP
+the		O	DT
+NFL)	http://dbpedia.org/resource/National_Football_League‎	B-other	NNP
+.		O	0
+First		O	JJ
+draft		O	NN
+choice		O	NN
+:		O	:
+Brett	http://dbpedia.org/resource/Brett_Favre	B-person	NNP
+Favre	http://dbpedia.org/resource/Brett_Favre	I-person	NNP
+.		O	0
+			
+A		O	
+FUN		O	
+movie		O	
+for		O	
+the		O	
+kids-		O	
+Alpha	http://dbpedia.org/resource/Alpha_and_Omega_(film)	B-movie	
+&amp;	http://dbpedia.org/resource/Alpha_and_Omega_(film)	I-movie	
+Omega	http://dbpedia.org/resource/Alpha_and_Omega_(film)	I-movie	
+(		O	
+PG		O	
+)		O	
+Friday		O	
+5:00		O	
+,		O	
+7:00		O	
+,		O	
+8:45		O	
+,		O	
+Saturday-		O	
+1:30		O	
+,		O	
+3:15		O	
+,		O	
+5:00		O	
+,		O	
+7:00		O	
+,		O	
+8:45		O	
+,...		O	
+http://fb.me/IiraJpe3		O	
+			
+I		O	PRP
+may		O	MD
+have		O	VB
+been		O	VBN
+wrong		O	JJ
+about		O	IN
+Murkowski	http://dbpedia.org/resource/Lisa_Murkowski	B-person	NNP
+,		O	,
+look		O	VB
+like		O	IN
+she		O	PRP
+'s		O	VBZ
+going		O	VBG
+to		O	TO
+turn		O	VB
+Friday		O	NNP
+news		O	NN
+dump		O	NN
+on		O	IN
+its		O	PRP$
+head		O	NN
+.		O	0
+three-way		O	JJ
+race		O	NN
+reportedly		O	RB
+ahead		O	RB
+in		O	IN
+AK	http://dbpedia.org/resource/Alaska	B-geo-loc	NNP
+.		O	0
+			
+RT		O	RT
+@HippoArmy		O	USR
+:		O	:
+Thousands		O	NNS
+of		O	IN
+angry		O	JJ
+masturbators		O	NNS
+marched		O	VBD
+against		O	IN
+Christine		B-person	NNP
+O'Donnell	http://dbpedia.org/resource/Christine_O%27Donnell	I-person	NNP
+today	http://dbpedia.org/resource/Christine_O%27Donnell	O	NN
+http://bit.ly/9nTWQw	http://dbpedia.org/resource/Christine_O%27Donnell	O	URL
+Seriously	http://dbpedia.org/resource/Christine_O%27Donnell	O	UH
+.		O	0
+			
+Beer		O	
+after		O	
+golf		O	
+??		O	
+Give		O	
+me		O	
+a		O	
+hell		O	
+yeah		O	
+!!		O	
+(@		O	
+White	NIL	B-facility	
+Eagle	NIL	I-facility	
+)		O	
+http://4sq.com/b5Wloc		O	
+			
+RT		O	
+@eljmayes		O	
+:		O	
+Ladbrokes		O	
+Labour		O	
+Leadership		O	
+Market-		O	
+http://bit.ly/cD3Rn8		O	
+Ed	http://dbpedia.org/resource/Ed_Miliband	B-person	
+Miliband	http://dbpedia.org/resource/Ed_Miliband	I-person	
+'s		O	
+odds		O	
+have		O	
+shortened		O	
+significantly		O	
+in		O	
+the		O	
+last		O	
+week		O	
+.		O	
+			
+;		O	:
+I		O	PRP
+can		O	MD
+upgrade		O	VB
+to		O	TO
+a		O	DT
+BlackBerry	NIL	B-product	NNP
+in		O	IN
+November		O	NNP
+!!		O	0
+Yesss		O	UH
+.		O	0
+&lt;		O	UH
+3		O	UH
+BB	http://dbpedia.org/resource/BlackBerry_Bold‎	B-product	NNP
+Bold	http://dbpedia.org/resource/BlackBerry_Bold‎	I-product	NNP
+,		O	,
+here		O	RB
+I		O	PRP
+come		O	VBP
+!		O	0
+			
+Driving		O	VBG
+,		O	,
+driving		O	VBG
+,		O	,
+driving		O	VBG
+away		O	RB
+to		O	TO
+Phil	http://dbpedia.org/resource/Philadelphia‎	B-geo-loc	NNP
+.		O	0
+Tasty		O	JJ
+dinner		O	NN
+tonight		O	NN
+with		O	IN
+the		O	DT
+Society	NIL	B-other	NNP
+of	NIL	I-other	IN
+Mining	NIL	I-other	NNP
+and	NIL	I-other	CC
+Metallurgy	NIL	I-other	NNP
+Engineers	NIL	I-other	NNPS
+.		O	0
+			
+moving		O	
+to		O	
+the		O	
+UK	http://dbpedia.org/resource/United_Kingdom	B-geo-loc	
+in		O	
+approx		O	
+12		O	
+days		O	
+			
+Lingerie	http://dbpedia.org/resource/Legends_Football_League	B-other	NN
+football	http://dbpedia.org/resource/Legends_Football_League	I-other	NN
+league	http://dbpedia.org/resource/Legends_Football_League	I-other	NN
+come		O	VB
+on		O	IN
+tonight		O	NN
+			
+On		O	IN
+Thanksgiving	http://dbpedia.org/resource/Thanksgiving	B-other	NNP
+after		O	IN
+you		O	PRP
+done		O	VBN
+eating		O	VBG
+its		O	PRP
+#TimeToGetOut		O	HT
+unless		O	IN
+you		O	PRP
+wanna		O	VBP
+help		O	VB
+with		O	IN
+the		O	DT
+dishes		O	NNS
+			
+I		O	PRP
+want		O	VBP
+it		O	PRP
+NOW		O	RB
+!		O	0
+;)		O	UH
+RT		O	RT
+:		O	:
+@corsairartisan		O	USR
+Pumpkin	NIL	B-product	NNP
+Moonshine	NIL	I-product	NNP
+has		O	VBZ
+arrived		O	VBN
+in		O	IN
+Nashville	http://dbpedia.org/resource/Nashville,_Tennessee	B-geo-loc	NNP
+--		O	:
+Give		O	VB
+it		O	PRP
+a		O	DT
+week		O	NN
+to		O	TO
+get		O	VB
+it		O	PRP
+in		O	IN
+stores		O	NNS
+.		O	0
+KY	NIL	B-geo-loc	NNP
+ships		O	VBZ
+next		O	IN
+week		O	NN
+!		O	0
+			
+Check		O	VB
+this		O	DT
+video		O	NN
+out		O	RP
+--		O	:
+Three	http://dbpedia.org/resource/Three_Days_Grace‎	B-musicartist	NNP
+Days	http://dbpedia.org/resource/Three_Days_Grace‎	I-musicartist	NNP
+Grace	http://dbpedia.org/resource/Three_Days_Grace‎	I-musicartist	NNP
+-		O	:
+Break		O	NNP
+(		O	(
+Official		O	JJ
+Music		O	NN
+Video		O	NN
+)		O	)
+[		O	IN
+HQ		O	JJ
+]		O	:
+http://t.co/GOwCLQJ		O	URL
+via		O	IN
+@youtube		O	USR
+			
+The	NIL	B-facility	
+Metro	NIL	I-facility	
+Sept		O	
+26		O	
+Mannie	http://dbpedia.org/resource/Mannie_Fresh	B-person	
+Fresh	http://dbpedia.org/resource/Mannie_Fresh	I-person	
+and		O	
+Jermaine	http://dbpedia.org/resource/Jermaine_Dupri	B-person	
+Dupri	http://dbpedia.org/resource/Jermaine_Dupri	I-person	
+fa		O	
+da		O	
+after		O	
+party		O	
+,		O	
+holla		O	
+at		O	
+me		O	
+fa		O	
+ur		O	
+tickets		O	
+			
+Yahoo	http://dbpedia.org/resource/Yahoo!	B-company	NNP
+:		O	:
+Jackie	http://dbpedia.org/resource/Jacqueline_Kennedy_Onassis	B-person	NNP
+joins		O	VBZ
+Twitter	http://dbpedia.org/resource/Twitter	B-company	NNP
+50		O	CD
+years		O	NNS
+after		O	IN
+JFK	http://dbpedia.org/resource/John_F._Kennedy	B-person	NNP
+campaign		O	NN
+:		O	:
+Had		O	VBD
+Twitter	http://dbpedia.org/resource/Twitter	B-company	NNP
+been		O	VBN
+an		O	DT
+option		O	NN
+in		O	IN
+1960		O	CD
+,		O	,
+a		O	DT
+pregnant		O	JJ
+Jacquelin	http://dbpedia.org/resource/Jacqueline_Kennedy_Onassis	B-person	NNP
+...		O	:
+http://yhoo.it/9VAD4A		O	URL
+			
+Cant		O	MD
+wait		O	VB
+for		O	IN
+the		O	DT
+ravens	http://dbpedia.org/resource/Baltimore_Ravens	B-sportsteam	NNP
+game		O	NN
+tomorrow		O	NN
+....		O	:
+go		O	VB
+ray	http://dbpedia.org/resource/Ray_Rice‎	B-person	NNP
+rice	http://dbpedia.org/resource/Ray_Rice‎	I-person	NNP
+!!!!!!!		O	0
+			
+Always		O	
+kinda		O	
+awkward		O	
+when		O	
+you		O	
+get		O	
+the		O	
+chat		O	
+group		O	
+wrong		O	
+in		O	
+WoW	http://dbpedia.org/resource/World_of_Warcraft	B-product	
+.		O	
+Sometimes		O	
+you		O	
+don't		O	
+want		O	
+the		O	
+tank		O	
+to		O	
+know		O	
+you're		O	
+dissin		O	
+'		O	
+him		O	
+.		O	
+Oops		O	
+.		O	
+			
+Wtf		O	
+do		O	
+i		O	
+have		O	
+a		O	
+stupid		O	
+3hr		O	
+shift		O	
+tonight		O	
+!!		O	
+I		O	
+wanna		O	
+go		O	
+out		O	
+and		O	
+have		O	
+fun		O	
+:(		O	
+Oh		O	
+well		O	
+time		O	
+to		O	
+watch		O	
+some		O	
+Jersey		B-tvshow	
+Shore		I-tvshow	
+haha		O	
+			
+At		O	
+7pm		O	
+we'll		O	
+show		O	
+the		O	
+Awarded		O	
+movie		O	
+"		O	
+Agora	http://dbpedia.org/resource/Agora_%28film%29	B-movie	
+"		O	
+by		O	
+Spanish		O	
+director		O	
+Alex	http://dbpedia.org/resource/Alejandro_Amenabar	B-person	
+Amenabar	http://dbpedia.org/resource/Alejandro_Amenabar	I-person	
+who		O	
+directed		O	
+"		O	
+Mar	http://dbpedia.org/resource/The_Sea_Inside	B-movie	
+Adentro	http://dbpedia.org/resource/The_Sea_Inside	I-movie	
+"		O	
+(		O	
+"		O	
+The	http://dbpedia.org/resource/The_Sea_Inside	B-movie	
+Sea	http://dbpedia.org/resource/The_Sea_Inside	I-movie	
+Inside	http://dbpedia.org/resource/The_Sea_Inside	I-movie	
+"		O	
+)		O	
+.		O	
+W/Rachel	http://dbpedia.org/resource/Rachel_Weisz	B-person	
+Weisz	http://dbpedia.org/resource/Rachel_Weisz	I-person	
+.		O	
+			
+Men		O	
+'s		O	
+soccer		O	
+vs		O	
+.		O	
+Crown	NIL	B-sportsteam	
+College	NIL	I-sportsteam	
+at		O	
+home		O	
+tomorrow		O	
+at		O	
+2		O	
+pm		O	
+.		O	
+Come		O	
+support		O	
+your		O	
+Eagles	NIL	B-sportsteam	
+!		O	
+Praying		O	
+for		O	
+you		O	
+guys		O	
+!		O	
+			
+#aberdeen		O	
+RT		O	
+@flook_firehose2010Polar		O	
+Bear		O	
+http://flook.it/c/1H1HZq		O	
+Sun		O	
+,		O	
+17		O	
+Oct		O	
+2010		O	
+at		O	
+10:28		O	
+am		O	
+The		O	
+Tunnels		O	
+Carnegies		O	
+Brae		O	
+Aberdeen		O	
+Un		O	
+...		O	
+			
+Checking		O	
+out		O	
+this		O	
+weeks		O	
+tell		O	
+'		O	
+em		O	
+Steve	http://dbpedia.org/resource/Tell_'Em_Steve-Dave!	B-person	
+Dave	http://dbpedia.org/resource/Tell_'Em_Steve-Dave!	I-person	
+Podcast		O	
+			
+@MakethisRalate		O	USR
+good		O	JJ
+luck		O	NN
+at		O	IN
+Elliot		O	NNP
+Miner		O	NNP
+:D		O	UH
+yous		O	PRP
+were		O	VBD
+greaaaat		O	JJ
+tonight		O	NN
+&lt;		O	UH
+3		O	UH
+xx		O	UH
+			
+http://bit.ly/aTTQYq		O	URL
+When		O	WRB
+Pepsi	http://dbpedia.org/resource/PepsiCo	B-company	NNP
+to		O	TO
+ring		O	VB
+usually		O	RB
+confirm		O	VB
+to		O	TO
+,		O	,
+winning		O	VBG
+a		O	DT
+Nokia	http://dbpedia.org/resource/Nokia_5800_XpressMusic‎	B-product	NNP
+5800	http://dbpedia.org/resource/Nokia_5800_XpressMusic‎	I-product	CD
+?		O	0
+			
+Exclusive		O	JJ
+:		O	:
+Rep		O	NNP
+.		O	0
+Steve	http://dbpedia.org/resource/Steve_King	B-person	NNP
+King	http://dbpedia.org/resource/Steve_King	I-person	NNP
+on		O	IN
+ObamaCare		O	NNP
+,		O	,
+Tea		O	NNP
+Party		O	NNP
+,		O	,
+and		O	CC
+Constitution	http://dbpedia.org/resource/Constitution_Day_(United_States)	B-other	NNP
+Day	http://dbpedia.org/resource/Constitution_Day_(United_States)	I-other	NNP
+:		O	:
+The		O	DT
+inclusion		O	NN
+of		O	IN
+the		O	DT
+Tenth		O	NNP
+Amendment		O	NNP
+in		O	IN
+...		O	:
+http://bit.ly/cYITA8		O	URL
+			
+Google	http://dbpedia.org/resource/Google_Play_Music	B-product	
+Music	http://dbpedia.org/resource/Google_Play_Music	I-product	
+Rumors		O	
+:		O	
+Labels		O	
+Happy		O	
+About		O	
+iTunes	http://dbpedia.org/resource/iTunes	B-company	
+Alternative		O	
+?		O	
+-		O	
+Techland	NIL	B-company	
+-		O	
+TIME		O	
+.		O	
+com		O	
+http://bit.ly/a4kSfV		O	
+			
+I		O	PRP
+liked		O	VBD
+a		O	DT
+YouTube	http://dbpedia.org/resource/YouTube	B-company	NNP
+video		O	NN
+--		O	:
+Family	http://dbpedia.org/resource/Family_Guy	B-tvshow	NNP
+Guy	http://dbpedia.org/resource/Family_Guy	I-tvshow	NNP
+-		O	:
+Songs		O	NNS
+Named		O	VBD
+After		O	IN
+a		O	DT
+Girl		O	NN
+http://youtu.be/ErPsx8zdnX4?a		O	URL
+			
+In		O	IN
+bed		O	NN
+watching		O	VBG
+Day		O	NN
+51		O	CD
+HLs		O	NNP
+.		O	0
+(		O	(
+Awaiting		O	VBG
+Marcus	http://dbpedia.org/resource/Marcus_Bentley	B-person	NNP
+Bentley	http://dbpedia.org/resource/Marcus_Bentley	I-person	NNP
+!		O	0
+)		O	)
+#BB11	http://dbpedia.org/resource/Big_Brother_(UK)	B-tvshow	HT
+			
+Small		O	JJ
+Biz		O	NNP
+Tech		O	NNP
+Tour		O	NNP
+2010		O	CD
+Launches		O	VBZ
+Five		O	CD
+City		O	NN
+Tour		O	NN
+MONTCLAIR	http://dbpedia.org/resource/Montclair,_New_Jersey	B-geo-loc	NNP
+N.J.	http://dbpedia.org/resource/New_Jersey	B-geo-loc	NNP
+...:	http://dbpedia.org/resource/New_Jersey	O	:
+The	http://dbpedia.org/resource/New_Jersey	O	DT
+all	http://dbpedia.org/resource/New_Jersey	O	DT
+day		O	NN
+event		O	NN
+features		O	VBZ
+America's...		O	NNP
+http://tinyurl.com/28hd9fu		O	URL
+#fb		O	HT
+			
+After		O	
+a		O	
+great		O	
+two		O	
+days		O	
+of		O	
+meetings		O	
+with		O	
+Houston	http://dbpedia.org/resource/Houston	B-geo-loc	
+,		O	
+Fes	NIL	B-person	
+is		O	
+back		O	
+in		O	
+Salt	http://dbpedia.org/resource/Salt_Lake_City	B-geo-loc	
+Lake	http://dbpedia.org/resource/Salt_Lake_City	I-geo-loc	
+.		O	
+			
+Find		O	
+us		O	
+at		O	
+Tipitina	http://dbpedia.org/resource/Tipitina's	B-facility	
+'s		O	
+tonight		O	
+and		O	
+mention		O	
+that		O	
+you're		O	
+following		O	
+us		O	
+on		O	
+Twitter	http://dbpedia.org/resource/Twitter	B-company	
+and		O	
+get		O	
+a		O	
+FREE		O	
+Fried		O	
+Mac		O	
+N		O	
+'		O	
+Cheese		O	
+ball		O	
+with		O	
+any		O	
+order		O	
+!		O	
+			
+Not		O	RB
+only		O	RB
+is		O	VBZ
+it		O	PRP
+#BattlestarGalactica		O	HT
+'s		O	POS
+32nd		O	JJ
+Anniversary		O	NN
+,		O	,
+tonite		O	NN
+is		O	VBZ
+the		O	DT
+3rd		O	JJ
+season		O	NN
+premiere		O	NN
+of		O	IN
+#StarWars		O	HT
+#TheCloneWars		O	HT
+!!		O	0
+			
+You		O	
+Get		O	
+What		O	
+You		O	
+Give		O	
+~		O	
+Zac	http://dbpedia.org/resource/Zac_Brown_Band	B-musicartist	
+Brown	http://dbpedia.org/resource/Zac_Brown_Band	I-musicartist	
+Band	http://dbpedia.org/resource/Zac_Brown_Band	I-musicartist	
+40		O	
+days		O	
+in		O	
+the		O	
+top		O	
+100		O	
+Release		O	
+Date		O	
+:		O	
+September		O	
+21		O	
+,		O	
+2010Buy		O	
+new		O	
+:		O	
+$		O	
+18.98		O	
+$		O	
+...		O	
+http://amzn.to/9Cfkpc		O	
+			
+Greek	http://dbpedia.org/resource/Greek_festival	B-other	NNP
+Festival	http://dbpedia.org/resource/Greek_festival	I-other	NNP
+at		O	IN
+St	NIL	B-geo-loc	NNP
+Johns	NIL	I-geo-loc	NNP
+before		O	IN
+ASPEN	NIL	B-geo-loc	NNP
+			
+Snooth		O	
+Talk		O	
+:		O	
+Zinfandel		O	
+Port		O	
+:		O	
+This		O	
+week		O	
+is		O	
+all		O	
+about		O	
+Zinfandel		O	
+,		O	
+and		O	
+just		O	
+last		O	
+night		O	
+I		O	
+released		O	
+a		O	
+post		O	
+on		O	
+Zinfandel		O	
+...		O	
+http://bit.ly/972Sik		O	
+			
+After	NIL	B-product	
+Eventide	NIL	I-product	
+(		O	
+Kindle	http://dbpedia.org/resource/Amazon_Kindle	B-product	
+Edition)By		O	
+Catherine	NIL	B-person	
+Olson	NIL	I-person	
+Buy		O	
+new		O	
+:		O	
+$		O	
+6.49		O	
+Customer		O	
+R		O	
+...		O	
+http://tinyurl.com/25e59fk		O	
+#twilight		O	
+			
+Jessica	http://dbpedia.org/resource/Jessica_Simpson	B-person	
+Simpson	http://dbpedia.org/resource/Jessica_Simpson	I-person	
+is		O	
+PREGNANT		O	
+!?!:		O	
+Jessica	http://dbpedia.org/resource/Jessica_Simpson	B-person	
+Simpson	http://dbpedia.org/resource/Jessica_Simpson	I-person	
+is		O	
+pregnant		O	
+??		O	
+Simpson	http://dbpedia.org/resource/Jessica_Simpson	B-person	
+is		O	
+pregnant		O	
+with		O	
+her		O	
+barely		O	
+4-month		O	
+boyfrien		O	
+...		O	
+http://bit.ly/aoempS		O	
+			
+Don	http://dbpedia.org/resource/Don_Mattingly	B-person	
+Mattingly	http://dbpedia.org/resource/Don_Mattingly	I-person	
+will		O	
+replace		O	
+Joe	http://dbpedia.org/resource/Joe_Torre	B-person	
+Torre	http://dbpedia.org/resource/Joe_Torre	I-person	
+as		O	
+LA	http://dbpedia.org/resource/Los_Angeles_Dodgers	B-sportsteam	
+Dodgers	http://dbpedia.org/resource/Los_Angeles_Dodgers	I-sportsteam	
+manager		O	
+after		O	
+this		O	
+season		O	
+			
+last		O	JJ
+day		O	NN
+of		O	IN
+sorting		O	VBG
+pope	http://dbpedia.org/resource/Pope	B-person	NNP
+visit		O	NN
+to		O	TO
+birmingham	NIL	B-geo-loc	NNP
+stuff		O	NN
+out		O	RP
+.....		O	:
+hope		O	VBP
+it		O	PRP
+goes		O	VBZ
+ok		O	JJ
+on		O	IN
+sunday		O	NNP
+!!		O	0
+			
+QUAKE		O	NN
+:		O	:
+Mag		O	NN
+4.5		O	CD
+,		O	,
+Saturday		O	NNP
+,		O	,
+September		O	NNP
+18		O	CD
+2010		O	CD
+at		O	IN
+10:03		O	CD
+am		O	NN
+(		O	(
+NZST)		O	NNP
+,		O	,
+20		O	CD
+km		O	NN
+south-west		O	JJ
+of		O	IN
+Christchurch		B-geo-loc	NNP
+.		O	0
+http://tinyurl.com/265n4mx		O	URL
+#eqnz		O	HT
+			
+Day		O	
+three		O	
+of		O	
+St	http://dbpedia.org/resource/Hypericum_perforatum‎	B-other	
+John	http://dbpedia.org/resource/Hypericum_perforatum‎	I-other	
+'s	http://dbpedia.org/resource/Hypericum_perforatum‎	I-other	
+wort	http://dbpedia.org/resource/Hypericum_perforatum‎	I-other	
+tea		O	
+for		O	
+anxiety		O	
+.		O	
+So		O	
+far		O	
+today		O	
+I		O	
+havent		O	
+had		O	
+a		O	
+panic		O	
+attack...we'll		O	
+see		O	
+if		O	
+this		O	
+works		O	
+!		O	
+			
+PLANO	http://dbpedia.org/resource/Plano_Balloon_Festival	B-other	
+BALLOON	http://dbpedia.org/resource/Plano_Balloon_Festival	I-other	
+FESTIVAL	http://dbpedia.org/resource/Plano_Balloon_Festival	I-other	
+2010	http://dbpedia.org/resource/Plano_Balloon_Festival	I-other	
+TO		O	
+START		O	
+TODAY		O	
+:		O	
+The	NIL	B-other	
+31st	NIL	I-other	
+annual	NIL	I-other	
+Plano	NIL	I-other	
+Balloon	NIL	I-other	
+Festival	NIL	I-other	
+,		O	
+Plano	http://dbpedia.org/resource/Plano_Balloon_Festival	B-other	
+Balloon	http://dbpedia.org/resource/Plano_Balloon_Festival	I-other	
+Festival	http://dbpedia.org/resource/Plano_Balloon_Festival	I-other	
+2		O	
+...		O	
+http://tinyurl.com/22kg6uz		O	
+			
+Amber	http://dbpedia.org/resource/Amber_Le_Bon	B-person	NNP
+Le	http://dbpedia.org/resource/Amber_Le_Bon	I-person	NNP
+Bon	http://dbpedia.org/resource/Amber_Le_Bon	I-person	NNP
+is		O	VBZ
+to		O	TO
+walk		O	VB
+in		O	IN
+Giles	http://dbpedia.org/resource/Giles_Deacon	B-person	NNP
+Deacon	http://dbpedia.org/resource/Giles_Deacon	I-person	NNP
+'s		O	POS
+Monday		O	NNP
+LFW		O	NNP
+show		O	NN
+			
+Xbox	http://dbpedia.org/resource/Xbox_360	B-product	
+360	http://dbpedia.org/resource/Xbox_360	I-product	
+:		O	
+Enslaved	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	B-product	
+:	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	I-product	
+Odyssey	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	I-product	
+to	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	I-product	
+the	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	I-product	
+West	http://dbpedia.org/resource/Enslaved:_Odyssey_to_the_West‎	I-product	
+Demo		O	
+Coming		O	
+to		O	
+PlayStation	http://dbpedia.org/resource/PlayStation_Network	B-product	
+Network	http://dbpedia.org/resource/PlayStation_Network	I-product	
+on		O	
+September		O	
+...		O	
+http://bit.ly/9gFTHn		O	
+			
+Home		O	
+made		O	
+cod		O	
+&amp;		O	
+chips		O	
++		O	
+bottle		O	
+of		O	
+Microsoft	http://dbpedia.org/resource/Microsoft	B-company	
+provided		O	
+champagne		O	
+=		O	
+top		O	
+class		O	
+Friday		O	
+;-)		O	
+			
+Is		O	VBZ
+all		O	DT
+done		O	VBN
+getting		O	VBG
+things		O	NNS
+set		O	VB
+up		O	RP
+for		O	IN
+the		O	DT
+Ultimate	http://dbpedia.org/resource/Ultimate_Magic	B-other	NNP
+Magic	http://dbpedia.org/resource/Ultimate_Magic	I-other	NNP
+playtest		O	NN
+that		O	WDT
+starts		O	VBZ
+on		O	IN
+Monday		O	NNP
+.		O	0
+Ca		O	MD
+n't		O	RB
+wait		O	VB
+to		O	TO
+see		O	VB
+what		O	WP
+people		O	NNS
+think		O	VBP
+.		O	0
+			
+The	http://dbpedia.org/resource/The_Maccabees_(band)	B-musicartist	
+Maccabees	http://dbpedia.org/resource/The_Maccabees_(band)	I-musicartist	
+are		O	
+the		O	
+love		O	
+of		O	
+my		O	
+life		O	
+.		O	
+one		O	
+day		O	
+i		O	
+will		O	
+be		O	
+married		O	
+to		O	
+all		O	
+of		O	
+them		O	
+.		O	
+			
+Mayday		O	
+Parade		O	
+&amp;		O	
+The		O	
+Maine		O	
+in		O	
+like		O	
+16		O	
+days		O	
+,		O	
+excitedddd		O	
+.		O	
+All		O	
+time		O	
+low		O	
+next		O	
+year		O	
+,		O	
+maybe		O	
+.		O	
+			
+Amazon	http://dbpedia.org/resource/Amazon.com	B-company	NNP
+U.K.	http://dbpedia.org/resource/Amazon.com	I-company	NNP
+Offering		O	VBG
+HTC	http://dbpedia.org/resource/HTC_Desire_Z	B-product	NNP
+Desire	http://dbpedia.org/resource/HTC_Desire_Z	I-product	NNP
+Z	http://dbpedia.org/resource/HTC_Desire_Z	I-product	NNP
+Unlocked		O	JJ
+October		O	NNP
+11		O	CD
+:		O	:
+We		O	PRP
+just		O	RB
+got		O	VBD
+official		O	JJ
+word		O	NN
+of		O	IN
+the		O	DT
+HTC	http://dbpedia.org/resource/HTC_Desire_Z	B-product	NNP
+Desire	http://dbpedia.org/resource/HTC_Desire_Z	I-product	NNP
+Z	http://dbpedia.org/resource/HTC_Desire_Z	I-product	NNP
+earlier		O	JJR
+in		O	IN
+Lo		O	NNP
+...		O	:
+http://bit.ly/bsyz9H		O	URL
+			
+@therowdydog		O	
+Me		O	
+neither		O	
+.		O	
+It		O	
+'s		O	
+tough		O	
+to		O	
+get		O	
+away		O	
+.		O	
+There		O	
+is		O	
+one		O	
+Tuesday		O	
+in		O	
+AUS	NIL	B-geo-loc	
+and		O	
+the		O	
+one		O	
+in		O	
+RR	NIL	B-geo-loc	
+on		O	
+Friday		O	
+.		O	
+We		O	
+should		O	
+go		O	
+so		O	
+I		O	
+have		O	
+a		O	
+friend		O	
+!		O	
+			
+RT		O	RT
+@Quotealicious		O	USR
+:		O	:
+Today		O	NN
+,		O	,
+I		O	PRP
+saw		O	VBD
+a		O	DT
+guy		O	NN
+driving		O	VBG
+a		O	DT
+Pepsi	http://dbpedia.org/resource/PepsiCo	B-company	NNP
+truck		O	NN
+,		O	,
+drinking		O	VBG
+a		O	DT
+Coke	http://dbpedia.org/resource/Coca-Cola	B-product	NNP
+.		O	0
+MLIA		O	UH
+#Quotealicious		O	HT
+			
+I		O	PRP
+'ve		O	VBP
+just		O	RB
+watched		O	VBN
+first		O	JJ
+four		O	CD
+episodes		O	NNS
+of		O	IN
+K-On	http://dbpedia.org/resource/K-On!‎	B-tvshow	NNP
+for		O	IN
+the		O	DT
+first		O	JJ
+time		O	NN
+!		O	0
+:		O	UH
+3		O	UH
+			
+AI		O	
+:		O	
+DEMAND		O	
+RELEASE		O	
+FOR		O	
+SYRIAN		O	
+BLOGGER		O	
+:		O	
+17-9-2010Tal		O	
+al-Mallohi	http://dbpedia.org/resource/Tal_al-Mallohi	B-person	
+,		O	
+a		O	
+19-year-old		O	
+Syrian		O	
+woman		O	
+,		O	
+has		O	
+been		O	
+held		O	
+incommun		O	
+...		O	
+http://bit.ly/aDG3ub		O	
+			
+Y	NIL	B-musicartist	
+La	NIL	I-musicartist	
+Bamba	NIL	I-musicartist	
+:		O	
+Playing		O	
+a		O	
+show		O	
+in		O	
+Portland	http://dbpedia.org/resource/Portland,_Oregon	B-geo-loc	
+,		O	
+OR		O	
+at		O	
+9:00		O	
+PM		O	
+today		O	
+at		O	
+Mississippi	NIL	B-facility	
+Studios	NIL	I-facility	
+http://artistdata.com/a/1kdx		O	
+			
+@aplusk		O	USR
+http://www.youtube.com/watch?v=eLMui7zBiXo		O	URL
+we		O	PRP
+beat		O	VBD
+kilkenny	http://dbpedia.org/resource/Kilkenny_GAA	B-geo-loc	NNP
+after		O	IN
+they		O	PRP
+beat		O	VBD
+us		O	PRP
+for		O	IN
+the		O	DT
+last		O	JJ
+4		O	CD
+years		O	NNS
+in		O	IN
+the		O	DT
+hurling		O	NN
+.		O	0
+Woo		O	UH
+!!!		O	0
+			
+@joejonas		O	USR
+@nickjonas		O	USR
+@kevinjonas		O	USR
+@papajonas		O	USR
+@greggarbo		O	USR
+@johnlloydtaylor		O	USR
+Rock		O	VB
+to		O	TO
+SECTION		O	NN
+204		O	CD
+tonight		O	NN
+!!!!		O	0
+			
+Israel	http://dbpedia.org/resource/Israel	B-geo-loc	NNP
+grinds		O	VBZ
+to		O	TO
+a		O	DT
+halt		O	NN
+for		O	IN
+Yom	http://dbpedia.org/resource/Yom_Kippur	B-other	NNP
+Kippur	http://dbpedia.org/resource/Yom_Kippur	I-other	NNP
+fasting		O	JJ
+day		O	NN
+(		O	(
+wwrn.org		O	URL
+)		O	)
+http://bit.ly/cqlwCZ		O	URL
+			
+Honored		O	VBD
+Double		O	NNP
+Diaomond		O	NNP
+as		O	IN
+well		O	RB
+:		O	:
+Jan	NIL	B-person	NNP
+Bloom	NIL	I-person	NNP
+...		O	:
+her		O	PRP$
+two		O	CD
+beautiful		O	JJ
+daughters		O	NNS
+surprised		O	VBD
+her		O	PRP
+on		O	IN
+stage		O	NN
+,		O	,
+it		O	PRP
+was		O	VBD
+just		O	RB
+sooo		O	RB
+...		O	:
+http://fb.me/JLLhbDl0		O	URL
+			
+Cowboy		O	
+fans		O	
+remember		O	
+when		O	
+Da	http://dbpedia.org/resource/Chicago_Bears	B-sportsteam	
+Bears	http://dbpedia.org/resource/Chicago_Bears	I-sportsteam	
+demolished		O	
+you		O	
+guys		O	
+44-0		O	
+in		O	
+your		O	
+own		O	
+home		O	
+in		O	
+1985		O	
+??		O	
+same		O	
+year		O	
+we		O	
+won		O	
+the		O	
+superbowl		O	
+!		O	
+#BEARDOWN		O	
+			
+Season		O	
+opener		O	
+for		O	
+Bradley	http://dbpedia.org/resource/Bradley_Braves_men's_soccer	B-sportsteam	
+Soccer	http://dbpedia.org/resource/Bradley_Braves_men's_soccer	I-sportsteam	
+tonight		O	
+!		O	
+			
+USM	http://dbpedia.org/resource/University_of_Southern_Mississippi	B-other	NNP
+get		O	VB
+ready		O	RB
+yours		O	PRP$
+truly		O	RB
+tonight		O	NN
+at		O	IN
+frat	NIL	B-facility	NN
+house	NIL	I-facility	NN
+Hattiesburg	NIL	I-facility	NNP
+on		O	IN
+the		O	DT
+1s		O	CD
+n		O	CC
+2s		O	CD
+!!		O	0
+			
+Can		O	
+your		O	
+CMS		O	
+guarantee		O	
+pixel-precise		O	
+output		O	
+when		O	
+compared		O	
+to		O	
+our		O	
+MS-Paint		O	
+designs		O	
+?		O	
+#cmsretractions		O	
+			
+For		O	IN
+code		O	NN
+I		O	PRP
+'ve		O	VBP
+written		O	VBN
+since		O	IN
+Sept		O	NNP
+'		O	''
+9		O	CD
+,		O	,
+the		O	DT
+delay		O	NN
+between		O	IN
+commit		O	VBZ
+to		O	TO
+SCM		O	NNP
+and		O	CC
+running		O	VBG
+on		O	IN
+customer		O	NN
+hardware		O	NN
+has		O	VBZ
+been		O	VBN
+about		O	IN
+10		O	CD
+days		O	NNS
+.		O	0
+			
+@ChefGuyFieri		O	
+Pls		O	
+RT		O	
+-		O	
+NIGHT		O	
+golf		O	
+tournament		O	
+9/25		O	
+to		O	
+benefit		O	
+3		O	
+year		O	
+old		O	
+Penny	NIL	B-person	
+of		O	
+Mesa	http://dbpedia.org/resource/Mesa,_Arizona	B-geo-loc	
+,		O	
+AZ	http://dbpedia.org/resource/Arizona	B-geo-loc	
+who		O	
+had		O	
+heart		O	
+transplant		O	
+.		O	
+www.flancers.com		O	
+4		O	
+info		O	
+			
+RT		O	
+@CHRIS_Daughtry		O	
+:		O	
+We're		O	
+playing		O	
+a		O	
+show		O	
+with		O	
+KISS	http://dbpedia.org/resource/Kiss_(band)	B-musicartist	
+tomorrow		O	
+.		O	
+Can't		O	
+say		O	
+I		O	
+saw		O	
+that		O	
+coming		O	
+5		O	
+years		O	
+ago		O	
+...		O	
+			
+Business	NIL	B-company	
+Alliance	NIL	I-company	
+will		O	
+save		O	
+you		O	
+time		O	
+and		O	
+money		O	
+and		O	
+most		O	
+importantly		O	
+,		O	
+match		O	
+you		O	
+with		O	
+the		O	
+right		O	
+franchise		O	
+.		O	
+check		O	
+out		O	
+at		O	
+http://ow.ly/2kt2M		O	
+			
+before		O	
+the		O	
+season		O	
+even		O	
+starts		O	
+i		O	
+will		O	
+not		O	
+respond		O	
+to		O	
+any		O	
+new		O	
+found		O	
+miami	http://dbpedia.org/resource/Miami_Heat	B-sportsteam	
+heat	http://dbpedia.org/resource/Miami_Heat	I-sportsteam	
+fans		O	
+...		O	
+			
+Winner		O	
+will		O	
+be		O	
+chosen		O	
+Monday		O	
+morning		O	
+.		O	
+Get		O	
+your		O	
+caption		O	
+in		O	
+the		O	
+funny		O	
+photo		O	
+caption		O	
+contest-		O	
+Nadal		B-person	
+and	http://dbpedia.org/resource/Rafael_Nadal	O	
+Novak		B-person	
+in	http://dbpedia.org/resource/Novak_Djokovic	O	
+the		O	
+tub		O	
+http://ow.ly/2G3Jh		O	
+			
+@bowlerhatlover		O	
+Been		O	
+trying		O	
+to		O	
+find		O	
+a		O	
+copy		O	
+of		O	
+"		O	
+Nostalgia	NIL	B-product	
+"		O	
+for		O	
+years		O	
+.		O	
+http://hollisframpton.org.uk/		O	
+			
+@NeilPen		O	USR
+I		O	PRP
+position		O	NN
+to		O	TO
+Manchester	http://dbpedia.org/resource/Manchester	B-geo-loc	NNP
+tomorrow		O	NN
+on		O	IN
+BA		O	NNP
+2910		O	CD
+and		O	CC
+fly		O	VBP
+to		O	TO
+Barbados	http://dbpedia.org/resource/Barbados	B-geo-loc	NNP
+on		O	IN
+Sunday		O	NNP
+			
+#news		O	
+Dems	http://dbpedia.org/resource/Democratic_Party_(United_States)	B-other	
+to		O	
+voters		O	
+:		O	
+You		O	
+may		O	
+hate		O	
+us		O	
+,		O	
+but		O	
+GOP	http://dbpedia.org/resource/Republican_Party_(United_States)	B-other	
+is		O	
+worse		O	
+(		O	
+AP	http://dbpedia.org/resource/Associated_Press	B-other	
+)		O	
+(		O	
+Yahoo	http://dbpedia.org/resource/Yahoo!	B-company	
+!		O	
+)		O	
+:		O	
+Share		O	
+With		O	
+Friends		O	
+:		O	
+|		O	
+Latest		O	
+Top		O	
+Ne		O	
+...		O	
+http://adpro.co/aQxQtY		O	
+			
+Jupiter	http://dbpedia.org/resource/Jupiter	B-geo-loc	
+:		O	
+Closest		O	
+Approach		O	
+in		O	
+Nearly		O	
+50		O	
+years		O	
+.		O	
+Catch		O	
+it		O	
+nxt		O	
+week		O	
+.		O	
+It		O	
+wnt		O	
+B		O	
+that		O	
+big		O	
+or		O	
+bright		O	
+again		O	
+til		O	
+2022		O	
+http://bit.ly/d5Bzx7		O	
+			
+I		O	PRP
+just		O	RB
+took		O	VBD
+"		O	''
+When		O	WRB
+your		O	PRP$
+mom		O	NN
+makes		O	VBZ
+you		O	PRP
+go		O	VBP
+live		O	VB
+with		O	IN
+your		O	PRP$
+dad		O	NN
+Scooter	http://dbpedia.org/resource/Scooter_Braun	B-person	NNP
+Braun	http://dbpedia.org/resource/Scooter_Braun	I-person	NNP
+,		O	,
+your		O	PRP$
+life		O	NN
+..."		O	''
+and		O	CC
+got		O	VBD
+:		O	:
+Part		O	NN
+7		O	CD
+!		O	0
+Try		O	VB
+it		O	PRP
+:		O	:
+http://tinyurl.com/27r2pdz		O	URL
+			
+What		O	WP
+Do		O	VBP
+S.F.	http://dbpedia.org/resource/San_Francisco	B-geo-loc	NNP
+Rabbis		O	NNS
+Eat		O	VBZ
+Before		O	IN
+and		O	CC
+After		O	IN
+Yom	http://dbpedia.org/resource/Yom_Kippur	B-other	NNP
+Kippur	http://dbpedia.org/resource/Yom_Kippur	I-other	NNP
+?		O	0
+We		O	PRP
+Asked		O	VBD
+Five		O	CD
+to		O	TO
+Enlighten		O	VB
+Us		O	PRP
+!		O	0
+via		O	IN
+@SFoodie		O	USR
+http://bit.ly/aQrFUz		O	URL
+			
+Pope	http://dbpedia.org/resource/Pope_Benedict_XVI	B-person	NNP
+Benedict	http://dbpedia.org/resource/Pope_Benedict_XVI	I-person	NNP
+trip		O	NN
+:		O	:
+Why		O	WRB
+move		O	VB
+John	http://dbpedia.org/resource/John_Henry_Newman	B-person	NNP
+Henry	http://dbpedia.org/resource/John_Henry_Newman	I-person	NNP
+Newman	http://dbpedia.org/resource/John_Henry_Newman	I-person	NNP
+toward		O	IN
+sainthood		O	NN
+?:		O	0
+Pope	http://dbpedia.org/resource/Pope_Benedict_XVI	B-person	NNP
+Benedict	http://dbpedia.org/resource/Pope_Benedict_XVI	I-person	NNP
+XVI	http://dbpedia.org/resource/Pope_Benedict_XVI	I-person	CD
+plans		O	VBZ
+on		O	IN
+Sunday		O	NNP
+during		O	IN
+his		O	PRP$
+sta		O	NN
+...		O	:
+http://bit.ly/d7tM0r		O	URL
+			
+@ohy22SD		O	USR
+Hopefully		O	RB
+the		O	DT
+Force		O	NNP
+will		O	MD
+be		O	VB
+VERY		O	RB
+strong		O	JJ
+with		O	IN
+the		O	DT
+#Padres	http://dbpedia.org/resource/San_Diego_Padres‎	B-sportsteam	HT
+tonight		O	NN
+.		O	0
+We		O	PRP
+NEED		O	VBP
+a		O	DT
+win		O	NN
+.		O	0
+#ScoreSomeRuns		O	HT
+			
+Gotta		O	VBP
+love		O	VB
+the		O	DT
+bumper		O	NN
+stickers		O	NNS
+of		O	IN
+Fayette	NIL	B-geo-loc	NNP
+County	NIL	I-geo-loc	NNP
+:		O	:
+"		O	''
+Ever		O	RB
+wonder		O	VBP
+if		O	IN
+there		O	EX
+is		O	VBZ
+life		O	NN
+after		O	IN
+death		O	NN
+?		O	0
+Touch		O	VB
+my		O	PRP$
+truck		O	NN
+and		O	CC
+'ll		O	MD
+find		O	VB
+out		O	RP
+."		O	:
+			
+@themayorpete		O	
+I		O	
+split		O	
+my		O	
+time		O	
+now		O	
+btwn		O	
+SF	http://dbpedia.org/resource/San_Francisco	B-geo-loc	
+and		O	
+San	http://dbpedia.org/resource/San_Mateo,_California	B-geo-loc	
+Mateo	http://dbpedia.org/resource/San_Mateo,_California	I-geo-loc	
+			
+-CHANGE		O	
+OF		O	
+ROOM		O	
+!		O	
+-		O	
+FATHER'S		O	
+DAY		O	
+auditions		O	
+Sept		O	
+25		O	
+CANWEST	NIL	B-facility	
+Center	NIL	I-facility	
+for		O	
+Theater		O	
+and		O	
+Film		O	
+U	http://dbpedia.org/resource/University_of_Winnipeg‎	B-geo-loc	
+of	http://dbpedia.org/resource/University_of_Winnipeg‎	I-geo-loc	
+W	http://dbpedia.org/resource/University_of_Winnipeg‎	I-geo-loc	
+ROOM		O	
+0T15		O	
+11:30		O	
+am		O	
+-		O	
+4:00		O	
+PM		O	
+.		O	
+			
+Bloggers		O	
+:		O	
+Who		O	
+are		O	
+you		O	
+writing		O	
+for		O	
+?		O	
+|		O	
+Social		O	
+Media		O	
+Today		O	
+http://bit.ly/9mY0NK		O	
+			
+5		O	
+Things		O	
+You		O	
+Need		O	
+To		O	
+Do		O	
+Before		O	
+Contacting		O	
+A		O	
+Professional		O	
+Photographer		O	
+http://goo.gl/fb/I7rBo		O	
+#inourhead		O	
+			
+@Strigy		O	USR
+got		O	VBD
+mine		O	NN
+in		O	IN
+bbt		O	NNP
+aintree	http://dbpedia.org/resource/Aintree	B-geo-loc	NNP
+today		O	NN
+.		O	0
+Played		O	VBD
+table		O	NN
+tennis		O	NN
+on		O	IN
+it		O	PRP
+in		O	IN
+store		O	NN
+!		O	0
+V		O	RB
+impressed		O	VBD
+.		O	0
+Did		O	VB
+you		O	PRP
+get		O	VB
+analogue		O	JJ
+controller		O	NN
+2		O	RB
+?		O	0
+			
+Balloon		O	
+glowing		O	
+?		O	
+We'd		O	
+love		O	
+to		O	
+see		O	
+you		O	
+before		O	
+or		O	
+after		O	
+at		O	
+Pi	NIL	B-geo-loc	
+!		O	
+CWE	http://dbpedia.org/resource/Central_West_End,_St._Louis	B-geo-loc	
+and		O	
+Delmar	NIL	B-geo-loc	
+are		O	
+around		O	
+the		O	
+corner		O	
+,		O	
+Kirkwood	NIL	B-geo-loc	
+&amp;		O	
+...		O	
+http://fb.me/I6SZ52nW		O	
+			
+Have		O	VBP
+a		O	DT
+practice		O	NN
+session		O	NN
+@Cromwell		O	USR
+Field		O	NN
+today		O	NN
+at		O	IN
+6pm		O	CD
+.		O	0
+Hope		O	VBP
+i		O	PRP
+shine		O	VBP
+well		O	RB
+and		O	CC
+start		O	VB
+the		O	DT
+next		O	JJ
+game		O	NN
+.		O	0
+:)		O	UH
+			
+@ConorMc_Ginty		O	USR
+GaGa	http://dbpedia.org/resource/Lady_Gaga	B-person	NNP
+played		O	VBD
+here		O	RB
+a		O	DT
+few		O	JJ
+weeks		O	NNS
+back		O	JJ
+.		O	0
+She		O	PRP
+spoke		O	VBD
+out		O	RP
+against		O	IN
+SB1070	http://dbpedia.org/resource/Arizona_SB_1070‎	B-product	NNP
+during		O	IN
+the		O	DT
+show		O	NN
+.		O	0
+God		O	NNP
+bless		O	VBZ
+her		O	PRP
+for		O	IN
+that		O	DT
+.		O	0
+			
+Still		O	
+dislike		O	
+Early		O	
+Decision		O	
+for		O	
+most		O	
+kids		O	
+,		O	
+but		O	
+Early		O	
+Action		O	
+can		O	
+be		O	
+great		O	
+when		O	
+used		O	
+thoughtfully		O	
+.		O	
+http://ow.ly/2G1Cn		O	
+#admissions		O	
+#colleges		O	
+			
+From		O	IN
+Green		O	NNP
+Newsfeed		O	NNP
+:		O	:
+AHFA	http://dbpedia.org/resource/American_Home_Furnishings_Alliance	B-other	NNP
+extends		O	VBZ
+deadline		O	NN
+for		O	IN
+Sage	NIL	B-other	NNP
+Award	NIL	I-other	NNP
+to		O	TO
+Nov		O	NNP
+.		O	0
+5		O	CD
+http://tinyurl.com/24agj38		O	URL
+			
+just		O	RB
+about		O	RB
+off		O	RB
+work		O	NN
+!		O	0
+going		O	VBG
+to		O	TO
+alderwood	NIL	B-geo-loc	NNP
+again		O	RB
+:)		O	UH
+yay		O	UH
+.		O	0
+hopefully		O	RB
+we		O	PRP
+got		O	VBD
+cody		O	NNP
+'s		O	POS
+ipod	http://dbpedia.org/resource/iPod	B-product	NN
+in		O	IN
+the		O	DT
+mail		O	NN
+today		O	NN
+.		O	0
+			
+Adam	http://dbpedia.org/resource/Adam_Beyer	B-person	
+Beyer	http://dbpedia.org/resource/Adam_Beyer	I-person	
+:		O	
+Swedish		O	
+Techno		O	
+Pioneer		O	
+:		O	
+When		O	
+it		O	
+comes		O	
+to		O	
+his		O	
+own		O	
+DJing		O	
+and		O	
+sound		O	
+,		O	
+he		O	
+'s		O	
+slightly		O	
+more		O	
+diverse		O	
+and		O	
+likes		O	
+...		O	
+http://bit.ly/c1E0I1		O	
+			
+RT		O	
+@RealJudgeJules		O	
+:		O	
+Playing		O	
+the		O	
+world		O	
+exclusive		O	
+of		O	
+@SanderVanDoorn		O	
+remix		O	
+of		O	
+@swedishousemfia		O	
+-		O	
+Miami	http://dbpedia.org/resource/Miami_2_Ibiza	B-other	
+2	http://dbpedia.org/resource/Miami_2_Ibiza	I-other	
+Ibiza	http://dbpedia.org/resource/Miami_2_Ibiza	I-other	
+on		O	
+the		O	
+show		O	
+tonight		O	
+.		O	
+Tune		O	
+i		O	
+...		O	
+			
+ok		O	
+bed		O	
+time		O	
+.		O	
+I		O	
+think		O	
+i'ma		O	
+curl		O	
+up		O	
+and		O	
+watch		O	
+Sabrina	http://dbpedia.org/resource/Sabrina:_The_Animated_Series	B-tvshow	
+!!!		O	
+Thanks		O	
+@louisha		O	
+!!!		O	
+x		O	
+			
+RT		O	
+@PolarBeverages		O	
+:		O	
+Before		O	
+Hurricane	http://dbpedia.org/resource/Hurricane_Earl_(2010)	B-other	
+Earl	http://dbpedia.org/resource/Hurricane_Earl_(2010)	I-other	
+comes		O	
+,		O	
+stock		O	
+up		O	
+on		O	
+Polar		O	
+Orange		O	
+Dry		O	
+!		O	
+:)		O	
+			
+DJ		O	NNP
+set		O	NN
+at		O	IN
+The	http://dbpedia.org/resource/Standard_Hotel‎	B-facility	NNP
+Standard	http://dbpedia.org/resource/Standard_Hotel‎	I-facility	NNP
+in		O	IN
+LA	http://dbpedia.org/resource/Los_Angeles‎	B-geo-loc	NNP
+tonight		O	NN
+!		O	0
+http://fb.me/I91IUaEq		O	URL
+			
+@justinbieber		O	USR
+I		O	PRP
+have		O	VBP
+chance		O	NN
+with		O	IN
+you		O	PRP
+?		O	0
+webcam		O	NN
+enters		O	VBZ
+Sunday		O	NNP
+7:00		O	CD
+pm		O	JJ
+?		O	0
+please		O	UH
+?		O	0
+to		O	TO
+talk		O	VB
+right		O	RB
+!		O	0
+kisses		O	NNS
+on		O	IN
+the		O	DT
+chin		O	NN
+			
+...		O	:
+four		O	CD
+fucking		O	JJ
+years		O	NNS
+I		O	PRP
+'ve		O	VBP
+been		O	VBN
+configuring		O	VBG
+iBGP	http://dbpedia.org/resource/Border_Gateway_Protocol‎	B-other	NNP
+and		O	CC
+eBGP	http://dbpedia.org/resource/Border_Gateway_Protocol‎	B-other	NNP
+on		O	IN
+Cisco	http://dbpedia.org/resource/Cisco_Systems	B-company	NNP
+AND		O	CC
+Juniper	http://dbpedia.org/resource/Juniper_Networks	B-company	NNP
+routers		O	NNS
+for		O	IN
+America	http://dbpedia.org/resource/United_States	B-geo-loc	NNP
+'s		O	POS
+largest		O	JJS
+wireless		O	NN
+ISP		O	NN
+...		O	:
+and		O	CC
+I		O	PRP
+get		O	VBP
+a		O	DT
+612		O	CD
+			
+#sp		O	
+Facebook	http://dbpedia.org/resource/Facebook	B-company	
+Job-Hunting		O	
+App		O	
+BranchOut	http://dbpedia.org/resource/BranchOut	B-product	
+Raises		O	
+$6		O	
+Million		O	
+From		O	
+Accel	http://dbpedia.org/resource/Accel_Partners	B-company	
+And		O	
+Super		O	
+Angels		O	
+:		O	
+When		O	
+you		O	
+want		O	
+to		O	
+hang		O	
+out		O	
+...		O	
+http://migre.me/1kO1K		O	
+			
+CyberNation		O	
+Sky	http://dbpedia.org/resource/Sky_3D	B-company	
+3D	http://dbpedia.org/resource/Sky_3D	I-company	
+enlists		O	
+Stephen	http://dbpedia.org/resource/Stephen_Fry	B-person	
+Fry	http://dbpedia.org/resource/Stephen_Fry	I-person	
+to		O	
+explain		O	
+the		O	
+technology		O	
+ahead		O	
+of		O	
+its		O	
+October		O	
+1		O	
+launch		O	
+(		O	
+video)		O	
+:		O	
+With		O	
+the		O	
+o		O	
+...		O	
+http://bit.ly/aWoRmo		O	
+			
+@lauraluanabeth		O	USR
+'ll		O	MD
+be		O	VB
+back		O	RB
+in		O	IN
+LA	http://dbpedia.org/resource/Los_Angeles‎	B-geo-loc	NNP
+tomorrow		O	NN
+night		O	NN
+!		O	0
+yaaaay		O	UH
+!		O	0
+			
+Was		O	VBD
+hard		O	JJ
+work		O	NN
+going		O	VBG
+to		O	TO
+the		O	DT
+gym		O	NN
+on		O	IN
+my		O	PRP$
+own		O	JJ
+tonight		O	NN
+but		O	CC
+managed		O	VBD
+a		O	DT
+30		O	CD
+min		O	NN
+run		O	NN
+and		O	CC
+plenty		O	RB
+of		O	IN
+weights		O	NNS
+.		O	0
+Catching		O	VBG
+up		O	RP
+on		O	IN
+ufc	http://dbpedia.org/resource/Ultimate_Fighting_Championship‎	B-company	NNP
+now		O	RB
+			
+Let		O	
+'s		O	
+go		O	
+to		O	
+New	http://dbpedia.org/resource/New_York	B-geo-loc	
+York	http://dbpedia.org/resource/New_York	I-geo-loc	
+tomorrow		O	
+with		O	
+Blakehurst	NIL	B-other	
+.		O	
+Contact		O	
+us		O	
+about		O	
+your		O	
+fall/winter		O	
+trave		O	
+@		O	
+410-336-3234		O	
+			
+A		O	
+week		O	
+in		O	
+New	http://dbpedia.org/resource/New_Jersey	B-geo-loc	
+Jersey	http://dbpedia.org/resource/New_Jersey	I-geo-loc	
+,		O	
+of		O	
+all		O	
+places		O	
+,		O	
+and		O	
+I		O	
+never		O	
+want		O	
+to		O	
+hear		O	
+a		O	
+*Boston*	http://dbpedia.org/resource/Boston	B-geo-loc	
+accent		O	
+again		O	
+.		O	
+			
+Preventing		O	VBG
+Public		O	NN
+Health		O	NN
+Disasters		O	NNS
+[		O	:
+The		O	DT
+Pump		O	NN
+Handle]		O	NN
+:		O	:
+Earlier		O	RBR
+this		O	DT
+week		O	NN
+,		O	,
+FDA	http://dbpedia.org/resource/Food_and_Drug_Administration	B-other	NNP
+Commissioner		O	NN
+Margaret	http://dbpedia.org/resource/Margaret_Hamburg	B-person	NNP
+Hamburg	http://dbpedia.org/resource/Margaret_Hamburg	I-person	NNP
+present		O	VBP
+...		O	:
+http://bit.ly/9i1AEg		O	URL
+			
+Halo	http://dbpedia.org/resource/Halo:_Reach	B-product	NNP
+Reach	http://dbpedia.org/resource/Halo:_Reach	I-product	NNP
+was		O	VBD
+a		O	DT
+bit		O	JJ
+crap		O	NN
+tonight		O	NN
+			
+#BlackHoliday		O	
+Marvin	http://dbpedia.org/resource/Marvin_Gaye	B-person	
+Gaye	http://dbpedia.org/resource/Marvin_Gaye	I-person	
+Day		O	
+			
+'Come		O	
+to		O	
+"		O	
+MRB	NIL	B-other	
+@	NIL	I-other	
+61	NIL	I-other	
+Roadhouse	NIL	I-other	
+BBQ	NIL	I-other	
+"		O	
+Sunday		O	
+,		O	
+October		O	
+10		O	
+from		O	
+12:00		O	
+pm		O	
+to		O	
+4:00		O	
+pm		O	
+.		O	
+We		O	
+are		O	
+playing		O	
+for		O	
+the		O	
+61		O	
+Roadhouse		O	
+...		O	
+http://fb.me/G1FbJGw1'		O	
+			
+Day		O	NN
+at		O	IN
+T		O	NNP
+.		O	0
+epic		O	JJ
+interview		O	NN
+and		O	CC
+photo		O	NN
+shoot		O	NN
+with		O	IN
+Marie	http://dbpedia.org/resource/Marie_Claire‎	B-company	NNP
+Clair	http://dbpedia.org/resource/Marie_Claire‎	I-company	NNP
+.		O	0
+@OHEMMGEEZY		O	USR
+			
+You		O	
+all		O	
+need		O	
+to		O	
+know		O	
+justin	http://dbpedia.org/resource/Justin_Bieber‎	B-person	
+isnt		O	
+the		O	
+innocent		O	
+16		O	
+year		O	
+old		O	
+boy		O	
+you		O	
+think		O	
+he		O	
+is		O	
+he		O	
+has		O	
+to		O	
+be		O	
+like		O	
+that		O	
+and		O	
+'		O	
+love		O	
+'		O	
+his		O	
+fans		O	
+so		O	
+...		O	
+			
+Soulja	http://dbpedia.org/resource/Soulja_Boy	B-person	NNP
+Boy	http://dbpedia.org/resource/Soulja_Boy	I-person	NNP
+|		O	:
+TheDeAndreWay		O	URL
+.		O	0
+com		O	URL
+-		O	:
+The		O	NNP
+DeAndre		O	NNP
+Way		O	NNP
+in		O	IN
+stores		O	NNS
+Nov		O	NNP
+.		O	0
+2		O	CD
+,		O	,
+2010		O	CD
+http://t.co/woAiLlZ		O	URL
+via		O	IN
+@SouljaBoy		O	USR
+			
+Is		O	VBZ
+Joaquin	http://dbpedia.org/resource/Joaquin_Phoenix	B-person	NNP
+Phoenix	http://dbpedia.org/resource/Joaquin_Phoenix	I-person	NNP
+Our		O	PRP$
+Modern		O	JJ
+Day		O	NN
+Andy	http://dbpedia.org/resource/Andy_Kaufman	B-person	NNP
+Kaufman	http://dbpedia.org/resource/Andy_Kaufman	I-person	NNP
+?:		O	0
+...		O	:
+the		O	DT
+bizarre		O	JJ
+events		O	NNS
+leading		O	VBG
+up		O	IN
+to		O	TO
+this		O	DT
+moment		O	NN
+,		O	,
+the		O	DT
+movie		O	NN
+could		O	MD
+...		O	:
+http://bit.ly/aUZ2on		O	URL
+			
+I		O	PRP
+like		O	VBP
+@SouljaBoy		O	USR
+songs		O	NNS
+after		O	IN
+a		O	DT
+few		O	JJ
+drinks		O	NNS
+			
+800		O	
+miles		O	
+to		O	
+see		O	
+clients		O	
+,		O	
+3		O	
+ACC		O	
+candidate/commissioner		O	
+meetings		O	
+,		O	
+big		O	
+press		O	
+release		O	
+,		O	
+making		O	
+it		O	
+to		O	
+Friday		O	
+..		O	
+PRICELESS		O	
+!		O	
+			
+@Zerinaakers		O	USR
+talking		O	VBG
+about		O	IN
+as		O	RB
+far		O	RB
+as		O	IN
+shooting		O	VBG
+for		O	IN
+location		O	NN
+its		O	PRP
+going		O	VBG
+to		O	TO
+be		O	VB
+on		O	IN
+#Vh1	http://dbpedia.org/resource/VH1	B-company	HT
+so		O	RB
+by		O	IN
+the		O	DT
+end		O	NN
+of		O	IN
+the		O	DT
+month		O	NN
+i		O	PRP
+should		O	MD
+know		O	VB
+something		O	NN
+			
+Branching		O	
+out		O	
+from		O	
+Lincoln	NIL	B-product	
+park	NIL	I-product	
+after	NIL	I-product	
+dark	NIL	I-product	
+...		O	
+Hello		O	
+"		O	
+Russian	NIL	B-product	
+navy	NIL	I-product	
+"		O	
+it		O	
+'s		O	
+like		O	
+the		O	
+same		O	
+thing		O	
+but		O	
+with		O	
+glitter		O	
+!		O	
+			
+@jackjohnson		O	USR
+where		O	WRB
+can		O	MD
+I		O	PRP
+get		O	VBP
+the		O	DT
+official		O	JJ
+set		O	NN
+list		O	NN
+to		O	TO
+the		O	DT
+show		O	NN
+at		O	IN
+Berkeley	NIL	B-geo-loc	NNP
+in		O	IN
+Oct		O	NNP
+6th		O	CD
+?!		O	0
+			
+LOL		O	UH
+A-W-E-S-O-M-E		O	JJ
+!!		O	0
+btw		O	UH
+,		O	,
+totally		O	RB
+agree		O	VBP
+RT		O	RT
+@fanoffob		O	USR
+Fall	http://dbpedia.org/resource/Fall_Out_Boy‎	B-musicartist	NNP
+Out	http://dbpedia.org/resource/Fall_Out_Boy‎	I-musicartist	NNP
+Boy	http://dbpedia.org/resource/Fall_Out_Boy‎	I-musicartist	NNP
+is		O	VBZ
+gay		O	JJ
+#reallymeans		O	HT
+I		O	PRP
+'m		O	VBP
+secretly		O	RB
+a		O	DT
+big		O	JJ
+time		O	JJ
+fan		O	NN
+.		O	0
+			
+[		O	(
+GigaOM		O	NNP
+]		O	)
+DRM		O	NNP
+FAIL		O	VB
+:		O	:
+Five		O	CD
+Broken		O	JJ
+Copy		O	NN
+Protection		O	NN
+Schemes		O	NNS
+:		O	:
+This		O	DT
+week		O	NN
+,		O	,
+we		O	PRP
+learned		O	VBD
+that		O	IN
+the		O	DT
+HDCP		O	NNP
+copy		O	NN
+protection		O	NN
+scheme		O	NN
+...		O	:
+http://bit.ly/blWf0e		O	URL
+			
+OMG		O	
+!		O	
+Miley	http://dbpedia.org/resource/Miley_Cyrus	B-person	
+Cyrus	http://dbpedia.org/resource/Miley_Cyrus	I-person	
+Has		O	
+A		O	
+14-Year-Old		O	
+Stalker		O	
+!:		O	
+First		O	
+Paris	http://dbpedia.org/resource/Paris_Hilton	B-person	
+Hilton	http://dbpedia.org/resource/Paris_Hilton	I-person	
+,		O	
+now		O	
+Miley	http://dbpedia.org/resource/Miley_Cyrus	B-person	
+Cyrus	http://dbpedia.org/resource/Miley_Cyrus	I-person	
+!		O	
+Cops		O	
+responded		O	
+to		O	
+a		O	
+break		O	
+in		O	
+cal		O	
+...		O	
+http://bit.ly/cd6OPC		O	
+			
+@MikePortnoy		O	USR
+I		O	PRP
+got		O	VBD
+slapped		O	VBD
+in		O	IN
+the		O	DT
+face		O	NN
+the		O	DT
+other		O	JJ
+day		O	NN
+by		O	IN
+a		O	DT
+few		O	JJ
+DT	http://dbpedia.org/resource/Dream_Theater	B-musicartist	NNP
+fans		O	NNS
+because		O	IN
+I		O	PRP
+said		O	VBD
+you		O	PRP
+were		O	VBD
+awesome		O	JJ
+for		O	IN
+joining		O	VBG
+A7X	http://dbpedia.org/resource/Avenged_Sevenfold	O	NNP
+.		O	0
+So		O	RB
+worth		O	JJ
+it		O	PRP
+.		O	0
+foREVer		O	RB
+!		O	0
+			
+#MedicalJobs		O	
+CT/Rad		O	
+Tech		O	
+-		O	
+PRN		O	
+:		O	
+TX-Fort		O	
+Worth		O	
+,		O	
+When		O	
+physicians		O	
+own		O	
+the		O	
+hospital		O	
+,		O	
+the		O	
+latest		O	
+advances		O	
+in		O	
+medical		O	
+s		O	
+...		O	
+http://bit.ly/cVPhNE		O	
+			
+I		O	PRP
+have		O	VBP
+a		O	DT
+strong		O	JJ
+hunch		O	NN
+Adam	NIL	B-person	NNP
+will		O	MD
+be		O	VB
+a		O	DT
+story		O	NN
+on		O	IN
+TMZ	http://dbpedia.org/resource/TMZ_on_TV	B-tvshow	NNP
+tonight		O	NN
+.		O	0
+Gulp		O	UH
+.		O	0
+			
+Rep		O	NNP
+.		O	0
+Bono	http://dbpedia.org/resource/Mary_Bono	B-person	NNP
+Mack	http://dbpedia.org/resource/Mary_Bono	I-person	NNP
+to		O	TO
+criticize		O	VB
+fellow		O	JJ
+desert		O	NN
+dweller		O	NN
+Barbara	http://dbpedia.org/resource/Barbara_Boxer	B-person	NNP
+Boxer	http://dbpedia.org/resource/Barbara_Boxer	I-person	NNP
+at		O	IN
+event		O	NN
+today		O	NN
+.		O	0
+http://tinyurl.com/2bhyuq7		O	URL
+			
+LIVESTRONG	NIL	B-other	NNP
+Day	NIL	I-other	NNP
+is		O	VBZ
+10-02-10		O	CD
+around		O	IN
+the		O	DT
+world		O	NN
+.		O	0
+			
+Apparently		O	
+40		O	
+days		O	
+,		O	
+1		O	
+hour		O	
+,		O	
+49		O	
+mins		O	
+and		O	
+36		O	
+seconds		O	
+to		O	
+Doha	http://dbpedia.org/resource/Doha	B-geo-loc	
+....		O	
+			
+It		O	PRP
+'s		O	VBZ
+official		O	NN
+.		O	0
+Next		O	JJ
+book		O	NN
+club		O	NN
+selection		O	NN
+is		O	VBZ
+"		O	''
+Not	NIL	B-other	NNP
+a	NIL	I-other	NNP
+Genuine	NIL	I-other	NNP
+Black	NIL	I-other	NNP
+Man	NIL	I-other	NNP
+"		O	''
+by		O	IN
+@BrianCopie		O	USR
+I		O	PRP
+saw		O	VBD
+the		O	DT
+show		O	NN
+a		O	DT
+few		O	JJ
+years		O	NNS
+ago		O	RB
+and		O	CC
+it		O	PRP
+was		O	VBD
+fantastic		O	JJ
+.		O	0
+			
+Buffs		O	
+FB		O	
+:		O	
+Giddings	NIL	B-geo-loc	
+faces		O	
+Elgin	NIL	B-geo-loc	
+tonite		O	
+@		O	
+Wildcat	NIL	B-facility	
+Stadium	NIL	I-facility	
+@		O	
+7:30		O	
+.		O	
+The	NIL	B-sportsteam	
+Buffs	NIL	I-sportsteam	
+will		O	
+try		O	
+to		O	
+re-group		O	
+after		O	
+two		O	
+straight		O	
+losses		O	
+.		O	
+Updates		O	
+on		O	
+LCL	NIL	B-company	
+			
+@angelajames		O	USR
+@roxannestclaire		O	USR
+I		O	PRP
+have		O	VBP
+n't		O	RB
+tried		O	VBN
+MAC	http://dbpedia.org/resource/MAC_Cosmetics	B-company	NNP
+.		O	0
+Next		O	JJ
+time		O	NN
+!		O	0
+			
+super	http://dbpedia.org/resource/Super_Nintendo_Entertainment_System‎	B-product	
+nintendo	http://dbpedia.org/resource/Super_Nintendo_Entertainment_System‎	I-product	
+sega	http://dbpedia.org/resource/Sega_Genesis	B-product	
+genesis	http://dbpedia.org/resource/Sega_Genesis	I-product	
+,		O	
+when		O	
+i		O	
+was		O	
+dead		O	
+broke		O	
+man		O	
+i		O	
+couldn't		O	
+picture		O	
+this		O	
+!		O	
+#nowplaying		O	
+Juicy		O	
+by		O	
+Biggie		O	
+			
+watching		O	VBG
+the		O	DT
+VMA	http://dbpedia.org/resource/MTV_Video_Music_Award	B-tvshow	NNP
+pre-show		O	NN
+again		O	RB
+lol		O	UH
+it		O	PRP
+was		O	VBD
+n't		O	RB
+even		O	RB
+a		O	DT
+good		O	JJ
+show		O	NN
+the		O	DT
+first		O	JJ
+time		O	NN
+...		O	:
+so		O	RB
+bored		O	VBN
+!		O	0
+			
+Haven't		O	
+tweeted		O	
+since		O	
+june		O	
+wow		O	
+.......................		O	
+but		O	
+I		O	
+did		O	
+get		O	
+a		O	
+facebook	http://dbpedia.org/resource/Facebook	B-company	
+so		O	
+who		O	
+cares		O	
+about		O	
+twitter	http://dbpedia.org/resource/Twitter	B-company	
+			
+RT		O	
+@KarlaRay		O	
+:		O	
+What		O	
+a		O	
+day		O	
+in		O	
+#Collier		O	
+!		O	
+Watch		O	
+@NBC2		O	
+at		O	
+6		O	
+for		O	
+details		O	
+on		O	
+the		O	
+latest		O	
+growhouse		O	
+bust		O	
+and		O	
+the		O	
+county		O	
+'s		O	
+first-ever		O	
+West		O	
+Nile		O	
+d		O	
+...		O	
+			
+30		O	
+Mosques		O	
+in		O	
+30		O	
+Days		O	
+:		O	
+A		O	
+Trip		O	
+Through		O	
+Islamic		O	
+America		O	
+http://dlvr.it/5RdYv		O	
+			
+Best		O	
+#free		O	
+#livemusic		O	
+in		O	
+#Denver	http://dbpedia.org/resource/Denver	B-geo-loc	
+tonight		O	
+with		O	
+the		O	
+return		O	
+of		O	
+Breaking	NIL	B-musicartist	
+&amp;	NIL	I-musicartist	
+Entering	NIL	I-musicartist	
+.		O	
+Be		O	
+sure		O	
+to		O	
+come		O	
+down		O	
+to		O	
+Hi	NIL	B-facility	
+Pac	NIL	I-facility	
+and		O	
+check		O	
+it		O	
+out		O	
+!		O	
+			
+3		O	
+tour		O	
+coaches		O	
+with		O	
+a		O	
+police		O	
+escort		O	
+in		O	
+Chapel	NIL	B-geo-loc	
+Hill	NIL	I-geo-loc	
+...		O	
+game		O	
+tonight		O	
+?		O	
+			
+@SoccerByIves		O	USR
+Let		O	VB
+'s		O	PRP
+hope		O	VBP
+the		O	DT
+Serie	http://dbpedia.org/resource/Serie_A	B-other	NNP
+A	http://dbpedia.org/resource/Serie_A	I-other	NNP
+continues		O	VBZ
+to		O	TO
+be		O	VB
+on		O	IN
+the		O	DT
+tv		O	NN
+schedule		O	NN
+next		O	JJ
+week		O	NN
+.		O	0
+This		O	DT
+strike		O	NN
+has		O	VBZ
+fans		O	NNS
+of		O	IN
+Calcio	NIL	B-geo-loc	NNP
+worried		O	VBN
+....		O	:
+			
+I		O	PRP
+just		O	RB
+took		O	VBD
+"		O	''
+After		O	IN
+getting		O	VBG
+trampled		O	VBD
+at		O	IN
+a		O	DT
+Justin	http://dbpedia.org/resource/Justin_Bieber	B-person	NNP
+Bieber	http://dbpedia.org/resource/Justin_Bieber	I-person	NNP
+concert		O	NN
+,		O	,
+yoiu		O	PRP
+wake		O	VBP
+up		O	IN
+and		O	CC
+..."		O	CD
+and		O	CC
+got		O	VBD
+:		O	:
+Part		O	NN
+6		O	CD
+:)		O	UH
+!		O	0
+Try		O	VB
+it		O	PRP
+:		O	:
+http://tinyurl.com/233u5lu		O	URL
+			
+anyone		O	
+else		O	
+ever		O	
+have		O	
+a		O	
+problem		O	
+moving		O	
+a		O	
+Hyper	http://dbpedia.org/resource/Hyper-V	B-other	
+V	http://dbpedia.org/resource/Hyper-V	I-other	
+guest		O	
+from		O	
+a		O	
+server	http://dbpedia.org/resource/Windows_server_2008	B-product	
+2008	http://dbpedia.org/resource/Windows_server_2008	I-product	
+to		O	
+server	http://dbpedia.org/resource/Windows_server_2008	B-product	
+2008	http://dbpedia.org/resource/Windows_server_2008	I-product	
+R2	http://dbpedia.org/resource/Windows_server_2008	I-product	
+host		O	
+?		O	
+Having		O	
+strange		O	
+lock		O	
+up		O	
+after		O	
+the		O	
+move		O	
+..		O	
+			
+@jaredleto		O	USR
+...		O	:
+ive		O	PRP
+been		O	VBN
+to		O	TO
+13		O	CD
+30stm	http://dbpedia.org/resource/Thirty_Seconds_to_Mars‎	B-musicartist	NNP
+concerts		O	NNS
+now		O	RB
+and		O	CC
+you		O	PRP
+never		O	RB
+got		O	VBD
+me		O	PRP
+on		O	IN
+stage		O	NN
+during/before		O	RB
+kings	http://dbpedia.org/resource/Kings_and_Queens_(Thirty_Seconds_to_Mars_song)	B-musicartist	NNP
+and	http://dbpedia.org/resource/Kings_and_Queens_(Thirty_Seconds_to_Mars_song)	I-musicartist	CC
+queens	http://dbpedia.org/resource/Kings_and_Queens_(Thirty_Seconds_to_Mars_song)	I-musicartist	NNPS
+:(		O	UH
+((		O	UH
+			
+Time	http://dbpedia.org/resource/Time_Warner_Cable	B-company	NNP
+Warner	http://dbpedia.org/resource/Time_Warner_Cable	I-company	NNP
+Cable	http://dbpedia.org/resource/Time_Warner_Cable	I-company	NNP
+Boycotting		O	VBG
+Epix	http://dbpedia.org/resource/Epix_(TV_network)	B-other	NNP
+Movie	http://dbpedia.org/resource/Epix_(TV_network)	I-other	NNP
+Channel	http://dbpedia.org/resource/Epix_(TV_network)	I-other	NNP
+Because		O	IN
+It		O	PRP
+Did		O	VBD
+A		O	DT
+Deal		O	NN
+With		O	IN
+Netflix	http://dbpedia.org/resource/Netflix	B-company	NNP
+http://dlvr.it/5RgcL		O	URL
+			
+RT		O	RT
+@TRAEABN		O	USR
+Headed		O	VBN
+to		O	TO
+Shreveport	http://dbpedia.org/resource/Shreveport,_Louisiana	B-geo-loc	NNP
+then		O	IN
+Lake	http://dbpedia.org/resource/Lake_Charles,_Louisiana	B-geo-loc	NNP
+Charles	http://dbpedia.org/resource/Lake_Charles,_Louisiana	I-geo-loc	NNP
+-might		O	MD
+as		O	IN
+well		O	RB
+shoot		O	VB
+through		O	IN
+dat		O	DT
+#BMT		O	HT
+after		O	IN
+the		O	DT
+slab		O	NN
+show		O	NN
+in		O	IN
+Lake	http://dbpedia.org/resource/Lake_Charles,_Louisiana	B-geo-loc	NNP
+Charles	http://dbpedia.org/resource/Lake_Charles,_Louisiana	I-geo-loc	NNP
+..		O	0
+			
+Bestfriend		O	NN
+HouseTonight		O	NN
+Til		O	IN
+Sunday		O	NNP
+Route		O	NNP
+66		O	CD
+Tomarrow		O	NN
+Wit		O	IN
+The		O	DT
+Cuhzans		O	NNS
+,		O	,
+Bestfriend&lt;Ride		O	NN
+Or		O	CC
+Die		O	VB
+.		O	0
+Fuxx		O	VBN
+Widd		O	IN
+IHT		O	NNP
+MODEL'$$		O	NN
+Repp		O	NN
+:)		O	UH
+			
+RT		O	RT
+@robmoysey		O	USR
+Eyeopener	http://dbpedia.org/resource/The_Eyeopener	B-sportsteam	NNP
+vs		O	CC
+.		O	0
+Ryerson	NIL	B-sportsteam	NNP
+Quidditch	NIL	I-sportsteam	NN
+team		O	NN
+this		O	DT
+Sunday		O	NNP
+at		O	IN
+4		O	CD
+p.m.		O	NN
+Anyone		O	NN
+know		O	VB
+where		O	WRB
+to		O	TO
+get		O	VB
+cheap		O	JJ
+brooms		O	NNS
+?		O	0
+#Ryerson		O	HT
+@RUQuidditch		O	USR
+#Rams		O	HT
+			
+Lots		O	NNS
+of		O	IN
+Merlot	http://dbpedia.org/resource/Merlot	B-product	NNP
+on		O	IN
+Thursday		O	NNP
+night		O	NN
+means		O	VBZ
+tired		O	JJ
+London		O	NNP
+Ladies		O	NNS
+are		O	VBP
+in		O	IN
+bed		O	NN
+by		O	IN
+23.19		O	CD
+on		O	IN
+the		O	DT
+Friday		O	NNP
+.		O	0
+Listening		O	VBG
+to		O	TO
+the		O	DT
+arts		O	NNS
+show		O	NN
+on		O	IN
+@BBCRadio4		O	USR
+.		O	0
+			
+@chrislhayes		O	
+That		O	
+'s		O	
+nothing		O	
+compared		O	
+to		O	
+the		O	
+LaserDiscs		O	
+I		O	
+picked		O	
+up		O	
+at		O	
+goodwill		O	
+the		O	
+other		O	
+day		O	
+.		O	
+Completely		O	
+useless		O	
+those		O	
+.		O	
+			
+Really		O	RB
+hope		O	VBP
+I		O	PRP
+can		O	MD
+get		O	VB
+to		O	TO
+@glasgowfilm		O	USR
+for		O	IN
+Winter	http://dbpedia.org/resource/Winter's_Bone‎	B-movie	NNP
+'s	http://dbpedia.org/resource/Winter's_Bone‎	I-movie	POS
+Bone	http://dbpedia.org/resource/Winter's_Bone‎	I-movie	NNP
+-		O	:
+need		O	VBP
+to		O	TO
+get		O	VB
+on		O	IN
+with		O	IN
+job		O	NN
+applications		O	NNS
+tonight		O	NN
+then		O	RB
+!		O	0
+Trailer		O	NN
+:		O	:
+http://bit.ly/bhUlum		O	URL
+			
+DITR		O	NNP
+REI		O	NNP
+Update		O	NN
+:		O	:
+California	http://dbpedia.org/resource/California	B-geo-loc	NNP
+Home		O	NN
+Sales		O	NNS
+Decline		O	VBZ
+Year-Over-Year		O	JJ
+:		O	:
+By		O	IN
+Michael	NIL	B-person	NNP
+Kraus	NIL	I-person	NNP
+on		O	IN
+September		O	NNP
+17		O	CD
+...		O	:
+http://bit.ly/96Zavf		O	URL
+#realestate		O	HT
+#invest		O	HT
+			
+Why		O	
+do		O	
+that		O	
+to		O	
+begin		O	
+with		O	
+?		O	
+lols		O	
+.		O	
+@mggykills		O	
+@dieSIBdie		O	
+When		O	
+on		O	
+vacation		O	
+in		O	
+Cebu	http://dbpedia.org/resource/Cebu	B-geo-loc	
+,		O	
+you		O	
+do		O	
+not		O	
+sniff		O	
+your		O	
+roommate		O	
+'s		O	
+boxers		O	
+.		O	
+#rulesbetweenmen		O	
+			
+RT		O	RT
+@PLLGirls		O	USR
+:		O	:
+Episodes		O	NNS
+1-10		O	CD
+of		O	IN
+Pretty	http://dbpedia.org/resource/Pretty_Little_Liars_%28TV_series%29	B-tvshow	NNP
+Little	http://dbpedia.org/resource/Pretty_Little_Liars_%28TV_series%29	I-tvshow	NNP
+Liars	http://dbpedia.org/resource/Pretty_Little_Liars_%28TV_series%29	I-tvshow	NNP
+will		O	MD
+air		O	VB
+in		O	IN
+the		O	DT
+UK	http://dbpedia.org/resource/United_Kingdom	B-geo-loc	NNP
+on		O	IN
+October		O	NNP
+18		O	CD
+!		O	0
+			
+Playboy	http://dbpedia.org/resource/Playboy_Enterprises	B-company	
+-		O	
+10		O	
+October		O	
+2010		O	
+Slovenia	http://dbpedia.org/resource/Slovenia	B-geo-loc	
+:		O	
+Playboy	http://dbpedia.org/resource/Playboy_Enterprises	B-company	
+-		O	
+10		O	
+October		O	
+2010		O	
+SloveniaSlovene		O	
+|		O	
+138		O	
+pages		O	
+|		O	
+PDF		O	
+|		O	
+39.45		O	
+Mb		O	
+http://bit.ly/aJILb4		O	
+			
+Looking		O	
+for		O	
+something		O	
+to		O	
+do		O	
+tonight		O	
+?		O	
+Samuel	NIL	B-person	
+Savoirfaire	NIL	I-person	
+Williams	NIL	I-person	
+at		O	
+Potbelly	NIL	B-facility	
+Lincoln	NIL	I-facility	
+Park	NIL	I-facility	
+in		O	
+Chicago	http://dbpedia.org/resource/Chicago	B-geo-loc	
+,		O	
+IL	http://dbpedia.org/resource/Illinois	B-geo-loc	
+http://bit.ly/bKMFgi		O	
+			
+@LesColyer		O	
+Who		O	
+do		O	
+you		O	
+film		O	
+for		O	
+?		O	
+I		O	
+was		O	
+on		O	
+SKY	http://dbpedia.org/resource/Sky_News	B-other	
+news	http://dbpedia.org/resource/Sky_News	I-other	
+2		O	
+weeks		O	
+ago		O	
+#checkmeout		O	
+			
+BORDER	NIL	B-musicartist	
+LINEA	NIL	I-musicartist	
+IS		O	
+TONIGHT		O	
+!		O	
+9		O	
+p.m.		O	
+to		O	
+2		O	
+a.m.		O	
+NO		O	
+COVER		O	
+.		O	
+Come		O	
+by		O	
+and		O	
+see		O	
+local		O	
+musicians		O	
+and		O	
+artists		O	
+showcased		O	
+at		O	
+Limelight	NIL	B-facility	
+on		O	
+St	NIL	B-geo-loc	
+.	NIL	I-geo-loc	
+Mary's.	NIL	I-geo-loc	
+			
+I		O	PRP
+'ve		O	VBP
+got		O	VBN
+a		O	DT
+theory		O	NN
+that		O	IN
+if		O	IN
+you		O	PRP
+give		O	VBP
+100%		O	NN
+all		O	DT
+of		O	IN
+the		O	DT
+time		O	NN
+,		O	,
+somehow		O	RB
+things		O	NNS
+will		O	MD
+work		O	VB
+out		O	RP
+in		O	IN
+the		O	DT
+end		O	NN
+.		O	0
+-Larry	http://dbpedia.org/resource/Larry_Bird	B-person	NNP
+Bird	http://dbpedia.org/resource/Larry_Bird	I-person	NNP
+			
+preciso		O	
+de		O	
+um		O	
+BG		O	
+do		O	
+all		O	
+time		O	
+low		O	
+ou		O	
+do		O	
+the		O	
+maine		O	
+(		O	
+:		O	
+			
+Good		O	UH
+golly		O	UH
+.		O	0
+Who		O	WP
+left		O	VBD
+the		O	DT
+candy		O	NN
+in		O	IN
+the		O	DT
+lunchroom		O	NN
+.		O	0
+May		O	MD
+set		O	VBD
+a		O	DT
+world		O	NN
+record		O	NN
+for		O	IN
+the		O	DT
+most		O	JJS
+Sour	http://dbpedia.org/resource/Sour_Patch_Kids	B-product	NNP
+Patch	http://dbpedia.org/resource/Sour_Patch_Kids	I-product	NNP
+kids	http://dbpedia.org/resource/Sour_Patch_Kids	I-product	NNPS
+eaten		O	VBN
+by		O	IN
+an		O	DT
+individual		O	NN
+!		O	0
+			
+Football		O	NN
+game		O	NN
+tonight		O	NN
+with		O	IN
+mariaelena	NIL	B-person	NNP
+,		O	,
+sarah	NIL	B-person	NNP
+,		O	,
+and		O	CC
+brittany	NIL	B-person	NNP
+!		O	0
+Mood		O	NN
+:		O	:
+excited		O	JJ
+!!		O	0
+GOO		O	VB
+WB	NIL	B-sportsteam	NNP
+WILDCATS	NIL	I-sportsteam	NNP
+!		O	0
+			
+I		O	PRP
+called		O	VBD
+my		O	PRP$
+sister		O	NN
+and		O	CC
+she		O	PRP
+asked		O	VBD
+why		O	WRB
+i		O	PRP
+want		O	VBP
+a		O	DT
+mcdonalds	http://dbpedia.org/resource/McDonald's	B-company	NN
+at		O	IN
+this		O	DT
+time		O	NN
+of		O	IN
+nigh		O	NN
+t.i		O	NN
+said		O	VBD
+'		O	''
+blame		O	VB
+rose	NIL	B-person	NNP
+'		O	''
+she		O	PRP
+said		O	VBD
+'		O	''
+who		O	WP
+'s		O	VBZ
+rose	NIL	B-person	NNP
+?'		O	0
+lmao		O	UH
+			
+Blades	http://dbpedia.org/resource/Saskatoon_Blades	B-sportsteam	
+trade		O	
+Travis	NIL	B-person	
+Toomey	NIL	I-person	
+to		O	
+Seattle	http://dbpedia.org/resource/Seattle_Thunderbirds	B-geo-loc	
+for		O	
+4th		O	
+Rd		O	
+Pick		O	
+in		O	
+'		O	
+11	http://dbpedia.org/resource/WHL_Bantam_Draft	B-other	
+Bantam	http://dbpedia.org/resource/WHL_Bantam_Draft	I-other	
+Draft	http://dbpedia.org/resource/WHL_Bantam_Draft	I-other	
+.		O	
+7		O	
+20-year		O	
+olds		O	
+remain		O	
+.		O	
+#yxe		O	
+#Blades		O	
+#WHL		O	
+			
+RT		O	
+@JR_Swish		O	
+:		O	
+Every		O	
+time		O	
+I		O	
+look		O	
+@NICKIMINAJ		O	
+I		O	
+just		O	
+be		O	
+lost		O	
+for		O	
+words		O	
+damn		O	
+!		O	
+#shhhhhhh		O	
+			
+Kid	http://dbpedia.org/resource/Kid_Cudi	B-person	NNP
+Cudi	http://dbpedia.org/resource/Kid_Cudi	I-person	NNP
+Opens		O	VBZ
+Up		O	RP
+About		O	IN
+Cocaine		O	NN
+Use		O	NN
+,		O	,
+Failed		O	JJ
+Lady		O	NNP
+Gaga		O	NNP
+Tour		O	NN
+:		O	:
+by		O	IN
+Mariel	NIL	B-person	NNP
+Concepcion	NIL	I-person	NNP
+,		O	,
+NY	http://dbpedia.org/resource/New_York	B-geo-loc	NNP
+|		O	:
+September		O	NNP
+1		O	CD
+...		O	:
+http://bit.ly/cZWGDi		O	URL
+			
+Now		O	
+off		O	
+for		O	
+Sushi		O	
+before		O	
+Sundown		O	
