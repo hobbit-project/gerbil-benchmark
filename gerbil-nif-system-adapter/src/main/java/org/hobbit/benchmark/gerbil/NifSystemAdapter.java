@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 import org.aksw.gerbil.annotator.impl.nif.AdaptedNIFBasedAnnotatorWebservice;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
@@ -17,6 +19,7 @@ import org.hobbit.core.Commands;
 import org.hobbit.core.Constants;
 import org.hobbit.core.components.AbstractSystemAdapter;
 import org.hobbit.core.rabbit.RabbitMQUtils;
+import org.hobbit.core.run.ComponentStarter;
 import org.hobbit.utils.rdf.RdfHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,13 +32,18 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     private static final String NIF_SYSTEM_ADAPTER_DOCKER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbilnifsystemadapter";
     private static final String HOST_PLACE_HOLDER = "HOST";
 
-    private boolean isMaster = true;
     private boolean isTerminating = false;
     private Set<String> slaveNodes = null;
     private String systemContainer = null;
     private TurtleNIFParser parser = new TurtleNIFParser();
     private TurtleNIFWriter writer = new TurtleNIFWriter();
     private AdaptedNIFBasedAnnotatorWebservice annotator;
+    private Semaphore slaveTerminationSemaphore = new Semaphore(0);
+    private Semaphore annotatorTerminationSemaphore = new Semaphore(0);
+
+    public static void main(String[] args) {
+        ComponentStarter.main(new String[] { NifSystemAdapter.class.getCanonicalName() });
+    }
 
     public NifSystemAdapter() {
         // We have to add the broadcast command header to receive messages about
@@ -50,16 +58,9 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         Map<String, String> env = System.getenv();
         // Check whether this node is the master or not
         if (env.containsKey(NOT_MASTER_NODE_KEY)) {
-            try {
-                isMaster = Boolean.getBoolean(env.get(NOT_MASTER_NODE_KEY));
-            } catch (Exception e) {
-                LOGGER.warn(
-                        "Couldn't read the value of " + NOT_MASTER_NODE_KEY + ". Assuming that this node is a slave.",
-                        e);
-                isMaster = false;
-            }
+            slaveNodes = null;
         } else {
-            isMaster = true;
+            slaveNodes = new HashSet<>();
         }
         // Get the system image name
         String systemImage = RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.instanceImageName);
@@ -73,7 +74,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
 
         // If this is the master, create the additional adapters if they are
         // needed
-        if (isMaster) {
+        if (slaveNodes != null) {
             createSlaveNodes();
         }
         // Create the system container
@@ -84,11 +85,10 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     }
 
     private void createSlaveNodes() throws Exception {
-        slaveNodes = new HashSet<>();
         if (systemParamModel.contains(null, NIF_SYS.numberOfInstances)) {
             try {
                 int numberOfInstances = Integer
-                        .getInteger(RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.numberOfInstances));
+                        .parseInt(RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.numberOfInstances));
                 if (numberOfInstances > 1) {
                     for (int i = 1; i < numberOfInstances; ++i) {
                         createSlaveNode();
@@ -114,7 +114,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     }
 
     private void createSystem(String systemImage) throws Exception {
-        String containerName = createContainer(NIF_SYSTEM_ADAPTER_DOCKER_IMAGE, Constants.CONTAINER_TYPE_SYSTEM,
+        String containerName = createContainer(systemImage, Constants.CONTAINER_TYPE_SYSTEM,
                 new String[] { NOT_MASTER_NODE_KEY + "=true", Constants.SYSTEM_PARAMETERS_MODEL_KEY + "="
                         + System.getenv().get(Constants.SYSTEM_PARAMETERS_MODEL_KEY) });
         if (containerName != null) {
@@ -157,11 +157,13 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
             ByteBuffer buffer = ByteBuffer.wrap(data);
             String containerName = RabbitMQUtils.readString(buffer);
             int exitCode = buffer.get();
-            if (!isTerminating) {
-                if ((slaveNodes != null) && (slaveNodes.contains(containerName))) {
-                    LOGGER.error("One of the slaves terminated with exit code {}.", exitCode);
-                } else if ((systemContainer != null) && (systemContainer.equals(containerName))) {
-                    LOGGER.error("The benchmarked system terminated with exit code {}. Terminating.", exitCode);
+            if ((slaveNodes != null) && (slaveNodes.contains(containerName))) {
+                slaveTerminationSemaphore.release();
+                LOGGER.error("One of the slaves terminated with exit code {}.", exitCode);
+            } else if ((systemContainer != null) && (systemContainer.equals(containerName))) {
+                LOGGER.error("The benchmarked system terminated with exit code {}. Terminating.", exitCode);
+                annotatorTerminationSemaphore.release();
+                if (!isTerminating) {
                     terminate(new Exception("The benchmarked system terminated with exit code " + exitCode));
                 }
             }
@@ -177,10 +179,24 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
 
     @Override
     public void close() throws IOException {
+        if (slaveNodes != null) {
+            // wait for the slaves to terminate (we don't have to terminate them
+            // since they should do this by themselfs
+            try {
+                slaveTerminationSemaphore.acquire(slaveNodes.size());
+            } catch (InterruptedException e) {
+                LOGGER.info("Interrupted while waiting for the slave instances to terminate.");
+            }
+        }
         // close the annotator client
         IOUtils.closeQuietly(annotator);
         // stop the annotation service
         stopContainer(systemContainer);
+        try {
+            annotatorTerminationSemaphore.tryAcquire(1, TimeUnit.MINUTES);
+        } catch (InterruptedException e) {
+            // nothing to do
+        }
         super.close();
     }
 }
