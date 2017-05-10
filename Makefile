@@ -5,6 +5,7 @@ build:
 	cd gerbil-data-generator && mvn clean package -U -Dmaven.test.skip=true
 	cd gerbil-evaluation-module && mvn clean package -U -Dmaven.test.skip=true
 	cd gerbil-task-generator && mvn clean package -U -Dmaven.test.skip=true
+	cd gerbil-nif-system-adapter && mvn clean package -U -Dmaven.test.skip=true
 
 dockerize:
 	cd gerbil-benchmark && docker build -f gerbil_controller.docker -t git.project-hobbit.eu:4567/gerbil/gerbilcontroller .

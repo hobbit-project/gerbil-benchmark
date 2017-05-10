@@ -2,6 +2,7 @@ package org.hobbit.benchmark.gerbil;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -83,6 +84,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     }
 
     private void createSlaveNodes() throws Exception {
+        slaveNodes = new HashSet<>();
         if (systemParamModel.contains(null, NIF_SYS.numberOfInstances)) {
             try {
                 int numberOfInstances = Integer
