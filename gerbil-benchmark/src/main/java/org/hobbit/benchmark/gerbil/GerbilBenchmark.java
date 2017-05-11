@@ -2,10 +2,7 @@ package org.hobbit.benchmark.gerbil;
 
 import org.aksw.gerbil.datatypes.ExperimentType;
 import org.aksw.gerbil.semantic.vocabs.GERBIL;
-import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.NodeIterator;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFNode;
 import org.hobbit.core.Commands;
 import org.hobbit.core.Constants;
 import org.hobbit.core.components.AbstractBenchmarkController;
@@ -19,12 +16,13 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 
     private static final String DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbildatagenerator";
     private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator";
-    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbil-evaluation-module";
+    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule";
 
     private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
-//     private static final String EVALUATION_STORE_CONTAINER_IMAGE =
-//     "hobbit/evaluation_store";
-//    private static final String EVALUATION_STORE_CONTAINER_IMAGE = "in_memory_evaluation_storage";
+    // private static final String EVALUATION_STORE_CONTAINER_IMAGE =
+    // "hobbit/evaluation_store";
+    // private static final String EVALUATION_STORE_CONTAINER_IMAGE =
+    // "in_memory_evaluation_storage";
 
     private ExperimentType experimentType;
 
@@ -34,39 +32,41 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 
         // TODO define this somewhere else
         int numberOfGenerators = 1;
-        long seed = 31;
+        // long seed = 31;
 
         // ex:BenchmarkRun_123 rdf:type hobbit:BenchmarkRun;
         // ex:hasNumberOfDocuments "200"^^xsd:unsignedInt;
         // ex:hasExperimentType ex:A2KB;
-        NodeIterator iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
-                .getProperty(GERBIL2_PREFIX+"hasDataset"));
-        String datasetName="";
-        if(iterator.hasNext()){
+        NodeIterator iterator = benchmarkParamModel
+                .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasDataset"));
+        String datasetName = "";
+        if (iterator.hasNext()) {
             try {
-        	datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
+                datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
             } catch (Exception e) {
-        	LOGGER.error("Exception while parsing parameter.", e);
+                LOGGER.error("Exception while parsing parameter.", e);
             }
         }
 
-//        iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
-//                .getProperty(GERBIL2_PREFIX+"hasNumberOfDocuments"));
-//        int numberOfDocuments = -1;
-//        if (iterator.hasNext()) {
-//            try {
-//                numberOfDocuments = iterator.next().asLiteral().getInt();
-//            } catch (Exception e) {
-//                LOGGER.error("Exception while parsing parameter.", e);
-//            }
-//        }
-//        if (numberOfDocuments < 0 && datasetName.isEmpty()) {
-//            LOGGER.error("Couldn't get the number of documents from the parameter model. Using the default value.");
-//            numberOfDocuments = 100;
-//        }
-        
-        iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
-                .getProperty(GERBIL2_PREFIX+"hasExperimentType"));
+        // iterator =
+        // benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
+        // .getProperty(GERBIL2_PREFIX+"hasNumberOfDocuments"));
+        // int numberOfDocuments = -1;
+        // if (iterator.hasNext()) {
+        // try {
+        // numberOfDocuments = iterator.next().asLiteral().getInt();
+        // } catch (Exception e) {
+        // LOGGER.error("Exception while parsing parameter.", e);
+        // }
+        // }
+        // if (numberOfDocuments < 0 && datasetName.isEmpty()) {
+        // LOGGER.error("Couldn't get the number of documents from the parameter
+        // model. Using the default value.");
+        // numberOfDocuments = 100;
+        // }
+
+        iterator = benchmarkParamModel
+                .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
         experimentType = null;
         if (iterator.hasNext()) {
             try {
@@ -85,23 +85,27 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
         // such a component here
 
-//        if(!datasetName.isEmpty()){
-            createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
-        	    CONSTANTS.GERBIL_DATASET_TO_TEST_NAME + "=" + datasetName,
-        	    CONSTANTS.GERBIL_EXPERIMENT_TYPE + "=" + experimentType.getName() });
-//        }else{
-//            createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
-//        	    CONSTANTS.GERBIL_DATA_GENERATOR_NUMBER_OF_DOCUMENTS_KEY + "=" + numberOfDocuments,
-//        	    CONSTANTS.GERBIL_DATA_GENERATOR_SEED_KEY + "=" + seed });
-//        }
-        
-        createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
-                new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
+        // if(!datasetName.isEmpty()){
+        createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
+                new String[] { CONSTANTS.GERBIL_DATASET_TO_TEST_NAME + "=" + datasetName,
+                        CONSTANTS.GERBIL_EXPERIMENT_TYPE + "=" + experimentType.getName() });
+        // }else{
+        // createDataGenerators(DATA_GENERATOR_CONTAINER_IMAGE,
+        // numberOfGenerators, new String[] {
+        // CONSTANTS.GERBIL_DATA_GENERATOR_NUMBER_OF_DOCUMENTS_KEY + "=" +
+        // numberOfDocuments,
+        // CONSTANTS.GERBIL_DATA_GENERATOR_SEED_KEY + "=" + seed });
+        // }
 
-//        createEvaluationStorage();
-        createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE, new String[] { Constants.ACKNOWLEDGEMENT_FLAG_KEY+"=true"});
-//        createEvaluationStorage(EVALUATION_STORE_CONTAINER_IMAGE, new String[] { "HOBBIT_RABBIT_HOST="
-//                + connection.getAddress().toString() });
+        createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
+                CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
+
+        // createEvaluationStorage();
+        createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE,
+                new String[] { Constants.ACKNOWLEDGEMENT_FLAG_KEY + "=true" });
+        // createEvaluationStorage(EVALUATION_STORE_CONTAINER_IMAGE, new
+        // String[] { "HOBBIT_RABBIT_HOST="
+        // + connection.getAddress().toString() });
 
         waitForComponentsToInitialize();
     }
