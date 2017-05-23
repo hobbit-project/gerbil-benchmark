@@ -36,3 +36,7 @@ dockerize-systems:
 push-systems: 
 	docker push git.project-hobbit.eu:4567/conrads/gerbilsystems
 
+bengal-dg:
+	cd gerbil-data-generator && mvn clean package
+	cd gerbil-data-generator && docker build -f bengal_data_generator.docker -t git.project-hobbit.eu:4567/conrads/bengaldatagenerator .
+	docker push git.project-hobbit.eu:4567/conrads/bengaldatagenerator
