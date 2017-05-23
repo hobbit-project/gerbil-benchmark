@@ -1,0 +1,14 @@
+http://dbpedia.org/ontology/Person
+http://dbpedia.org/ontology/Place
+http://dbpedia.org/ontology/Organisation
+http://dbpedia.org/ontology/Activity
+http://dbpedia.org/ontology/Deity
+http://dbpedia.org/ontology/Award
+http://dbpedia.org/ontology/Disease
+http://dbpedia.org/ontology/EthnicGroup
+http://dbpedia.org/ontology/Event
+http://dbpedia.org/ontology/Language
+http://dbpedia.org/ontology/MeanOfTransportation
+http://dbpedia.org/ontology/PersonFunction
+http://dbpedia.org/ontology/Species
+http://dbpedia.org/ontology/Work
