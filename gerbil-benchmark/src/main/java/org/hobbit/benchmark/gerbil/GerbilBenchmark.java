@@ -19,16 +19,17 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private static final String BENGAL_DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaldatagenerator";
     private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator";
     private static final String BENGAL_TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaltaskgenerator";
-    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbil-evaluation-module";
+    private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule";
 
     private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
     // private static final String EVALUATION_STORE_CONTAINER_IMAGE =
     // "hobbit/evaluation_store";
     // private static final String EVALUATION_STORE_CONTAINER_IMAGE =
     // "in_memory_evaluation_storage";
-    
+   
     private String selectorType="sym_star", minSentences="20", maxSentences="500", usePronouns="false",
 	    useParaphrasing="true",useAvatar="false",useOOP="false", phases="3", useSurfaceforms="true";
+
 
     private int task=1;
     private ExperimentType experimentType;
@@ -118,6 +119,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             if (experimentType == null) {
         	LOGGER.error("Couldn't get the experiment type from the parameter model. Using the default value.");
         	experimentType = ExperimentType.A2KB;
+
             }
         }
         // FIXME find a way to define the number of generators
@@ -151,12 +153,17 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
         }
         
-        
 
-//        createEvaluationStorage();
-        createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE, new String[] { Constants.ACKNOWLEDGEMENT_FLAG_KEY+"=true"});
-//        createEvaluationStorage(EVALUATION_STORE_CONTAINER_IMAGE, new String[] { "HOBBIT_RABBIT_HOST="
-//                + connection.getAddress().toString() });
+
+        createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
+                CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
+
+        // createEvaluationStorage();
+        createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE,
+                new String[] { Constants.ACKNOWLEDGEMENT_FLAG_KEY + "=true" });
+        // createEvaluationStorage(EVALUATION_STORE_CONTAINER_IMAGE, new
+        // String[] { "HOBBIT_RABBIT_HOST="
+        // + connection.getAddress().toString() });
 
         waitForComponentsToInitialize();
     }
