@@ -1,0 +1,3 @@
+http://purl.org/ontology/mo/MusicArtist
+http://purl.org/ontology/mo/SignalGroup
+http://purl.org/ontology/mo/MusicalWork 

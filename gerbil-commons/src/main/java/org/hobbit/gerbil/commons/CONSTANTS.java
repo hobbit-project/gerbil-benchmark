@@ -17,5 +17,15 @@ public class CONSTANTS {
 
     public static final String GERBIL_DATASET_TO_TEST_NAME = "gerbil-benchmark.datasetName";
     public static final String GERBIL_EXPERIMENT_TYPE = "gerbil-benchmark.experimentType";
-
+    public static final String BENGAL_TASK_KEY = "bengal-oke-task-id";
+    public static final String BENGAL_MIN_SENTENCE = "bengal-min-sentence";
+    public static final String BENGAL_MAX_SENTENCE = "bengal-max-sentence";
+    public static final String BENGAL_SELECTOR_TYPE = "bengal-selector-type";
+    public static final String BENGAL_USE_PARAPHRASING = "bengal-use-paraphrasing";
+    public static final String BENGAL_USE_PRONOUNS = "bengal-use-pronouns";
+    public static final String BENGAL_USE_AVATAR = "bengal-use-avatar";
+    public static final String BENGAL_USE_SURFACEFORMS = "bengal-use-surfaceforms";
+    public static final String BENGAL_USE_ONLY_OBJECT_PROPERTIES = "bengal-use-only-object-properties";
+    public static final String BENGAL_PHASES = "bengal-phases";
+    
 }
