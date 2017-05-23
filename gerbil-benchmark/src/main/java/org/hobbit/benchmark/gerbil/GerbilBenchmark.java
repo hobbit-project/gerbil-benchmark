@@ -16,9 +16,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 	    .getLogger(GerbilBenchmark.class);
 
     private static final String DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbildatagenerator";
-    private static final String BENGAL_DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaldatagenerator";
+    private static final String BENGAL_DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/conrads/bengaldatagenerator";
     private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator";
-    private static final String BENGAL_TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaltaskgenerator";
+    private static final String BENGAL_TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/conrads/bengaltaskgenerator";
     private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule";
 
     private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
@@ -34,6 +34,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private int task=1;
     private ExperimentType experimentType;
 
+    private boolean isBengal;
+
     @Override
     public void init() throws Exception {
         super.init();
@@ -41,11 +43,11 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // TODO define this somewhere else
         int numberOfGenerators = 1;
         long seed = 31;
-        boolean isBengal = false;
+        isBengal = false;
         int numberOfDocuments = -1; 
         String datasetName = "";
         
-        NodeIterator iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"isBengal"));
+        NodeIterator iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasBengalFlag"));
         if(iterator.hasNext() && Boolean.valueOf(iterator.next().asLiteral().getBoolean())){
             
             isBengal = true;
@@ -63,34 +65,39 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         	LOGGER.warn("Couldn't get the number of documents from the parameter model. Using the default value 100.");
         	numberOfDocuments = 100;
             }
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"selectorType"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasNumberOfGenerators"));
+            if(iterator.hasNext())
+            	numberOfGenerators = Integer.parseInt(iterator.next().asLiteral().getString());
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasSelectorType"));
             if(iterator.hasNext())
             	selectorType = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"minSentences"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasMinSentences"));
             if(iterator.hasNext())
         	minSentences = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"maxSentences"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasMaxSentences"));
             if(iterator.hasNext())
             	maxSentences = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"usePronouns"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasUsePronouns"));
             if(iterator.hasNext())
             	usePronouns = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"useParaphrasing"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasUseParaphrasing"));
             if(iterator.hasNext())
             	useParaphrasing = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"useAvatar"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasUseAvatar"));
             if(iterator.hasNext())
             	useAvatar = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"useOnlyObjectProperties"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasUseOnlyObjectProperties"));
             if(iterator.hasNext())
             	useOOP = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"phases"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasPhases"));
             if(iterator.hasNext())
             	phases = iterator.next().asLiteral().getString();
-            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"useSurfaceforms"));
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasUseSurfaceforms"));
             if(iterator.hasNext())
             	useSurfaceforms = iterator.next().asLiteral().getString();
-            
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasOKETASKID"));
+            if(iterator.hasNext())
+            	task = Integer.parseInt(iterator.next().asLiteral().getString());
         }
         else{
             iterator = benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel
@@ -150,13 +157,10 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         	    CONSTANTS.BENGAL_USE_SURFACEFORMS+"="+useSurfaceforms
             });
             createTaskGenerators(BENGAL_TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators,
-                    new String[] { CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
+                    new String[] {  });
         }
         
 
-
-        createTaskGenerators(TASK_GENERATOR_CONTAINER_IMAGE, numberOfGenerators, new String[] {
-                CONSTANTS.GERBIL_TASK_GENERATOR_EXPERIMENT_TYPE_PARAMETER_KEY + "=" + experimentType.name() });
 
         // createEvaluationStorage();
         createEvaluationStorage(DEFAULT_EVAL_STORAGE_IMAGE,
@@ -183,7 +187,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 	createEvaluationModule(
 		EVALUATION_MODULE_CONTAINER_IMAGE,
 		new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY
-			+ "=" + experimentType.name() });
+			+ "=" + experimentType.name(),
+			"IS_BENGAL="+isBengal,
+			"phases="+phases});
 	// wait for the evaluation to finish
 	waitForEvalComponentsToFinish();
 	// the evaluation module should have sent an RDF model containing the
