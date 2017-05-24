@@ -13,8 +13,8 @@ dockerize:
 	cd gerbil-task-generator && docker build -f gerbil_task_generator.docker -t git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator .
 	cd gerbil-evaluation-module && docker build -f gerbil_evaluation_module.docker -t git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule .
 	cd gerbil-benchmark && docker build -f gerbil_dummy_system.docker -t git.project-hobbit.eu:4567/gerbil/gerbiltestsystem .
-	cd gerbil-data-generator && docker build -f bengal-data-generator.docker -t git.project-hobbit:4567/conrads/bengaldatagenerator . 
-	cd gerbil-task-generator && docker build -f bengal-task-generator.docker -t git.project-hobbit:4567/conrads/bengaltaskgenerator .
+	cd gerbil-data-generator && docker build -f bengal-data-generator.docker -t git.project-hobbit.eu:4567/conrads/bengaldatagenerator . 
+	cd gerbil-task-generator && docker build -f bengal-task-generator.docker -t git.project-hobbit.eu:4567/conrads/bengaltaskgenerator .
 #	docker build -f in_memory_evaluation_storage.docker -t hobbit/in_memory_evaluation_storage .
 	cd gerbil-nif-system-adapter && docker build -f gerbil_nif_system_adapter.docker -t git.project-hobbit.eu:4567/gerbil/gerbilnifsystemadapter .
 indexes:

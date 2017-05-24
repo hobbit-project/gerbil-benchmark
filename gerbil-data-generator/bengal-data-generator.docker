@@ -1,6 +1,6 @@
 FROM java
 
-ADD model /gerbil/model
+ADD models /gerbil/models
 ADD dict /gerbil/dict
 ADD en_surface_forms.tsv /gerbil/en_surface_forms.tsv
 
