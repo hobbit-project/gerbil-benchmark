@@ -63,6 +63,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         	LOGGER.warn("Couldn't get the number of documents from the parameter model. Using the default value 100.");
         	numberOfDocuments = 100;
             }
+            iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"hasSeed"));
+            if(iterator.hasNext())
+            	seed = iterator.next().asLiteral().getLong();
             iterator=benchmarkParamModel.listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX+"selectorType"));
             if(iterator.hasNext())
             	selectorType = iterator.next().asLiteral().getString();
