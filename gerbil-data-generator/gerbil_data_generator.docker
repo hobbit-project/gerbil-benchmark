@@ -1,7 +1,6 @@
 FROM java
 
-ADD model /gerbil/model
-ADD dict /gerbil/dict
+ADD gerbil_data /gerbil/gerbil_data
 
 ADD target/gerbil-data-generator-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
 
