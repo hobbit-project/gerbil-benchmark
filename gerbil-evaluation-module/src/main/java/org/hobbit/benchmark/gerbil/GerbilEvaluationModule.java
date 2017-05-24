@@ -35,7 +35,9 @@ import org.aksw.gerbil.transfer.nif.TypedSpan;
 import org.aksw.gerbil.transfer.nif.data.TypedNamedEntity;
 import org.aksw.gerbil.web.config.RootConfig;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
 import org.hobbit.core.components.AbstractEvaluationModule;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.slf4j.Logger;
@@ -49,6 +51,9 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     public static final String EXPERIMENT_TYPE_KEY = "gerbil.experimentType";
 
+    private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
+
+    
     protected NIFParser reader = new TurtleNIFParser();
     private List<Document> expectedDocuments = new ArrayList<Document>();
     private List<Document> receivedDocuments = new ArrayList<Document>();
@@ -58,13 +63,31 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     private Matching matching;
     private LongArrayList runtimes = new LongArrayList();
     private int errorCount = 0;
+    
+    
+    private int count=0, phaseFinished;
+    private long time[];
 
     private SameAsRetriever globalRetriever;
+    
+    private static final String IS_BENGAL="IS_BENGAL";
+    private static final String PHASES="phases";
+
+    private static final String COUNT = null;
+    private boolean isBengal = false;
+
+
+    private int phase=0;
+
+    private Property phaseProp = ResourceFactory.createProperty(GERBIL.getURI(), "phase");
+
+    private Property averageRuntime = ResourceFactory.createProperty(GERBIL.getURI(), "avgRuntime");
+  
     
     @Override
     public void init() throws Exception {
         super.init();
-
+       
         type = null;
         if (System.getenv().containsKey(EXPERIMENT_TYPE_KEY)) {
             try {
@@ -80,7 +103,13 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             LOGGER.error(errorMsg);
             throw new Exception(errorMsg);
         }
-
+        if(System.getenv().containsKey(IS_BENGAL)){
+            isBengal=Boolean.valueOf(System.getenv(IS_BENGAL));
+        }
+        if(isBengal){
+            phaseFinished = Integer.parseInt(System.getenv(COUNT));
+        }
+        
        generateMatcher();
 
        generateEvaluators();
@@ -127,6 +156,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     		this.errorCount++;
     	}
     	Document expectedDocument = parseDocument(expectedData);
+    	
     	Document receivedDocument = parseDocument(receivedData);
     	if(expectedData.length>0){
     	    SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, expectedDocument.getMarkings());
@@ -138,6 +168,14 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     	expectedDocuments.add(expectedDocument);
         receivedDocuments.add(receivedDocument);
         runtimes.add(responseReceivedTimestamp - responseReceivedTimestamp);
+        if(isBengal){
+            count++;
+            time[phase]+=responseReceivedTimestamp-taskSentTimestamp;
+            if(count>=phaseFinished){
+        	phase++;
+            }
+
+        }
     }
 
     @SuppressWarnings("deprecation")
@@ -327,6 +365,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     protected Model generateModel(ExperimentTaskResult result) {
         Model model = createDefaultModel();
         Resource experiment = model.getResource(experimentUri);
+        
 
         model.addLiteral(experiment, GERBIL.macroPrecision, result.getMacroPrecision());
         model.addLiteral(experiment, GERBIL.macroRecall, result.getMacroRecall());
@@ -335,7 +374,15 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         model.addLiteral(experiment, GERBIL.microRecall, result.getMicroRecall());
         model.addLiteral(experiment, GERBIL.microF1, result.getMicroF1Measure());
         model.addLiteral(experiment, GERBIL.errorCount, result.errorCount+this.errorCount);
-
+        if(isBengal){
+            for(int i=0;i<phase;i++){
+        	Resource phase = model.getResource(GERBIL2_PREFIX+"phase"+i);
+        	model.add(experiment, phaseProp, phase);
+        	model.add(phase, model.getProperty("http://www.w3.org/2005/Atom"), model.getResource(GERBIL2_PREFIX+"phase"));
+        	model.addLiteral(phase, averageRuntime, time[i]*1.0/phaseFinished);
+            }
+        }
+        
         // TODO add handling of additional results
         // TODO add handling of sub experiments
 
