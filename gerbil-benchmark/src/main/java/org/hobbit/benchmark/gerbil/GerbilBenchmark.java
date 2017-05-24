@@ -16,9 +16,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 	    .getLogger(GerbilBenchmark.class);
 
     private static final String DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbildatagenerator";
-    private static final String BENGAL_DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaldatagenerator";
+    private static final String BENGAL_DATA_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/conrads/bengaldatagenerator";
     private static final String TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator";
-    private static final String BENGAL_TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/bengaltaskgenerator";
+    private static final String BENGAL_TASK_GENERATOR_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/conrads/bengaltaskgenerator";
     private static final String EVALUATION_MODULE_CONTAINER_IMAGE = "git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule";
 
     private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
