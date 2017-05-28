@@ -36,6 +36,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private ExperimentType experimentType;
 
     private boolean isBengal;
+    private int numberOfDocsPerPhase;
 
     @Override
     public void init() throws Exception {
@@ -129,6 +130,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             // TODO replace this by reading the experiment type from the
             // parameters
             experimentType = ExperimentType.OKE_Task1;
+            numberOfDocsPerPhase = numberOfGenerators * numberOfDocuments;
         } else {
             try {
                 datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
@@ -195,7 +197,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // start the evaluation module
         createEvaluationModule(EVALUATION_MODULE_CONTAINER_IMAGE,
                 new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name(),
-                        "IS_BENGAL=" + isBengal, "phases=" + phases });
+                        "IS_BENGAL=" + isBengal, "PHASES=" + phases, "DOCS_PER_PHASE=" + numberOfDocsPerPhase });
         // wait for the evaluation to finish
         waitForEvalComponentsToFinish();
         // the evaluation module should have sent an RDF model containing the

@@ -238,17 +238,17 @@ public class BengalDataGenerator extends AbstractDataGenerator {
     private List<Document> generateCorpus2(int task, String endpoint, long seed, int numberOfDocuments) throws FileNotFoundException{
 	List<Document> ret=new ArrayList<Document> ();
 	File f=null;
-	switch(task){
-	case 1:
-	    f = new File(path+"task1.nif");
-	    break;
-	case 2:
-	    f = new File(path+"task2.nif");
-	    break;
-	case 3:
-	    f = new File(path+"task3.nif");
-	    break;
-	}
+    f = new File(path+ task + "task" + getGeneratorId() + ".nif");
+//	switch(task){
+//	case 1:
+//	    break;
+//	case 2:
+//	    f = new File(path+"task2.nif");
+//	    break;
+//	case 3:
+//	    f = new File(path+"task3.nif");
+//	    break;
+//	}
 	List<Document> allDocuments = parser.parseNIF(new FileReader(f));
 	Collections.sort(allDocuments, new DocumentComparator());
 
