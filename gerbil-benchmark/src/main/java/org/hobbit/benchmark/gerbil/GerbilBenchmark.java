@@ -35,6 +35,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private int task = 1;
     private ExperimentType experimentType;
 
+    private boolean isBengal;
+
     @Override
     public void init() throws Exception {
         super.init();
@@ -124,7 +126,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "useSurfaceforms"));
             if (iterator.hasNext())
                 useSurfaceforms = iterator.next().asLiteral().getString();
-            // TODO replace this by reading the experiment type from the parameters
+            // TODO replace this by reading the experiment type from the
+            // parameters
             experimentType = ExperimentType.OKE_Task1;
         } else {
             try {
@@ -132,7 +135,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             } catch (Exception e) {
                 throw new IllegalArgumentException("Got an unknown dataset name.", e);
             }
-            
+
             Resource expResource = RdfHelper.getObjectResource(benchmarkParamModel, newExpResource,
                     benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
             if (expResource == null) {
@@ -144,7 +147,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                         "Got unknown experiment type resource \"" + expResource.toString() + "\"");
             }
         }
-        
+
         // FIXME find a way to define the number of generators
 
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
@@ -191,7 +194,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         waitForSystemToFinish();
         // start the evaluation module
         createEvaluationModule(EVALUATION_MODULE_CONTAINER_IMAGE,
-                new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name() });
+                new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name(),
+                        "IS_BENGAL=" + isBengal, "phases=" + phases });
         // wait for the evaluation to finish
         waitForEvalComponentsToFinish();
         // the evaluation module should have sent an RDF model containing the
