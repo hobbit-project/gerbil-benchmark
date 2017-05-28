@@ -8,6 +8,8 @@ ADD src/main/resources/task1.txt /gerbil/src/main/resources/task1.txt
 ADD src/main/resources/task2.txt /gerbil/src/main/resources/task2.txt
 ADD src/main/resources/task3.txt /gerbil/src/main/resources/task3.txt
 
+ADD src/main/resources/corpora /gerbil/corpora
+
 ADD target/gerbil-data-generator-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
 
 WORKDIR /gerbil

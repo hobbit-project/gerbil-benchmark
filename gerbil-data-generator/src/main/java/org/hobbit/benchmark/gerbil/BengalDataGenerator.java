@@ -1,16 +1,21 @@
 package org.hobbit.benchmark.gerbil;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.aksw.gerbil.io.nif.NIFParser;
 import org.aksw.gerbil.io.nif.NIFWriter;
+import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.simba.bengal.paraphrasing.ParaphraseService;
@@ -26,6 +31,7 @@ import org.aksw.simba.bengal.verbalizer.NumberOfVerbalizedTriples;
 import org.aksw.simba.bengal.verbalizer.SemWeb2NLVerbalizer;
 import org.apache.jena.rdf.model.Statement;
 import org.dllearner.kb.sparql.SparqlEndpoint;
+import org.hobbit.benchmark.gerbil.comparator.DocumentComparator;
 import org.hobbit.core.components.AbstractDataGenerator;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.hobbit.gerbil.commons.CONSTANTS;
@@ -46,9 +52,10 @@ public class BengalDataGenerator extends AbstractDataGenerator {
     private static final boolean USE_AVATAR = false;
     private static final boolean USE_ONLY_OBJECT_PROPERTIES = false;
     private static final long WAITING_TIME_BETWEEN_DOCUMENTS = 500;
+    private static String path = "corpora"+File.separator;
 
 
-
+    private NIFParser parser = new TurtleNIFParser();
     private NIFWriter writer = new TurtleNIFWriter();
     private int numberOfDocuments;
 
@@ -149,12 +156,42 @@ public class BengalDataGenerator extends AbstractDataGenerator {
             useOnlyObjectProperties = Boolean.valueOf(env.get(CONSTANTS.BENGAL_USE_ONLY_OBJECT_PROPERTIES));
         }catch(Exception e){}
         
+      
         phases=3;
         try{
             phases  = Integer.parseInt(env.get(CONSTANTS.BENGAL_PHASES));
         }catch(Exception e){}
-        documents = generateCorpus(task, endpoint, seed, numberOfDocuments);
+        documents = generateCorpus2(task, endpoint, seed, numberOfDocuments);
     }
+    
+    private List<Document> generateCorpus2(int task, String endpoint, long seed, int numberOfDocuments) throws FileNotFoundException{
+	List<Document> ret=new ArrayList<Document> ();
+	File f=null;
+	//TODO FIXME
+	String prefix = this.getGeneratorId()+"";
+	switch(task){
+	case 1:
+	    f = new File(path+prefix+"task1.nif");
+	    break;
+	case 2:
+	    f = new File(path+prefix+"task2.nif");
+	    break;
+	case 3:
+	    f = new File(path+prefix+"task3.nif");
+	    break;
+	}
+	List<Document> allDocuments = parser.parseNIF(new FileReader(f));
+	Collections.sort(allDocuments, new DocumentComparator());
+
+	int startDoc = Long.valueOf(seed%allDocuments.size()).intValue();
+	for(int i=0;i<numberOfDocuments;i++){
+	    if(startDoc>=allDocuments.size()){startDoc=0;}
+	    ret.add(allDocuments.get(startDoc++));
+	}
+	
+	return ret;
+    }
+    
     
     private static List<Document> generateCorpus(int task, String endpoint, long seed, int numberOfDocuments){
 	
@@ -246,12 +283,18 @@ public class BengalDataGenerator extends AbstractDataGenerator {
     @Override
     protected void generateData() throws Exception {
 	byte[] data;
+	int docsPerPhase = documents.size()/phases;
+	int currentDoc=0;
 	for(int i=phases; i>0;i--){
             
-            for(Document document : documents){
+            for(int k=0;k<docsPerPhase;k++){
+        	
+        	Document document = documents.get(currentDoc);
+               	currentDoc++;
         	data = RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document)));
 		sendDataToTaskGenerator(data);
         	wait(getWaitTime(i));
+ 
             }
         }
     }

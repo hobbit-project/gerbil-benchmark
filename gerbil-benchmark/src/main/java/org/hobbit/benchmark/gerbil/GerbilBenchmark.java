@@ -124,7 +124,6 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "useSurfaceforms"));
             if (iterator.hasNext())
                 useSurfaceforms = iterator.next().asLiteral().getString();
-
             // TODO replace this by reading the experiment type from the parameters
             experimentType = ExperimentType.OKE_Task1;
         } else {
