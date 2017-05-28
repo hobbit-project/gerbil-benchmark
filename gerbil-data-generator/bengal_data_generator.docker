@@ -2,9 +2,9 @@ FROM java
 
 ADD gerbil_data /gerbil/gerbil_data
 
-ADD src/main/resources/task1.txt /gerbil/task1.txt
-ADD src/main/resources/task2.txt /gerbil/task2.txt
-ADD src/main/resources/task3.txt /gerbil/task3.txt
+#ADD src/main/resources/task1.txt /gerbil/task1.txt
+#ADD src/main/resources/task2.txt /gerbil/task2.txt
+#ADD src/main/resources/task3.txt /gerbil/task3.txt
 
 ADD corpora /gerbil/corpora
 

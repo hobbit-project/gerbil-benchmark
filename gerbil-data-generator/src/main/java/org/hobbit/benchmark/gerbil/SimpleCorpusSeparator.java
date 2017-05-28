@@ -18,8 +18,8 @@ import org.aksw.gerbil.transfer.nif.Document;
  */
 public class SimpleCorpusSeparator {
 
-    private static final String INPUT_FILE = "../../BENGAL/bengal_star_surface_para_600.ttl";
-    private static final int TASK_ID = 1;
+    private static final String INPUT_FILE = "../../BENGAL/task2.ttl";
+    private static final int TASK_ID = 2;
     private static final int GENERATORS = 4;
     private static final int DOCS_PER_GENERATOR = 140;
 
