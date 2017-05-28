@@ -151,7 +151,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         if (receivedData.length == 0) {
             this.errorCount++;
         } else {
-            runtimes.add(taskSentTimestamp - responseReceivedTimestamp);
+            runtimes.add(responseReceivedTimestamp - taskSentTimestamp);
         }
         Document expectedDocument = parseDocument(expectedData);
 
