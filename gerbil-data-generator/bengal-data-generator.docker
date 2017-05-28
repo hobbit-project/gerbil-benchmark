@@ -4,9 +4,9 @@ ADD models /gerbil/models
 ADD dict /gerbil/dict
 ADD en_surface_forms.tsv /gerbil/en_surface_forms.tsv
 
-#ADD src/main/resources/task1.txt /gerbil/task1.txt
-#ADD src/main/resources/task2.txt /gerbil/task2.txt
-#ADD src/main/resources/task3.txt /gerbil/task3.txt
+ADD src/main/resources/task1.txt /gerbil/src/main/resources/task1.txt
+ADD src/main/resources/task2.txt /gerbil/src/main/resources/task2.txt
+ADD src/main/resources/task3.txt /gerbil/src/main/resources/task3.txt
 
 ADD target/gerbil-data-generator-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
 

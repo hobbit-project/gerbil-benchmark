@@ -53,6 +53,7 @@ public class BengalDataGenerator extends AbstractDataGenerator {
     private int numberOfDocuments;
 
     private String endpoint="http://dbpedia.org/sparql";
+    //private String endpoint="http://local-dbpedia:8890/sparql";
 
     private List<Document>  documents;
 

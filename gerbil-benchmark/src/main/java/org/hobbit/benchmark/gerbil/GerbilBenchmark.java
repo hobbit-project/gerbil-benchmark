@@ -83,7 +83,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             Literal literal = RdfHelper.getLiteral(benchmarkParamModel, newExpResource,
                     benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasSeed"));
             if (literal != null) {
-                seed = iterator.next().asLiteral().getLong();
+                seed = literal.getLong();
             } else {
                 LOGGER.warn("Couldn't read seed from parameter model.s");
                 seed = 31;
@@ -125,26 +125,27 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             if (iterator.hasNext())
                 useSurfaceforms = iterator.next().asLiteral().getString();
 
+            // TODO replace this by reading the experiment type from the parameters
+            experimentType = ExperimentType.OKE_Task1;
         } else {
             try {
                 datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
             } catch (Exception e) {
                 throw new IllegalArgumentException("Got an unknown dataset name.", e);
             }
-
+            
             Resource expResource = RdfHelper.getObjectResource(benchmarkParamModel, newExpResource,
                     benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
             if (expResource == null) {
                 throw new IllegalArgumentException("Experiment type resource is missing.");
             }
-            experimentType = null;
-            try {
-                experimentType = GERBIL.getExperimentTypeFromResource(expResource);
-            } catch (Exception e) {
+            experimentType = GERBIL.getExperimentTypeFromResource(expResource);
+            if (experimentType == null) {
                 throw new IllegalArgumentException(
-                        "Got unknown experiment type resource \"" + expResource.toString() + "\"", e);
+                        "Got unknown experiment type resource \"" + expResource.toString() + "\"");
             }
         }
+        
         // FIXME find a way to define the number of generators
 
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
