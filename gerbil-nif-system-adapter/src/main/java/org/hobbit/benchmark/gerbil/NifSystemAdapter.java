@@ -65,7 +65,9 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         // Get the system image name
         String systemImage = RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.instanceImageName);
         if (systemImage == null) {
-            throw new IllegalArgumentException("Couldn't load system image name. Aborting.");
+            LOGGER.warn("Couldn't load system image name. It is assumed that no system container has to be started.");
+            // throw new IllegalArgumentException("Couldn't load system image
+            // name. Aborting.");
         }
         String systemUrl = RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.webserviceUrl);
         if (systemUrl == null) {
@@ -78,7 +80,9 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
             createSlaveNodes();
         }
         // Create the system container
-        createSystem(systemImage);
+        if (systemImage != null) {
+            createSystem(systemImage);
+        }
         // Create the annotation system
         systemUrl = generateSystemUrl(systemUrl);
         annotator = new AdaptedNIFBasedAnnotatorWebservice(systemUrl, "NIF-based-system");
@@ -125,11 +129,15 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     }
 
     private String generateSystemUrl(String systemUrl) {
-        int pos = systemUrl.indexOf(HOST_PLACE_HOLDER);
-        if (pos >= 0) {
-            return systemUrl.replaceFirst(HOST_PLACE_HOLDER, systemContainer);
+        if (systemContainer != null) {
+            int pos = systemUrl.indexOf(HOST_PLACE_HOLDER);
+            if (pos >= 0) {
+                return systemUrl.replaceFirst(HOST_PLACE_HOLDER, systemContainer);
+            } else {
+                return "http://" + systemContainer + systemUrl;
+            }
         } else {
-            return "http://" + systemContainer + systemUrl;
+            return systemUrl;
         }
     }
 
@@ -191,7 +199,9 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         // close the annotator client
         IOUtils.closeQuietly(annotator);
         // stop the annotation service
-        stopContainer(systemContainer);
+        if (systemContainer != null) {
+            stopContainer(systemContainer);
+        }
         try {
             annotatorTerminationSemaphore.tryAcquire(1, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
