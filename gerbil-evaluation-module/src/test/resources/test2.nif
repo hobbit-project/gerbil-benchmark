@@ -9,16 +9,16 @@
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
 
-<http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-2#char=0,192>
+<http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-1#char=0,146>
         a                     nif:RFC5147String , nif:String , nif:Context ;
         nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
-        nif:endIndex          "192"^^xsd:nonNegativeInteger ;
-        nif:isString          "Such notables include James Carville, who was the senior political adviser to Bill Clinton, and Donna Brazile, the campaign manager of the 2000 presidential campaign of Vice-President Al Gore."@en .
+        nif:endIndex          "146"^^xsd:nonNegativeInteger ;
+        nif:isString          "Florence May Harding studied at a school in Sydney, and with Douglas Robert Dundas , but in effect had no formal training in either botany or art."@en .
 
-<http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-2#char=22,36>
+<http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-1#char=0,20>
         a                     nif:RFC5147String , nif:String ;
-        nif:anchorOf          "James Carville"@en ;
-        nif:beginIndex        "22"^^xsd:nonNegativeInteger ;
-        nif:endIndex          "36"^^xsd:nonNegativeInteger ;
-        nif:referenceContext  <http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-2#char=0,192> ;
-        itsrdf:taIdentRef     dbpedia:James_Carville .
+        nif:anchorOf          "Florence May Harding"@en ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "20"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://www.ontologydesignpatterns.org/data/oke-challenge/task-1/sentence-1#char=0,146> ;
+        itsrdf:taIdentRef     dbpedia:Florence_May_Harding .

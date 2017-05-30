@@ -35,6 +35,9 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private int task = 1;
     private ExperimentType experimentType;
 
+    private boolean isBengal;
+    private int numberOfDocsPerPhase;
+
     @Override
     public void init() throws Exception {
         super.init();
@@ -83,7 +86,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             Literal literal = RdfHelper.getLiteral(benchmarkParamModel, newExpResource,
                     benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasSeed"));
             if (literal != null) {
-                seed = iterator.next().asLiteral().getLong();
+                seed = literal.getLong();
             } else {
                 LOGGER.warn("Couldn't read seed from parameter model.s");
                 seed = 31;
@@ -124,7 +127,10 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "useSurfaceforms"));
             if (iterator.hasNext())
                 useSurfaceforms = iterator.next().asLiteral().getString();
-
+            // TODO replace this by reading the experiment type from the
+            // parameters
+            experimentType = ExperimentType.OKE_Task1;
+            numberOfDocsPerPhase = numberOfGenerators * numberOfDocuments;
         } else {
             try {
                 datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
@@ -137,14 +143,13 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             if (expResource == null) {
                 throw new IllegalArgumentException("Experiment type resource is missing.");
             }
-            experimentType = null;
-            try {
-                experimentType = GERBIL.getExperimentTypeFromResource(expResource);
-            } catch (Exception e) {
+            experimentType = GERBIL.getExperimentTypeFromResource(expResource);
+            if (experimentType == null) {
                 throw new IllegalArgumentException(
-                        "Got unknown experiment type resource \"" + expResource.toString() + "\"", e);
+                        "Got unknown experiment type resource \"" + expResource.toString() + "\"");
             }
         }
+
         // FIXME find a way to define the number of generators
 
         // FIXME for the usage of Bengal, we need a DBpedia endpoint. Create
@@ -191,7 +196,8 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         waitForSystemToFinish();
         // start the evaluation module
         createEvaluationModule(EVALUATION_MODULE_CONTAINER_IMAGE,
-                new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name() });
+                new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name(),
+                        "IS_BENGAL=" + isBengal, "PHASES=" + phases, "DOCS_PER_PHASE=" + numberOfDocsPerPhase });
         // wait for the evaluation to finish
         waitForEvalComponentsToFinish();
         // the evaluation module should have sent an RDF model containing the

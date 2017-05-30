@@ -50,11 +50,11 @@
 			<artifactId>commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
+        <!-- <dependency>
 			<groupId>org.aksw.simba</groupId>
 			<artifactId>bengal</artifactId>
             <version>1.0-local</version>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>

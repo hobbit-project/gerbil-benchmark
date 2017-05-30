@@ -25,26 +25,12 @@ public class BengalTaskGenerator extends AbstractTaskGenerator {
 
     protected NIFParser reader = new TurtleNIFParser();
     protected NIFWriter writer = new TurtleNIFWriter();
-    protected ExperimentType type;
 
     @Override
     public void init() throws Exception {
         super.init();
         Map<String, String> envVariables = System.getenv();
 
-        if (envVariables.containsKey(EXPERIMENT_TYPE_PARAMETER_KEY)) {
-            String value = envVariables.get(EXPERIMENT_TYPE_PARAMETER_KEY);
-            try {
-                type = ExperimentType.valueOf(value);
-            } catch (Exception e) {
-                LOGGER.error("Exception while trying to parse the experiment type. Aborting.", e);
-                throw new Exception("Exception while trying to parse the experiment type. Aborting.", e);
-            }
-        } else {
-            String msg = "Couldn't get \"" + EXPERIMENT_TYPE_PARAMETER_KEY + "\" from the properties. Aborting.";
-            LOGGER.error(msg);
-            throw new Exception(msg);
-        }
     }
 
     @Override

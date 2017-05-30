@@ -130,6 +130,7 @@ public class GERBIL {
     public static ExperimentType getExperimentTypeFromResource(Resource resource) {
         if (resource == null) {
             LOGGER.error("Got null resource.");
+            return null;
         }
         String uri = resource.getURI();
         if (A2KB.getURI().equals(uri)) {
