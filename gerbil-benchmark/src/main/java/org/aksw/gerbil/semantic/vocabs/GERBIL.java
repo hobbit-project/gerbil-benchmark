@@ -133,6 +133,7 @@ public class GERBIL {
             return null;
         }
         String uri = resource.getURI();
+        
         if (A2KB.getURI().equals(uri)) {
             return ExperimentType.A2KB;
         } else if (C2KB.getURI().equals(uri)) {

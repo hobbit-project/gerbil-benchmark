@@ -10,6 +10,7 @@ import org.aksw.gerbil.io.nif.NIFWriter;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.transfer.nif.Document;
+import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.hobbit.benchmark.gerbil.systems.HobbitAnnotator;
@@ -42,7 +43,11 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
         @Override
         public void init() throws Exception {
     		super.init();
+    		this.
+    		LOGGER.info(this.systemParamModel.listResourcesWithProperty(name).toList()+"");
     		String systemName = this.systemParamModel.listObjectsOfProperty(name).next().asLiteral().getString();
+    		LOGGER.info("SYSTEM NAME: "+systemName);
+    		systemName="Spotlight-ACRT2KB-OKET1";
     		switch(systemName){
     		case "Aida-AC2KB-ERec":
     		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate", false);
@@ -63,10 +68,10 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		    annotator = new NERDWrapper("http://nerd.eurecom.fr/api/");
     		    break;
     		case "Spotlight-ACRT2KB-OKET1":
-    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 0);
+    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org:2222/rest/", 0);
     		    break;
     		case "Spotlight-D2KB-ETyping":
-    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 1);
+    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org:2222/rest/", 1);
     		    break;
     		case "Spotlight-ERec":
     		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 2);
@@ -84,6 +89,7 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		    annotator = new XLisaWrapper("en","en","dbedia","NGRAM");
     		    break;
     		}
+    	
         }
     	
     	
@@ -114,14 +120,23 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
      *
      */
     public void receiveGeneratedTask(String taskId, byte[] data) {
-    	
-		List<Document> documents = reader.parseNIF(RabbitMQUtils.readString(data));
-       		Document document = documents.get(0);
-
-	    	try {
-		    getAnswers(document);
+		Document document=null;
+		try{
+		    List<Document> documents = reader.parseNIF(RabbitMQUtils.readString(data));
+		    document = documents.get(0);
+		}catch(Exception e){
+		    LOGGER.error("DOCUMENT WAS NULL.", e);
+		    document = new DocumentImpl();
+		}
+		 
+      	    	try {
+	    	    LOGGER.info("Get Answer for Document:"+document);
+		    document = getAnswers(document);
+		    LOGGER.info("Got answers:");
+	    	    LOGGER.info(document+"");
 		} catch (GerbilException e1) {
 		    document = null;
+		    LOGGER.error("Could not get answer due to", e1);
 		}
 
 		// Send the result to the evaluation storage
@@ -129,15 +144,16 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
             		sendResultToEvalStorage(taskId, RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document))));
 
 		} catch (IOException e) {
-			//Log the error
+			//Log the error.
+		    	LOGGER.error("Problem sending results to eval storage. ", e);
 		}
 	}
 
 	 /*
 	  * Use This to switch through several possibiliets (A2KB, Etyping,..)
 	  */
-	protected void getAnswers(Document document) throws GerbilException{
-	    document = annotator.annotate(document);
+	protected Document getAnswers(Document document) throws GerbilException{
+	    return annotator.annotate(document);
 	}
 
 

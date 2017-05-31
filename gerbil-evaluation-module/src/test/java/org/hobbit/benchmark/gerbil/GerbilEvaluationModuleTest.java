@@ -25,8 +25,8 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
         eval.generateEvaluators();
         eval.generateRetriever();
 
-        byte[] expectedData = null;
-        byte[] receivedData = new byte[0];
+        byte[] expectedData = new byte[0];
+        byte[] receivedData = null;
         expectedData = FileUtils.readFileToByteArray(new File("src/test/resources/test.nif"));
         // As receivedData has the size of 0 it should count 1 errors here
         eval.evaluateResponse(expectedData, receivedData, 0L, 0L);

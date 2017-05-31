@@ -6,9 +6,12 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.aksw.gerbil.annotator.AnnotatorConfiguration;
+import org.aksw.gerbil.annotator.AnnotatorConfigurationImpl;
 import org.aksw.gerbil.annotator.decorator.ErrorCountingAnnotatorDecorator;
 import org.aksw.gerbil.database.ExperimentDAO;
 import org.aksw.gerbil.database.ResultNameToIdMapping;
+import org.aksw.gerbil.dataset.DatasetConfigurationImpl;
 import org.aksw.gerbil.datatypes.ErrorTypes;
 import org.aksw.gerbil.datatypes.ExperimentTaskConfiguration;
 import org.aksw.gerbil.datatypes.ExperimentTaskResult;
@@ -34,6 +37,7 @@ import org.aksw.gerbil.transfer.nif.Meaning;
 import org.aksw.gerbil.transfer.nif.MeaningSpan;
 import org.aksw.gerbil.transfer.nif.Span;
 import org.aksw.gerbil.transfer.nif.TypedSpan;
+import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.aksw.gerbil.transfer.nif.data.TypedNamedEntity;
 import org.aksw.gerbil.web.config.RootConfig;
 import org.apache.jena.rdf.model.Model;
@@ -148,14 +152,24 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     @Override
     protected void evaluateResponse(byte[] expectedData, byte[] receivedData, long taskSentTimestamp,
             long responseReceivedTimestamp) throws Exception {
-        if (receivedData.length == 0) {
+	Document receivedDocument = new DocumentImpl();
+        Document expectedDocument = new DocumentImpl(); 
+        if (receivedData == null || receivedData.length == 0) {
             this.errorCount++;
+            receivedData = new byte[0];
         } else {
             runtimes.add(responseReceivedTimestamp - taskSentTimestamp);
+            receivedDocument =  parseDocument(receivedData);
         }
-        Document expectedDocument = parseDocument(expectedData);
+        if(expectedData == null || expectedData.length==0){
+            expectedData = new byte[0];
 
-        Document receivedDocument = parseDocument(receivedData);
+        }
+        else{
+            expectedDocument = parseDocument(expectedData);
+
+        }
+         
         if (expectedData.length > 0) {
             SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, expectedDocument.getMarkings());
         }
@@ -165,6 +179,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
         expectedDocuments.add(expectedDocument);
         receivedDocuments.add(receivedDocument);
+        LOGGER.info("exp: "+expectedDocument);
+        LOGGER.info("recv"+receivedDocument);
         if (isBengal) {
             if (receivedData.length == 0) {
                 stressTestData
@@ -184,9 +200,11 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     @Override
     protected Model summarizeEvaluation() throws Exception {
-        EvaluationResult evalResult = evaluate(expectedDocuments, receivedDocuments);
-
-        LOGGER.info("results=" + evalResult.toString());
+	LOGGER.info("expected: "+this.expectedDocuments.toString());
+	LOGGER.info("received: "+this.receivedDocuments.toString());
+	
+	EvaluationResult evalResult = evaluate(expectedDocuments, receivedDocuments);
+        
         ExperimentTaskResult expResult = new ExperimentTaskResult("", "", type, matching, new double[6],
                 ExperimentDAO.TASK_FINISHED, 0, System.currentTimeMillis());
         transformResults(evalResult, expResult);
@@ -362,8 +380,14 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     protected void transformResults(EvaluationResult result, ExperimentTaskResult expResult) {
         if (result instanceof SubTaskResult) {
-            ExperimentTaskResult subTask = new ExperimentTaskResult(((SubTaskResult) result).getConfiguration(),
-                    new double[6], ExperimentDAO.TASK_FINISHED, 0);
+            double[] arr = new double[6];
+            SubTaskResult subtask = (SubTaskResult) result;
+            ExperimentTaskConfiguration config = subtask.getConfiguration();
+            config.annotatorConfig = new AnnotatorConfigurationImpl("...", true,null,null, type);
+            config.datasetConfig = new DatasetConfigurationImpl("...", true, null, null, type, null,globalRetriever);
+           
+            ExperimentTaskResult subTask = new ExperimentTaskResult(config,
+                   arr, ExperimentDAO.TASK_FINISHED, 0);
             List<EvaluationResult> tempResults = ((EvaluationResultContainer) result).getResults();
             for (EvaluationResult tempResult : tempResults) {
                 transformResults(tempResult, subTask);
@@ -418,7 +442,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             return;
         } else if (result instanceof IntEvaluationResult) {
             if (result.getName().equals(ErrorCountingAnnotatorDecorator.ERROR_COUNT_RESULT_NAME)) {
-                expResult.errorCount = ((IntEvaluationResult) result).getValueAsInt();
+                expResult.errorCount = errorCount;//((IntEvaluationResult) result).getValueAsInt();
                 return;
             }
             int id = ResultNameToIdMapping.getInstance().getResultId(result.getName());

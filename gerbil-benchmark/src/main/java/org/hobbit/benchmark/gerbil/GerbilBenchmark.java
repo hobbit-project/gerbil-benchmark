@@ -36,7 +36,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private ExperimentType experimentType;
 
     private boolean isBengal;
-    private int numberOfDocsPerPhase;
+    private int numberOfDocsPerPhase=0;
 
     @Override
     public void init() throws Exception {
@@ -127,23 +127,40 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "useSurfaceforms"));
             if (iterator.hasNext())
                 useSurfaceforms = iterator.next().asLiteral().getString();
-            // TODO replace this by reading the experiment type from the
-            // parameters
-            experimentType = ExperimentType.OKE_Task1;
+            iterator = benchmarkParamModel
+                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasOKETASKID"));
+            if (iterator.hasNext())
+                task = Integer.valueOf(iterator.next().asLiteral().getString());
+            
+            iterator = benchmarkParamModel
+                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
+           
+            if (!iterator.hasNext()) {
+                throw new IllegalArgumentException("Experiment type resource is missing.");
+            }
+            Resource expResource =  iterator.next().asResource();
+            experimentType = GERBIL.getExperimentTypeFromResource(expResource);
+            
+//            	experimentType = ExperimentType.OKE_Task1;
             numberOfDocsPerPhase = numberOfGenerators * numberOfDocuments;
         } else {
             try {
+		iterator = benchmarkParamModel
+                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasDataset"));
                 datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
             } catch (Exception e) {
                 throw new IllegalArgumentException("Got an unknown dataset name.", e);
             }
 
-            Resource expResource = RdfHelper.getObjectResource(benchmarkParamModel, newExpResource,
-                    benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
-            if (expResource == null) {
+            iterator = benchmarkParamModel
+                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
+           
+            if (!iterator.hasNext()) {
                 throw new IllegalArgumentException("Experiment type resource is missing.");
             }
+            Resource expResource =  iterator.next().asResource();
             experimentType = GERBIL.getExperimentTypeFromResource(expResource);
+            
             if (experimentType == null) {
                 throw new IllegalArgumentException(
                         "Got unknown experiment type resource \"" + expResource.toString() + "\"");

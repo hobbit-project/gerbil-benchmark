@@ -355,14 +355,15 @@ public class BengalDataGenerator extends AbstractDataGenerator {
 	int docsPerPhase = documents.size()/phases;
 	int currentDoc=0;
 	for(int i=phases; i>0;i--){
-            
+            LOGGER.info("CURRENT PHASE: "+i);
             for(int k=0;k<docsPerPhase;k++){
         	
         	Document document = documents.get(currentDoc);
+        	LOGGER.info("SENDING: "+document);
                	currentDoc++;
         	data = RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document)));
 		sendDataToTaskGenerator(data);
-        	wait(getWaitTime(i));
+        	Thread.currentThread().sleep(getWaitTime(i));
  
             }
         }
