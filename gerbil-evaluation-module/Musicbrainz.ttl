@@ -1,0 +1,274 @@
+<http://purl.org/ontology/mo/Conductor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/Label>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/CorporateBody> .
+
+<http://purl.org/ontology/mo/ED2K>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Composer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/Show>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/DVDA>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/PublishedLyrics>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/Sound>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/Signal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/Arrangement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/MusicalManifestation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/vocab/frbr/core#Manifestation> .
+
+<http://purl.org/ontology/mo/Stream>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Record>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/DigitalSignal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Signal> .
+
+<http://purl.org/ontology/mo/Torrent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Membership>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/DAT>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Performance>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/MagneticTape>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Track>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/SACD>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Instrumentation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Arrangement> .
+
+<http://purl.org/ontology/mo/SoundEngineer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/Activity>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/DCC>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/CorporateBody>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Organization> .
+
+<http://purl.org/ontology/mo/PublishedScore>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/CD>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Performer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/Movement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalWork> .
+
+<http://purl.org/ontology/mo/Recording>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/Arranger>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/Release>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/AnalogSignal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Signal> .
+
+<http://purl.org/ontology/mo/RecordingSession>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/Lyrics>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/SoloMusicArtist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicArtist> .
+
+<http://purl.org/ontology/mo/Vinyl>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/ReleaseEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/MusicArtist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/MusicalExpression>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/vocab/frbr/core#Expression> .
+
+<http://purl.org/ontology/mo/Score>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/PublishedLibretto>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalManifestation> .
+
+<http://purl.org/ontology/mo/Listener>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://purl.org/ontology/mo/MusicalWork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/vocab/frbr/core#Work> .
+
+<http://purl.org/ontology/mo/AudioFile>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://xmlns.com/foaf/0.1/Document> .
+
+<http://purl.org/ontology/mo/Transcription>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/MusicGroup>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicArtist> .
+
+<http://purl.org/ontology/mo/SignalGroup>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/Orchestration>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Arrangement> .
+
+<http://purl.org/ontology/mo/Composition>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .
+
+<http://purl.org/ontology/mo/Medium>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalItem> .
+
+<http://purl.org/ontology/mo/Libretto>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/MusicalExpression> .
+
+<http://purl.org/ontology/mo/MD>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/ontology/mo/Medium> .
+
+<http://purl.org/ontology/mo/Festival>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://purl.org/NET/c4dm/event.owl#Event> .

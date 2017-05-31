@@ -1,5 +1,8 @@
 package org.hobbit.benchmark.gerbil;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,6 +33,8 @@ import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.matching.Matching;
 import org.aksw.gerbil.semantic.sameas.SameAsRetriever;
 import org.aksw.gerbil.semantic.sameas.SameAsRetrieverUtils;
+import org.aksw.gerbil.semantic.subclass.SimpleSubClassInferencer;
+import org.aksw.gerbil.semantic.subclass.SubClassInferencer;
 import org.aksw.gerbil.semantic.vocabs.GERBIL;
 import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.gerbil.transfer.nif.Marking;
@@ -41,6 +46,7 @@ import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.aksw.gerbil.transfer.nif.data.TypedNamedEntity;
 import org.aksw.gerbil.web.config.RootConfig;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 import org.hobbit.core.components.AbstractEvaluationModule;
 import org.hobbit.core.rabbit.RabbitMQUtils;
@@ -145,7 +151,16 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     @SuppressWarnings("unchecked")
     protected void generateEvaluators() {
-        EvaluatorFactory factory = new EvaluatorFactory();
+	Model model = ModelFactory.createDefaultModel();
+	try {
+	    
+	    model.read(new FileInputStream("Musicbrainz.ttl"), "http://purl.org/ontology/", "TTL");
+	    model.read(new FileInputStream("DBpediaTypes.ttl"), "http://dbpedia.org/ontology/", "TTL");
+	} catch (FileNotFoundException e) {
+	    LOGGER.error("Could not open Type hierarchies");
+	}
+	SubClassInferencer inferencer = new SimpleSubClassInferencer(model);
+        EvaluatorFactory factory = new EvaluatorFactory(inferencer);
         evaluator = factory.createEvaluator(type, new ExperimentTaskConfiguration(null, null, type, matching), null);
     }
 

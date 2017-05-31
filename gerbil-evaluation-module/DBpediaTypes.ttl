@@ -1,0 +1,3769 @@
+<http://dbpedia.org/ontology/Continent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/ArchitecturalStructure>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/WaterTower>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tower> .
+
+<http://dbpedia.org/ontology/MusicFestival>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/SerialKiller>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Murderer> .
+
+<http://dbpedia.org/ontology/Sea>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BodyOfWater> .
+
+<http://dbpedia.org/ontology/NascarDriver>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RacingDriver> .
+
+<http://dbpedia.org/ontology/GovernmentType>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Type> .
+
+<http://dbpedia.org/ontology/ComicStrip>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Comic> .
+
+<http://dbpedia.org/ontology/Model>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/SnookerWorldRanking>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportCompetitionResult> .
+
+<http://dbpedia.org/ontology/BobsleighAthlete>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Book>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Engineer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/EurovisionSongContestEntry>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Song> .
+
+<http://dbpedia.org/ontology/CityDistrict>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Settlement> .
+
+<http://dbpedia.org/ontology/SpaceStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/TopicalConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Organ>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Instrument> .
+
+<http://dbpedia.org/ontology/Farmer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Zoo>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/Producer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/NationalFootballLeagueEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/PrehistoricalPeriod>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/LacrossePlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Park>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Baronet>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BritishRoyalty> .
+
+<http://dbpedia.org/ontology/MixedMartialArtsEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/Vein>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/AnimangaCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ComicsCharacter> .
+
+<http://dbpedia.org/ontology/SongWriter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/Pope>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/PoliticalParty>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Ship>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/CardGame>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Game> .
+
+<http://dbpedia.org/ontology/Document>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/TelevisionDirector>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/NobleFamily>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Family> .
+
+<http://dbpedia.org/ontology/Medician>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Scientist> .
+
+<http://dbpedia.org/ontology/Population>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/ScientificConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/ResearchProject>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Project> .
+
+<http://dbpedia.org/ontology/Saint>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/Beer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Beverage> .
+
+<http://dbpedia.org/ontology/Venue>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/Windmill>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mill> .
+
+<http://dbpedia.org/ontology/WrestlingEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/BaseballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/BusCompany>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/Escalator>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/On-SiteTransportation> .
+
+<http://dbpedia.org/ontology/Cricketer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Congressman>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/TrainCarriage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/OldTerritory>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Territory> .
+
+<http://dbpedia.org/ontology/HistoricalAreaOfAuthority>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AdministrativeRegion> .
+
+<http://dbpedia.org/ontology/OfficeHolder>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/RugbyLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Lock>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/Meeting>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/MetroStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Station> .
+
+<http://dbpedia.org/ontology/Currency>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/TennisTournament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tournament> .
+
+<http://dbpedia.org/ontology/ClassicalMusicArtist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalArtist> .
+
+<http://dbpedia.org/ontology/BusinessPerson>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Company>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Holiday>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Bird>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/FilmFestival>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/RouteStop>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/SpeedSkater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/AutomobileEngine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Engine> .
+
+<http://dbpedia.org/ontology/ReligiousOrganisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/StillImage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Image> .
+
+<http://dbpedia.org/ontology/College>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/EducationalInstitution> .
+
+<http://dbpedia.org/ontology/Capital>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/City> .
+
+<http://dbpedia.org/ontology/MotorsportRacer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Airport>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/SambaSchool>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/GridironFootballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/HockeyTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Fish>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/NaturalEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Event> .
+
+<http://dbpedia.org/ontology/Train>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/TennisLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Pyramid>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/SkiArea>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportFacility> .
+
+<http://dbpedia.org/ontology/Cardinal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/Year>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/Crustacean>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/Arachnid>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/RecordLabel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/HorseRider>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/PublicTransitSystem>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/VicePrimeMinister>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/CricketGround>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportFacility> .
+
+<http://dbpedia.org/ontology/Death>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonalEvent> .
+
+<http://dbpedia.org/ontology/List>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/State>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Motorcycle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/Desert>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Opera>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/DTMRacer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RacingDriver> .
+
+<http://dbpedia.org/ontology/Synagogue>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/AmericanFootballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/SportsTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Database>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Boxer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/GrandPrix>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/MilitaryAircraft>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Aircraft> .
+
+<http://dbpedia.org/ontology/HighDiver>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/TheatreDirector>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/TelevisionHost>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Presenter> .
+
+<http://dbpedia.org/ontology/Canoeist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Locomotive>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/Film>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Building>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/BaseballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/NCAATeamSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeamSeason> .
+
+<http://dbpedia.org/ontology/Name>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Cat>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mammal> .
+
+<http://dbpedia.org/ontology/Song>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Sound>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Document> .
+
+<http://dbpedia.org/ontology/Archeologist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/FictionalCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Fencer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/RollerCoaster>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AmusementParkAttraction> .
+
+<http://dbpedia.org/ontology/OlympicResult>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportCompetitionResult> .
+
+<http://dbpedia.org/ontology/MemberResistanceMovement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/BrownDwarf>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Star> .
+
+<http://dbpedia.org/ontology/Square>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/TelevisionEpisode>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/BloodVessel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/IceHockeyLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Lawyer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Publisher>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/SumoWrestler>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Wrestler> .
+
+<http://dbpedia.org/ontology/MotocycleRacer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MotorcycleRider> .
+
+<http://dbpedia.org/ontology/RadioHost>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Presenter> .
+
+<http://dbpedia.org/ontology/WinterSportPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Soccer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TeamSport> .
+
+<http://dbpedia.org/ontology/Racecourse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RaceTrack> .
+
+<http://dbpedia.org/ontology/InternationalOrganisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Airline>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/LunarCrater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Crater> .
+
+<http://dbpedia.org/ontology/BoxingStyle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Boxing> .
+
+<http://dbpedia.org/ontology/SnookerPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/TelevisionShow>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/MusicDirector>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalArtist> .
+
+<http://dbpedia.org/ontology/Galaxy>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/BoxingCategory>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Boxing> .
+
+<http://dbpedia.org/ontology/SoftballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/InlineHockeyLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/GeneLocation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Plant>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Eukaryote> .
+
+<http://dbpedia.org/ontology/CurlingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Psychologist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/TheologicalConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Monastery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/HistoricalRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Region> .
+
+<http://dbpedia.org/ontology/Country>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Sculptor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/Bone>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/EthnicGroup>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/PersonFunction>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/LightNovel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Novel> .
+
+<http://dbpedia.org/ontology/Area>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/BoardGame>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Game> .
+
+<http://dbpedia.org/ontology/Mollusca>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/Linguist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Brewery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/Philosopher>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/PersonalEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/LifeCycleEvent> .
+
+<http://dbpedia.org/ontology/HistoricalDistrict>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/District> .
+
+<http://dbpedia.org/ontology/Dancer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/HistoricalPeriod>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/Town>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Settlement> .
+
+<http://dbpedia.org/ontology/TeamSport>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Sport> .
+
+<http://dbpedia.org/ontology/NationalAnthem>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Convention>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/Aristocrat>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Cleric>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/CoalPit>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mine> .
+
+<http://dbpedia.org/ontology/MovingImage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Image> .
+
+<http://dbpedia.org/ontology/SubMunicipality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Intercommunality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/MusicalArtist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/Memorial>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Monument> .
+
+<http://dbpedia.org/ontology/SportsTeamSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsSeason> .
+
+<http://dbpedia.org/ontology/Valley>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Comic>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/PenaltyShootOut>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/InternationalFootballLeagueEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/LacrosseLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/SportsManager>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/ProtectedArea>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Priest>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/On-SiteTransportation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/AdministrativeRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Region> .
+
+<http://dbpedia.org/ontology/SystemOfLaw>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/ChessPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Manhwa>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Comic> .
+
+<http://dbpedia.org/ontology/Marriage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonalEvent> .
+
+<http://dbpedia.org/ontology/RailwayStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Station> .
+
+<http://dbpedia.org/ontology/GovernmentAgency>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Horse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mammal> .
+
+<http://dbpedia.org/ontology/Genre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Photographer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/Food>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Image>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Document> .
+
+<http://dbpedia.org/ontology/Award>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Embryology>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/CelestialBody>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Religious>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/CanadianFootballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Governor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Gnetophytes>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/DartsPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Star>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/President>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Contest>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Competition> .
+
+<http://dbpedia.org/ontology/RailwayTunnel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/Bodybuilder>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Musical>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/RugbyClub>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Election>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/Ideology>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/MicroRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Creek>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Stream> .
+
+<http://dbpedia.org/ontology/HandballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Writer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Medicine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Annotation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/ElectricalSubstation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Station> .
+
+<http://dbpedia.org/ontology/AmusementParkAttraction>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/Amphibian>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/Bridge>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/Satellite>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/PlayWright>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/FormulaOneRacer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RacingDriver> .
+
+<http://dbpedia.org/ontology/NordicCombined>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/CardinalDirection>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/ArtificialSatellite>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Satellite> .
+
+<http://dbpedia.org/ontology/Spacecraft>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/UnitOfWork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Treadmill>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mill> .
+
+<http://dbpedia.org/ontology/Municipality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Stream>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BodyOfWater> .
+
+<http://dbpedia.org/ontology/FillingStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Station> .
+
+<http://dbpedia.org/ontology/Conifer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/DigitalCamera>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Camera> .
+
+<http://dbpedia.org/ontology/Department>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/ProgrammingLanguage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Language> .
+
+<http://dbpedia.org/ontology/CyclingCompetition>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/Sales>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Activity> .
+
+<http://dbpedia.org/ontology/Stadium>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportFacility> .
+
+<http://dbpedia.org/ontology/Brain>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/Eukaryote>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Species> .
+
+<http://dbpedia.org/ontology/HockeyClub>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsClub> .
+
+<http://dbpedia.org/ontology/MotorsportSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsSeason> .
+
+<http://dbpedia.org/ontology/Professor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Scientist> .
+
+<http://dbpedia.org/ontology/AdultActor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Actor> .
+
+<http://dbpedia.org/ontology/Nerve>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/University>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/EducationalInstitution> .
+
+<http://dbpedia.org/ontology/Coach>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/VideogamesLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/WaterwayTunnel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/Birth>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonalEvent> .
+
+<http://dbpedia.org/ontology/Swimmer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/AustralianFootballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Senator>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Skier>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/SportsSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Island>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Cemetery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/ConcentrationCamp>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Sculpture>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artwork> .
+
+<http://dbpedia.org/ontology/Gymnast>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/FootballMatch>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/FigureSkater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Place>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Beach>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/NationalFootballLeagueSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FootballLeagueSeason> .
+
+<http://dbpedia.org/ontology/Road>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/Globularswarm>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Swarm> .
+
+<http://dbpedia.org/ontology/Ocean>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BodyOfWater> .
+
+<http://dbpedia.org/ontology/Village>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Settlement> .
+
+<http://dbpedia.org/ontology/Type>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Hospital>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Polyhedron>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Artwork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/SportsClub>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Watermill>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mill> .
+
+<http://dbpedia.org/ontology/Athletics>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Sport> .
+
+<http://dbpedia.org/ontology/Rocket>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/PoliticianSpouse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/WaterRide>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AmusementParkAttraction> .
+
+<http://dbpedia.org/ontology/GeopoliticalOrganisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/CrossCountrySkier>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Instrumentalist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalArtist> .
+
+<http://dbpedia.org/ontology/Letter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Asteroid>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/Organisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Agent> .
+
+<http://dbpedia.org/ontology/Ski_jumper>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Group>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Archive>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CollectionOfValuables> .
+
+<http://dbpedia.org/ontology/TableTennisPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/HorseRiding>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Sport> .
+
+<http://dbpedia.org/ontology/MouseGeneLocation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GeneLocation> .
+
+<http://dbpedia.org/ontology/Referee>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/FieldHockeyLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Race>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/CricketLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/MovieDirector>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/RacingDriver>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MotorsportRacer> .
+
+<http://dbpedia.org/ontology/Theatre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Venue> .
+
+<http://dbpedia.org/ontology/RaceTrack>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportFacility> .
+
+<http://dbpedia.org/ontology/CanadianFootballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GridironFootballPlayer> .
+
+<http://dbpedia.org/ontology/VideoGame>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Software> .
+
+<http://dbpedia.org/ontology/ArtistDiscography>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Language>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/ReligiousBuilding>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Scientist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Mine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Planet>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/RadioStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Broadcaster> .
+
+<http://dbpedia.org/ontology/YearInSpaceflight>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/HumanGene>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Gene> .
+
+<http://dbpedia.org/ontology/Competition>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Event> .
+
+<http://dbpedia.org/ontology/Album>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Device>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/OrganisationMember>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Earthquake>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalEvent> .
+
+<http://dbpedia.org/ontology/Openswarm>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Swarm> .
+
+<http://dbpedia.org/ontology/Port>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/File>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Document> .
+
+<http://dbpedia.org/ontology/AcademicJournal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PeriodicalLiterature> .
+
+<http://dbpedia.org/ontology/Family>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Agent> .
+
+<http://dbpedia.org/ontology/LineOfFashion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Mammal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/CollectionOfValuables>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/RocketEngine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Engine> .
+
+<http://dbpedia.org/ontology/SoccerManager>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsManager> .
+
+<http://dbpedia.org/ontology/Play>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Insect>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/MartialArtist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/CyclingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Surname>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Name> .
+
+<http://dbpedia.org/ontology/ClubMoss>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Hotel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Grape>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FloweringPlant> .
+
+<http://dbpedia.org/ontology/NetballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/MathematicalConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/AthleticsPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Cartoon>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Vicar>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/Dam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/GrossDomesticProduct>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Restaurant>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Engine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/GatedCommunity>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Painter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/DisneyCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FictionalCharacter> .
+
+<http://dbpedia.org/ontology/MotorRace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Race> .
+
+<http://dbpedia.org/ontology/Diploma>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Tower>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/Crater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Drama>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/ConveyorSystem>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/On-SiteTransportation> .
+
+<http://dbpedia.org/ontology/Skyscraper>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Province>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/ShoppingMall>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Winery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/Agent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Athlete>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/MilitaryConflict>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/RadioProgram>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/City>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Settlement> .
+
+<http://dbpedia.org/ontology/HandballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/GreenAlga>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Celebrity>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Casino>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/MixedMartialArtsLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Guitar>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Instrument> .
+
+<http://dbpedia.org/ontology/ChemicalElement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ChemicalSubstance> .
+
+<http://dbpedia.org/ontology/GaelicGamesPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Politician>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Band>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Group> .
+
+<http://dbpedia.org/ontology/Fiefdom>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/HistoricalAreaOfAuthority> .
+
+<http://dbpedia.org/ontology/Mayor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Canton>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/RestArea>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/Orphan>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/PowerStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/Street>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Instrument>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/VolleyballCoach>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Coach> .
+
+<http://dbpedia.org/ontology/Bacteria>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Species> .
+
+<http://dbpedia.org/ontology/SportsLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/ArtisticGenre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Genre> .
+
+<http://dbpedia.org/ontology/BaseballSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeamSeason> .
+
+<http://dbpedia.org/ontology/TeamMember>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Manga>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Comic> .
+
+<http://dbpedia.org/ontology/RaceHorse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Horse> .
+
+<http://dbpedia.org/ontology/ComicsCreator>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/SportFacility>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/TramStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Station> .
+
+<http://dbpedia.org/ontology/LiteraryGenre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Genre> .
+
+<http://dbpedia.org/ontology/AutoRacingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Boxing>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Sport> .
+
+<http://dbpedia.org/ontology/Guitarist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Instrumentalist> .
+
+<http://dbpedia.org/ontology/HotSpring>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Sport>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Activity> .
+
+<http://dbpedia.org/ontology/TimePeriod>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/BeautyQueen>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Territory>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/GivenName>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Name> .
+
+<http://dbpedia.org/ontology/CyclingTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Polysaccharide>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Biomolecule> .
+
+<http://dbpedia.org/ontology/Anime>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cartoon> .
+
+<http://dbpedia.org/ontology/GolfPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/MilitaryPerson>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Project>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/UnitOfWork> .
+
+<http://dbpedia.org/ontology/LegalCase>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Case> .
+
+<http://dbpedia.org/ontology/WaterPoloPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/AmericanFootballCoach>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Coach> .
+
+<http://dbpedia.org/ontology/Quote>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Curler>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Station>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/Protein>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Biomolecule> .
+
+<http://dbpedia.org/ontology/HorseTrainer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Drug>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ChemicalSubstance> .
+
+<http://dbpedia.org/ontology/OlympicEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Olympics> .
+
+<http://dbpedia.org/ontology/Parliament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/ElectionDiagram>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Lipid>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Biomolecule> .
+
+<http://dbpedia.org/ontology/RoadTunnel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/SoapCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FictionalCharacter> .
+
+<http://dbpedia.org/ontology/MusicGenre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Genre> .
+
+<http://dbpedia.org/ontology/MilitaryVehicle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/BowlingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Humorist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/UndergroundJournal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PeriodicalLiterature> .
+
+<http://dbpedia.org/ontology/ClericalOrder>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousOrganisation> .
+
+<http://dbpedia.org/ontology/HistoricalSettlement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Settlement> .
+
+<http://dbpedia.org/ontology/Beverage>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Food> .
+
+<http://dbpedia.org/ontology/PaintballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/AcademicSubject>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/SpeedwayLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/ArcherPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Cheese>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Food> .
+
+<http://dbpedia.org/ontology/PrimeMinister>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/LifeCycleEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Event> .
+
+<http://dbpedia.org/ontology/Profession>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonFunction> .
+
+<http://dbpedia.org/ontology/Comedian>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/CapitalOfRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/City> .
+
+<http://dbpedia.org/ontology/VolleyballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Rebellion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/NuclearPowerStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PowerStation> .
+
+<http://dbpedia.org/ontology/SocietalEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Event> .
+
+<http://dbpedia.org/ontology/Region>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Locality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Gate>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/WorldHeritageSite>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Diocese>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ClericalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Lake>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BodyOfWater> .
+
+<http://dbpedia.org/ontology/CanadianFootballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/TermOfOffice>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/TelevisionPersonality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/SpeedwayRider>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MotorcycleRider> .
+
+<http://dbpedia.org/ontology/MeanOfTransportation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Deity>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Agent> .
+
+<http://dbpedia.org/ontology/BasketballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Fern>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Historian>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/TrackList>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/List> .
+
+<http://dbpedia.org/ontology/Reptile>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Animal> .
+
+<http://dbpedia.org/ontology/ComicsCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FictionalCharacter> .
+
+<http://dbpedia.org/ontology/Altitude>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Parish>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ClericalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Broadcaster>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Architect>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Moss>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Employer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Agent> .
+
+<http://dbpedia.org/ontology/Biomolecule>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Cycad>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/VicePresident>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Presenter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Bank>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/MotorcycleRacingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/FormulaOneRacing>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/SoccerPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/ComedyGroup>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Group> .
+
+<http://dbpedia.org/ontology/Fashion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Statistic>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/ClassicalMusicComposition>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Depth>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/RailwayLine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/NarutoCharacter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FictionalCharacter> .
+
+<http://dbpedia.org/ontology/Deanery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ClericalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Infrastructure>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/PoliticalFunction>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonFunction> .
+
+<http://dbpedia.org/ontology/Community>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Camera>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/Monarch>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/HumanGeneLocation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GeneLocation> .
+
+<http://dbpedia.org/ontology/CyclingRace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Race> .
+
+<http://dbpedia.org/ontology/Bay>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/BodyOfWater> .
+
+<http://dbpedia.org/ontology/Ligament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/Article>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/ChemicalCompound>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ChemicalSubstance> .
+
+<http://dbpedia.org/ontology/RoadJunction>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RouteOfTransportation> .
+
+<http://dbpedia.org/ontology/MilitaryUnit>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/SpaceShuttle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/Lieutenant>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Unknown>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/GrossDomesticProductPerCapita>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/RecordOffice>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Non-ProfitOrganisation> .
+
+<http://dbpedia.org/ontology/SkiResort>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SkiArea> .
+
+<http://dbpedia.org/ontology/Colour>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/PeriodOfArtisticStyle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/Deputy>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/FashionDesigner>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/PublicService>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/PoloLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Shrine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/RomanEmperor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/VoiceActor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Actor> .
+
+<http://dbpedia.org/ontology/Arena>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/LegalCase> .
+
+<http://dbpedia.org/ontology/Media>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/FormulaOneTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/CollegeCoach>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Coach> .
+
+<http://dbpedia.org/ontology/Tournament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/HistoricalProvince>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Province> .
+
+<http://dbpedia.org/ontology/Manhua>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Comic> .
+
+<http://dbpedia.org/ontology/Arrondissement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Game>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Activity> .
+
+<http://dbpedia.org/ontology/MultiVolumePublication>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/LawFirm>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/CricketTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/Skater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/SportsEvent>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/Prison>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Library>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> , <http://dbpedia.org/ontology/EducationalInstitution> .
+
+<http://dbpedia.org/ontology/Weapon>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/Singer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalArtist> .
+
+<http://dbpedia.org/ontology/ChristianPatriarch>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/CultivatedVariety>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Gene>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Biomolecule> .
+
+<http://dbpedia.org/ontology/PeriodicalLiterature>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/BodyOfWater>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Actor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artist> .
+
+<http://dbpedia.org/ontology/NaturalPlace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AdministrativeRegion> .
+
+<http://dbpedia.org/ontology/MusicalWork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Event>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/HollywoodCartoon>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cartoon> .
+
+<http://dbpedia.org/ontology/Disease>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Website>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Ginkgo>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/Dog>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mammal> .
+
+<http://dbpedia.org/ontology/MilitaryStructure>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/PopulatedPlace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/SoccerClubSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeamSeason> .
+
+<http://dbpedia.org/ontology/SportCompetitionResult>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Treaty>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/SpaceMission>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/BiologicalDatabase>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Database> .
+
+<http://dbpedia.org/ontology/GolfCourse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportFacility> .
+
+<http://dbpedia.org/ontology/Wine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Beverage> .
+
+<http://dbpedia.org/ontology/Rower>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Dike>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/RadioControlledRacingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Caterer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Company> .
+
+<http://dbpedia.org/ontology/Biologist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Scientist> .
+
+<http://dbpedia.org/ontology/Painting>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Artwork> .
+
+<http://dbpedia.org/ontology/HumanDevelopmentIndex>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/HandballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/BeachVolleyballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/VolleyballPlayer> .
+
+<http://dbpedia.org/ontology/FormerMunicipality>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Municipality> .
+
+<http://dbpedia.org/ontology/GeologicalPeriod>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/Decoration>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Award> .
+
+<http://dbpedia.org/ontology/Reference>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Annotation> .
+
+<http://dbpedia.org/ontology/FootballLeagueSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeamSeason> .
+
+<http://dbpedia.org/ontology/Poem>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Automobile>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/AustralianRulesFootballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Host>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TelevisionPersonality> .
+
+<http://dbpedia.org/ontology/Mosque>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/Swarm>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/SoccerLeagueSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeamSeason> .
+
+<http://dbpedia.org/ontology/MovingWalkway>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/On-SiteTransportation> .
+
+<http://dbpedia.org/ontology/AmericanFootballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GridironFootballPlayer> .
+
+<http://dbpedia.org/ontology/Cave>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/GolfLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/StormSurge>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalEvent> .
+
+<http://dbpedia.org/ontology/Volcano>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Garden>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Aircraft>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/PhilosophicalConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Chef>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/MemberOfParliament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/Jockey>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Standard>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/WrittenWork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/SpeedwayTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/WomensTennisAssociationTournament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tournament> .
+
+<http://dbpedia.org/ontology/Animal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Eukaryote> .
+
+<http://dbpedia.org/ontology/Legislature>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Abbey>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/ChartsPlacements>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Prefecture>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Agglomeration>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Magazine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PeriodicalLiterature> .
+
+<http://dbpedia.org/ontology/ChristianDoctrine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TheologicalConcept> .
+
+<http://dbpedia.org/ontology/Lymph>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/Muscle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/AmateurBoxer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Boxer> .
+
+<http://dbpedia.org/ontology/Archipelago>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Factory>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/VolleyballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Blazon>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/DistrictWaterBoard>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Monument>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/DocumentType>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Type> .
+
+<http://dbpedia.org/ontology/Law>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Chancellor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Politician> .
+
+<http://dbpedia.org/ontology/CareerStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/ControlledDesignationOfOriginWine>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Wine> .
+
+<http://dbpedia.org/ontology/BasketballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Constellation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/CelestialBody> .
+
+<http://dbpedia.org/ontology/School>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/EducationalInstitution> .
+
+<http://dbpedia.org/ontology/StatedResolution>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/RallyDriver>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/RacingDriver> .
+
+<http://dbpedia.org/ontology/BadmintonPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/MountainPass>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/EmployersOrganisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Museum>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Surfer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/EducationalInstitution>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/MotorcycleRider>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MotorsportRacer> .
+
+<http://dbpedia.org/ontology/RugbyPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Non-ProfitOrganisation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Castle>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/GraveMonument>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Monument> .
+
+<http://dbpedia.org/ontology/SoccerTournament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tournament> .
+
+<http://dbpedia.org/ontology/SoccerLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/AcademicConference>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/Criminal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/MouseGene>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Gene> .
+
+<http://dbpedia.org/ontology/AnatomicalStructure>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Tunnel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/Glacier>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Murderer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Criminal> .
+
+<http://dbpedia.org/ontology/HistoricalCountry>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Country> .
+
+<http://dbpedia.org/ontology/RouteOfTransportation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/SolarEclipse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalEvent> .
+
+<http://dbpedia.org/ontology/Newspaper>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PeriodicalLiterature> .
+
+<http://dbpedia.org/ontology/SquashPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/BasketballTeam>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/TelevisionSeason>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
+
+<http://dbpedia.org/ontology/Astronaut>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/MountainRange>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Artery>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AnatomicalStructure> .
+
+<http://dbpedia.org/ontology/MusicComposer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/Person>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Agent> .
+
+<http://dbpedia.org/ontology/TelevisionStation>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Broadcaster> .
+
+<http://dbpedia.org/ontology/Resume>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WrittenWork> .
+
+<http://dbpedia.org/ontology/Olympics>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsEvent> .
+
+<http://dbpedia.org/ontology/Biathlete>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Mountain>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/NaturalPlace> .
+
+<http://dbpedia.org/ontology/Fungus>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Eukaryote> .
+
+<http://dbpedia.org/ontology/Settlement>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PopulatedPlace> .
+
+<http://dbpedia.org/ontology/Poet>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/TennisPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/ChemicalSubstance>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Journalist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/BackScene>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalArtist> .
+
+<http://dbpedia.org/ontology/BoxingLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/BullFighter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/PlayboyPlaymate>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/NaturalRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Region> .
+
+<http://dbpedia.org/ontology/MovieGenre>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Genre> .
+
+<http://dbpedia.org/ontology/SnookerChamp>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SnookerPlayer> .
+
+<http://dbpedia.org/ontology/PokerPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/ProtohistoricalPeriod>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TimePeriod> .
+
+<http://dbpedia.org/ontology/MobilePhone>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/Divorce>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/PersonalEvent> .
+
+<http://dbpedia.org/ontology/HorseRace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Race> .
+
+<http://dbpedia.org/ontology/Tax>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Ambassador>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Species>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Economist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Egyptologist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Novel>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Book> .
+
+<http://dbpedia.org/ontology/Enzyme>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Biomolecule> .
+
+<http://dbpedia.org/ontology/CountrySeat>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/NobelPrize>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Award> .
+
+<http://dbpedia.org/ontology/SportsTeamMember>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/OrganisationMember> .
+
+<http://dbpedia.org/ontology/ScreenWriter>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Writer> .
+
+<http://dbpedia.org/ontology/TradeUnion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Organisation> .
+
+<http://dbpedia.org/ontology/Flag>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/ChristianBishop>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Cleric> .
+
+<http://dbpedia.org/ontology/Archaea>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Species> .
+
+<http://dbpedia.org/ontology/FloweringPlant>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Plant> .
+
+<http://dbpedia.org/ontology/BaseballPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/PoliticalConcept>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Canal>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Stream> .
+
+<http://dbpedia.org/ontology/GolfTournament>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tournament> .
+
+<http://dbpedia.org/ontology/Entomologist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Scientist> .
+
+<http://dbpedia.org/ontology/NationalSoccerClub>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SoccerClub> .
+
+<http://dbpedia.org/ontology/SiteOfSpecialScientificInterest>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/InformationAppliance>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Device> .
+
+<http://dbpedia.org/ontology/IceHockeyPlayer>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/WinterSportPlayer> .
+
+<http://dbpedia.org/ontology/Tram>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MeanOfTransportation> .
+
+<http://dbpedia.org/ontology/Artist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/River>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Stream> .
+
+<http://dbpedia.org/ontology/SoccerClub>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsTeam> .
+
+<http://dbpedia.org/ontology/OverseasDepartment>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Department> .
+
+<http://dbpedia.org/ontology/LaunchPad>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Infrastructure> .
+
+<http://dbpedia.org/ontology/AustralianFootballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/Attack>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SocietalEvent> .
+
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/AdministrativeRegion> .
+
+<http://dbpedia.org/ontology/Church>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/Case>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/UnitOfWork> .
+
+<http://dbpedia.org/ontology/Single>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/MusicalWork> .
+
+<http://dbpedia.org/ontology/Demographics>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Vodka>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Beverage> .
+
+<http://dbpedia.org/ontology/BroadcastNetwork>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Broadcaster> .
+
+<http://dbpedia.org/ontology/Lighthouse>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Tower> .
+
+<http://dbpedia.org/ontology/Regency>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/WineRegion>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/Atoll>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Island> .
+
+<http://dbpedia.org/ontology/WindMotor>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Mill> .
+
+<http://dbpedia.org/ontology/Royalty>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/HistoricPlace>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Place> .
+
+<http://dbpedia.org/ontology/GovernmentCabinet>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentAgency> .
+
+<http://dbpedia.org/ontology/Activity>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Temple>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ReligiousBuilding> .
+
+<http://dbpedia.org/ontology/HistoricBuilding>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Building> .
+
+<http://dbpedia.org/ontology/Taxon>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/TopicalConcept> .
+
+<http://dbpedia.org/ontology/Mineral>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ChemicalSubstance> .
+
+<http://dbpedia.org/ontology/Work>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://www.w3.org/2002/07/owl#Thing> .
+
+<http://dbpedia.org/ontology/Noble>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/AmericanFootballLeague>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/SportsLeague> .
+
+<http://dbpedia.org/ontology/District>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> .
+
+<http://dbpedia.org/ontology/MythologicalFigure>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/FictionalCharacter> .
+
+<http://dbpedia.org/ontology/Cyclist>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Wrestler>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Athlete> .
+
+<http://dbpedia.org/ontology/Mill>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/ArchitecturalStructure> .
+
+<http://dbpedia.org/ontology/BritishRoyalty>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Royalty> .
+
+<http://dbpedia.org/ontology/Judge>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Person> .
+
+<http://dbpedia.org/ontology/Software>
+        a       <https://www.w3.org/2002/07/owl#Class> ;
+        <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+                <http://dbpedia.org/ontology/Work> .
