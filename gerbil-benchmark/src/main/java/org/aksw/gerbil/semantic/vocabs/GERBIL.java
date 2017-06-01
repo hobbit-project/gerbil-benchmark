@@ -150,7 +150,7 @@ public class GERBIL {
         } else if (ETyping.getURI().equals(uri)) {
             return ExperimentType.ETyping;
         } else if (RT2KB.getURI().equals(uri)) {
-            return ExperimentType.Rc2KB;
+            return ExperimentType.RT2KB;
         } else if (Sa2KB.getURI().equals(uri)) {
             return ExperimentType.Sa2KB;
         } else if (Sc2KB.getURI().equals(uri)) {
