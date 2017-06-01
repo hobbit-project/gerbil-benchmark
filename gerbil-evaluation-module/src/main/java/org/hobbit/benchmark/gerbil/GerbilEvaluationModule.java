@@ -140,7 +140,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             break;
         case D2KB:
         case C2KB:
-        case Rc2KB:
+        case RT2KB:
         case Sa2KB:
         case Sc2KB:
             matching = Matching.STRONG_ENTITY_MATCH;
@@ -334,6 +334,11 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         case OKE_Task2: {
             evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedNamedEntity.class),
                     getMarkings(expectedDocuments, TypedNamedEntity.class));
+            break;
+        }
+        case RT2KB: {
+            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedSpan.class),
+                    getMarkings(expectedDocuments, TypedSpan.class));
             break;
         }
         default:
