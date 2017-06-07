@@ -67,8 +67,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     protected NIFParser reader = new TurtleNIFParser();
     private List<Document> expectedDocuments = new ArrayList<Document>();
     private List<Document> receivedDocuments = new ArrayList<Document>();
-    private Evaluator<? extends Marking> evaluator;
-    private List<Evaluator<? extends Marking>> evaluators;
+//    private Evaluator<? extends Marking> evaluator;
+    private List<Evaluator<?>> evaluators = new ArrayList<Evaluator<?>>();
     protected ExperimentType type;
     protected Matching matching;
     protected LongArrayList runtimes = new LongArrayList();
@@ -161,7 +161,9 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 	}
 	SubClassInferencer inferencer = new SimpleSubClassInferencer(model);
         EvaluatorFactory factory = new EvaluatorFactory(inferencer);
-        evaluator = factory.createEvaluator(type, new ExperimentTaskConfiguration(null, null, type, matching), null);
+//        evaluator = factory.createEvaluator(type, new ExperimentTaskConfiguration(null, null, type, matching), null);
+//        evaluators.add(evaluator);
+        factory.addEvaluators(evaluators, new ExperimentTaskConfiguration(null, null, type, matching), null);
     }
 
     @Override
@@ -297,18 +299,18 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         EvaluationResult evalResult = null;
         switch (type) {
         case D2KB: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, MeaningSpan.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, MeaningSpan.class),
                     getMarkings(expectedDocuments, MeaningSpan.class));
             break;
         }
         case Sa2KB:
         case A2KB: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, MeaningSpan.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, MeaningSpan.class),
                     getMarkings(expectedDocuments, MeaningSpan.class));
             break;
         }
         case C2KB: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, Meaning.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, Meaning.class),
                     getMarkings(expectedDocuments, Meaning.class));
             break;
         }
@@ -317,27 +319,27 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             throw new GerbilException(ErrorTypes.UNEXPECTED_EXCEPTION);
         }
         case ERec: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, Span.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, Span.class),
                     getMarkings(expectedDocuments, Span.class));
             break;
         }
         case ETyping: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedSpan.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, TypedSpan.class),
                     getMarkings(expectedDocuments, TypedSpan.class));
             break;
         }
         case OKE_Task1: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedNamedEntity.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, TypedNamedEntity.class),
                     getMarkings(expectedDocuments, TypedNamedEntity.class));
             break;
         }
         case OKE_Task2: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedNamedEntity.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, TypedNamedEntity.class),
                     getMarkings(expectedDocuments, TypedNamedEntity.class));
             break;
         }
         case RT2KB: {
-            evalResult = evaluate(Arrays.asList(evaluator), getMarkings(receivedDocuments, TypedSpan.class),
+            evalResult = evaluate(evaluators, getMarkings(receivedDocuments, TypedSpan.class),
                     getMarkings(expectedDocuments, TypedSpan.class));
             break;
         }
@@ -486,20 +488,22 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         model.addLiteral(experiment, GERBIL.microRecall, result.getMicroRecall());
         model.addLiteral(experiment, GERBIL.microF1, result.getMicroF1Measure());
         model.addLiteral(experiment, GERBIL.errorCount, result.errorCount + this.errorCount);
-        
-        for(ExperimentTaskResult subResult : result.getSubTasks()){
-            Resource subRes = model.getResource(experimentUri+"_"+subResult.type.toString());
-         
-            model.add(experiment, GERBIL.subExperimentOf, subRes);
-            model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
-            model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
-            model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());
-            model.addLiteral(subRes, GERBIL.microPrecision, subResult.getMicroPrecision());
-            model.addLiteral(subRes, GERBIL.microRecall, subResult.getMicroRecall());
-            model.addLiteral(subRes, GERBIL.microF1, subResult.getMicroF1Measure());
-            model.addLiteral(subRes, GERBIL.errorCount, subResult.errorCount + this.errorCount);
-            model.add(subRes, GERBIL.experimentType, GERBIL.getExperimentTypeResource(subResult.type));
+
+        if(result.getNumberOfSubTasks()>0){
+            for(ExperimentTaskResult subResult : result.getSubTasks()){
+        	Resource subRes = model.getResource(experimentUri+"_"+subResult.type.getName());
             
+        	model.add(experiment, GERBIL.subExperimentOf, subRes);
+        	model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
+        	model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
+        	model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());
+        	model.addLiteral(subRes, GERBIL.microPrecision, subResult.getMicroPrecision());
+        	model.addLiteral(subRes, GERBIL.microRecall, subResult.getMicroRecall());
+        	model.addLiteral(subRes, GERBIL.microF1, subResult.getMicroF1Measure());
+        	model.addLiteral(subRes, GERBIL.errorCount, subResult.errorCount + this.errorCount);
+        	model.add(subRes, GERBIL.experimentType, GERBIL.getExperimentTypeResource(subResult.type));
+            
+            }
         }
         
         long durationSum = 0;
