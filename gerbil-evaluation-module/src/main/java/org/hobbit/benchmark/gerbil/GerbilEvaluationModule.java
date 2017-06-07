@@ -478,6 +478,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         Model model = createDefaultModel();
         Resource experiment = model.getResource(experimentUri);
 
+        
         model.addLiteral(experiment, GERBIL.macroPrecision, result.getMacroPrecision());
         model.addLiteral(experiment, GERBIL.macroRecall, result.getMacroRecall());
         model.addLiteral(experiment, GERBIL.macroF1, result.getMacroF1Measure());
@@ -485,7 +486,22 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         model.addLiteral(experiment, GERBIL.microRecall, result.getMicroRecall());
         model.addLiteral(experiment, GERBIL.microF1, result.getMicroF1Measure());
         model.addLiteral(experiment, GERBIL.errorCount, result.errorCount + this.errorCount);
-
+        
+        for(ExperimentTaskResult subResult : result.getSubTasks()){
+            Resource subRes = model.getResource(experimentUri+"_"+subResult.type.toString());
+         
+            model.add(experiment, GERBIL.subExperimentOf, subRes);
+            model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
+            model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
+            model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());
+            model.addLiteral(subRes, GERBIL.microPrecision, subResult.getMicroPrecision());
+            model.addLiteral(subRes, GERBIL.microRecall, subResult.getMicroRecall());
+            model.addLiteral(subRes, GERBIL.microF1, subResult.getMicroF1Measure());
+            model.addLiteral(subRes, GERBIL.errorCount, subResult.errorCount + this.errorCount);
+            model.add(subRes, GERBIL.experimentType, GERBIL.getExperimentTypeResource(subResult.type));
+            
+        }
+        
         long durationSum = 0;
         double avgMillisPerDoc = 0;
         if (runtimes.buffer.length > 0) {

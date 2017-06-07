@@ -43,11 +43,8 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
         @Override
         public void init() throws Exception {
     		super.init();
-    		this.
-    		LOGGER.info(this.systemParamModel.listResourcesWithProperty(name).toList()+"");
-    		String systemName = this.systemParamModel.listObjectsOfProperty(name).next().asLiteral().getString();
-    		LOGGER.info("SYSTEM NAME: "+systemName);
-    		systemName="Spotlight-ACRT2KB-OKET1";
+    		//FIXME get systemName from 
+    		String systemName="xLisaNGRAM";
     		switch(systemName){
     		case "Aida-AC2KB-ERec":
     		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate", false);
