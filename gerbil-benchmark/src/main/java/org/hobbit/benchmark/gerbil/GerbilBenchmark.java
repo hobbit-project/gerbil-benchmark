@@ -36,7 +36,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
     private ExperimentType experimentType;
 
     private boolean isBengal;
-    private int numberOfDocsPerPhase=0;
+    private int numberOfDocsPerPhase = 0;
 
     @Override
     public void init() throws Exception {
@@ -131,22 +131,22 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasOKETASKID"));
             if (iterator.hasNext())
                 task = Integer.valueOf(iterator.next().asLiteral().getString());
-            
+
             iterator = benchmarkParamModel
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
-           
+
             if (!iterator.hasNext()) {
                 throw new IllegalArgumentException("Experiment type resource is missing.");
             }
-            Resource expResource =  iterator.next().asResource();
+            Resource expResource = iterator.next().asResource();
             experimentType = GERBIL.getExperimentTypeFromResource(expResource);
-            
-//            	experimentType = ExperimentType.OKE_Task1;
+
+            // experimentType = ExperimentType.OKE_Task1;
             numberOfDocsPerPhase = numberOfGenerators * numberOfDocuments;
         } else {
             try {
-		iterator = benchmarkParamModel
-                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasDataset"));
+                iterator = benchmarkParamModel
+                        .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasDataset"));
                 datasetName = DatasetMapper.getName(iterator.next().asResource().getLocalName());
             } catch (Exception e) {
                 throw new IllegalArgumentException("Got an unknown dataset name.", e);
@@ -154,13 +154,13 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
 
             iterator = benchmarkParamModel
                     .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasExperimentType"));
-           
+
             if (!iterator.hasNext()) {
                 throw new IllegalArgumentException("Experiment type resource is missing.");
             }
-            Resource expResource =  iterator.next().asResource();
+            Resource expResource = iterator.next().asResource();
             experimentType = GERBIL.getExperimentTypeFromResource(expResource);
-            
+
             if (experimentType == null) {
                 throw new IllegalArgumentException(
                         "Got unknown experiment type resource \"" + expResource.toString() + "\"");
@@ -209,7 +209,11 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         waitForDataGenToFinish();
         // wait for the task generators to finish their work
         waitForTaskGenToFinish();
-        // wait for the system to terminate
+        // wait for the system to terminate (If we are using Bengal, we should
+        // give some more time depending on the number of documents per phase,
+        // otherwise we can simply set the maximum to 5 minutes)
+        long maxWaitingForSystem = isBengal ? 60000L * numberOfDocsPerPhase * dataGenContainerIds.size() : 300000L;
+        LOGGER.info("Waiting for the system to terminate (max waiting time = {}ms).", maxWaitingForSystem);
         waitForSystemToFinish();
         // start the evaluation module
         createEvaluationModule(EVALUATION_MODULE_CONTAINER_IMAGE,
