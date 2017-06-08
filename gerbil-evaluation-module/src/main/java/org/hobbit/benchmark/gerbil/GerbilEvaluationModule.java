@@ -73,6 +73,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     protected Matching matching;
     protected LongArrayList runtimes = new LongArrayList();
     protected int errorCount = 0;
+    private int debugDocs=0;
 
     private SameAsRetriever globalRetriever;
 
@@ -193,7 +194,6 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         if (receivedData.length > 0) {
             SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, receivedDocument.getMarkings());
         }
-
         expectedDocuments.add(expectedDocument);
         receivedDocuments.add(receivedDocument);
         LOGGER.info("exp: "+expectedDocument);

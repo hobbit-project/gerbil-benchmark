@@ -120,7 +120,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
             if (iterator.hasNext())
                 useOOP = iterator.next().asLiteral().getString();
             iterator = benchmarkParamModel
-                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "phases"));
+                    .listObjectsOfProperty(benchmarkParamModel.getProperty(GERBIL2_PREFIX + "hasPhases"));
             if (iterator.hasNext())
                 phases = iterator.next().asLiteral().getString();
             iterator = benchmarkParamModel

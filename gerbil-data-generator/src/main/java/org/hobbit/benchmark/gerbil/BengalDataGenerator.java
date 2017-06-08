@@ -149,7 +149,7 @@ public class BengalDataGenerator extends AbstractDataGenerator {
         try{
             phases  = Integer.parseInt(env.get(CONSTANTS.BENGAL_PHASES));
         }catch(Exception e){}
-        documents = generateCorpus2(task, endpoint, seed, numberOfDocuments);
+        documents = generateCorpus2(task, endpoint, seed, numberOfDocuments*phases);
     }
     
     
@@ -352,11 +352,11 @@ public class BengalDataGenerator extends AbstractDataGenerator {
     @Override
     protected void generateData() throws Exception {
 	byte[] data;
-	int docsPerPhase = documents.size()/phases;
+//	int docsPerPhase = documents.size()/phases;
 	int currentDoc=0;
 	for(int i=phases; i>0;i--){
             LOGGER.info("CURRENT PHASE: "+i);
-            for(int k=0;k<docsPerPhase;k++){
+            for(int k=0;k<numberOfDocuments;k++){
         	
         	Document document = documents.get(currentDoc);
         	LOGGER.info("SENDING: "+document);
