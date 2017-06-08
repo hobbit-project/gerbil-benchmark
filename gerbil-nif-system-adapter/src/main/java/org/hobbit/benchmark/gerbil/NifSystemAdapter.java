@@ -40,6 +40,14 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     private AdaptedNIFBasedAnnotatorWebservice annotator;
     private Semaphore slaveTerminationSemaphore = new Semaphore(0);
     private Semaphore annotatorTerminationSemaphore = new Semaphore(0);
+    /**
+     * Used for debugging.
+     */
+    private Semaphore receivedTasksCounter = new Semaphore(0);
+    /**
+     * Used for debugging.
+     */
+    private Semaphore solvedTasksCounter = new Semaphore(0);
 
     public static void main(String[] args) {
         ComponentStarter.main(new String[] { NifSystemAdapter.class.getCanonicalName() });
@@ -148,12 +156,14 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
 
     @Override
     public void receiveGeneratedTask(String taskId, byte[] data) {
+        receivedTasksCounter.release();
         List<Document> documents = parser.parseNIF(RabbitMQUtils.readString(data));
         try {
             Document document = documents.get(0);
             documents.clear();
             documents.add(annotator.request(document));
             sendResultToEvalStorage(taskId, RabbitMQUtils.writeString(writer.writeNIF(documents)));
+            solvedTasksCounter.release();
         } catch (Exception e) {
             LOGGER.error("Got exception while processing task.", e);
         }
@@ -207,6 +217,8 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         } catch (InterruptedException e) {
             // nothing to do
         }
+        LOGGER.info("NIF System adapter closing after {} tasks have been received and {} tasks have been answered.",
+                receivedTasksCounter.availablePermits(), solvedTasksCounter.availablePermits());
         super.close();
     }
 }
