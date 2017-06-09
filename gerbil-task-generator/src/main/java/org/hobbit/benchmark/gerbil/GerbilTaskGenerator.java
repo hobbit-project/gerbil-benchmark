@@ -44,6 +44,8 @@ public class GerbilTaskGenerator extends AbstractSequencingTaskGenerator {
             LOGGER.error(msg);
             throw new Exception(msg);
         }
+        // Let's wait max. 3min per document
+        setAckTimeout(180000);
     }
 
     @Override

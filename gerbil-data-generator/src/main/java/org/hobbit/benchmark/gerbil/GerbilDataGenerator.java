@@ -13,7 +13,6 @@ import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.semantic.sameas.SameAsRetriever;
 import org.aksw.gerbil.transfer.nif.Document;
 import org.aksw.gerbil.web.config.DatasetsConfig;
-import org.aksw.gerbil.web.config.RootConfig;
 import org.hobbit.core.components.AbstractDataGenerator;
 import org.hobbit.core.rabbit.RabbitMQUtils;
 import org.hobbit.gerbil.commons.CONSTANTS;
@@ -25,7 +24,6 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
     private static final Logger LOGGER = LoggerFactory.getLogger(GerbilDataGenerator.class);
 
     private String datasetName;
-
     private NIFWriter writer = new TurtleNIFWriter();
     private ExperimentType experimentType;
     private List<DatasetConfiguration> configs;
@@ -69,7 +67,6 @@ public class GerbilDataGenerator extends AbstractDataGenerator {
 	LOGGER.info("Got the following configurations: {{}}", configs);
 	for(DatasetConfiguration config : configs) {
 	    LOGGER.info("Starting with config {{}}", config.getName());
-	    byte[] data;
 	    for (Document document : config.getDataset(experimentType).getInstances()) {
 		LOGGER.info("FOUND: "+document.getText());
 	    }
