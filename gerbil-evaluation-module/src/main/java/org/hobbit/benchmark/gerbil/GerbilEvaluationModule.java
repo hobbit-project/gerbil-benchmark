@@ -77,9 +77,9 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     private SameAsRetriever globalRetriever;
 
-    private static final String IS_BENGAL = "IS_BENGAL";
-    private static final String PHASES = "PHASES";
-    private static final String COUNT = "DOCS_PER_PHASE";
+    public static final String IS_BENGAL = "IS_BENGAL";
+    public static final String PHASES = "PHASES";
+    public static final String COUNT = "DOCS_PER_PHASE";
     protected boolean isBengal = false;
 
     private SortedSet<StressTestDocumentResult> stressTestData = new TreeSet<StressTestDocumentResult>();
@@ -493,7 +493,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             for(ExperimentTaskResult subResult : result.getSubTasks()){
         	Resource subRes = model.getResource(experimentUri+"_"+subResult.type.getName());
             
-        	model.add(experiment, GERBIL.subExperimentOf, subRes);
+        	model.add(subRes, GERBIL.subExperimentOf, experiment);
         	model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
         	model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
         	model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());

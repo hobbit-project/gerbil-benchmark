@@ -45,7 +45,6 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         // TODO define this somewhere else
         int numberOfGenerators = 1;
         long seed = 31;
-        boolean isBengal = false;
         int numberOfDocuments = -1;
         String datasetName = "";
 
@@ -219,6 +218,7 @@ public class GerbilBenchmark extends AbstractBenchmarkController {
         createEvaluationModule(EVALUATION_MODULE_CONTAINER_IMAGE,
                 new String[] { CONSTANTS.GERBIL_EVALUATION_MODULE_EXPERIMENT_TYPE_KEY + "=" + experimentType.name(),
                         "IS_BENGAL=" + isBengal, "PHASES=" + phases, "DOCS_PER_PHASE=" + numberOfDocsPerPhase });
+
         // wait for the evaluation to finish
         waitForEvalComponentsToFinish();
         // the evaluation module should have sent an RDF model containing the
