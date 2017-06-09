@@ -14,6 +14,7 @@ import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.semantic.vocabs.NIF_SYS;
 import org.aksw.gerbil.transfer.nif.Document;
+import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.apache.commons.io.IOUtils;
 import org.hobbit.core.Commands;
 import org.hobbit.core.Constants;
@@ -94,6 +95,19 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         // Create the annotation system
         systemUrl = generateSystemUrl(systemUrl);
         annotator = new AdaptedNIFBasedAnnotatorWebservice(systemUrl, "NIF-based-system");
+        // Wait for annotator to work
+        Document document = new DocumentImpl("This is a text document.", "http://example.org/test-doc");
+        boolean noResponse = true;
+        LOGGER.info("Waiting for the service to be available.");
+        while (noResponse) {
+            try {
+                annotator.request(document);
+                noResponse = false;
+            } catch (Exception e) {
+                Thread.sleep(1000);
+            }
+        }
+        LOGGER.info("Service seems to be available. Initialization done.");
     }
 
     private void createSlaveNodes() throws Exception {
@@ -199,7 +213,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     public void close() throws IOException {
         if (slaveNodes != null) {
             // wait for the slaves to terminate (we don't have to terminate them
-            // since they should do this by themselfs
+            // since they should do this by themselves
             try {
                 slaveTerminationSemaphore.acquire(slaveNodes.size());
             } catch (InterruptedException e) {
