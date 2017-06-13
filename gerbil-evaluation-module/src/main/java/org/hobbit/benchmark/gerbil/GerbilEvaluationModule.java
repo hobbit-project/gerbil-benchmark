@@ -2,16 +2,15 @@ package org.hobbit.benchmark.gerbil;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import org.aksw.gerbil.annotator.AnnotatorConfiguration;
 import org.aksw.gerbil.annotator.AnnotatorConfigurationImpl;
 import org.aksw.gerbil.annotator.decorator.ErrorCountingAnnotatorDecorator;
+import org.aksw.gerbil.config.GerbilConfiguration;
 import org.aksw.gerbil.database.ExperimentDAO;
 import org.aksw.gerbil.database.ResultNameToIdMapping;
 import org.aksw.gerbil.dataset.DatasetConfigurationImpl;
@@ -61,8 +60,10 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     private static final Logger LOGGER = LoggerFactory.getLogger(GerbilEvaluationModule.class);
 
     public static final String EXPERIMENT_TYPE_KEY = "gerbil.experimentType";
-
-    private static final String GERBIL2_PREFIX = "http://w3id.org/gerbil/hobbit/vocab#";
+    
+    private static final String HTTP_SAME_AS_RETRIEVAL_DOMAIN_KEY = "org.aksw.gerbil.semantic.sameas.impl.http.HTTPBasedSameAsRetriever.domain";
+    private static final String WIKIPEDIA_BASED_SAME_AS_RETRIEVAL_DOMAIN_KEY = "org.aksw.gerbil.semantic.sameas.impl.wiki.WikipediaApiBasedSingleUriSameAsRetriever.domain";
+    private static final String SAME_AS_CACHE_FILE_KEY = "org.aksw.gerbil.semantic.sameas.CachingSameAsRetriever.cacheFile";
 
     protected NIFParser reader = new TurtleNIFParser();
     private List<Document> expectedDocuments = new ArrayList<Document>();
@@ -73,7 +74,6 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     protected Matching matching;
     protected LongArrayList runtimes = new LongArrayList();
     protected int errorCount = 0;
-    private int debugDocs=0;
 
     private SameAsRetriever globalRetriever;
 
@@ -124,6 +124,14 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     }
 
     protected void generateRetriever() {
+        LOGGER.info("Reconfiguring sameAs retrieval...");
+        // Remove all domains for HTTP based same as retrieval
+        GerbilConfiguration.getInstance().setProperty(HTTP_SAME_AS_RETRIEVAL_DOMAIN_KEY, new String[0]);
+
+        // Remove all domains for Wikipedia based same as retrieval
+        GerbilConfiguration.getInstance().setProperty(WIKIPEDIA_BASED_SAME_AS_RETRIEVAL_DOMAIN_KEY, new String[0]);
+        // Remove the usage of cache files
+        GerbilConfiguration.getInstance().clearProperty(SAME_AS_CACHE_FILE_KEY);
         // FIXME write the createSameAsRetriever method in another Class and
         // just use it in the RootConfig
         globalRetriever = RootConfig.createSameAsRetriever();
@@ -137,20 +145,19 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         case ETyping:
         case OKE_Task1:
         case OKE_Task2:
+        case Sa2KB:
             matching = Matching.WEAK_ANNOTATION_MATCH;
             break;
         case D2KB:
         case C2KB:
         case RT2KB:
-        case Sa2KB:
         case Sc2KB:
+        case Rc2KB:
             matching = Matching.STRONG_ENTITY_MATCH;
             break;
-
         }
     }
 
-    @SuppressWarnings("unchecked")
     protected void generateEvaluators() {
 	Model model = ModelFactory.createDefaultModel();
 	try {
@@ -294,6 +301,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         return new StressTestPhaseResult(duration, f1ScoreSumPhase, beta, errors);
     }
 
+    @SuppressWarnings("deprecation")
     private EvaluationResult evaluate(List<Document> expectedDocuments, List<Document> receivedDocuments)
             throws GerbilException {
         EvaluationResult evalResult = null;
