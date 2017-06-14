@@ -14,6 +14,7 @@ import org.aksw.gerbil.io.nif.impl.TurtleNIFParser;
 import org.aksw.gerbil.io.nif.impl.TurtleNIFWriter;
 import org.aksw.gerbil.semantic.vocabs.NIF_SYS;
 import org.aksw.gerbil.transfer.nif.Document;
+import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.apache.commons.io.IOUtils;
 import org.hobbit.core.Commands;
 import org.hobbit.core.Constants;
@@ -48,6 +49,10 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
      * Used for debugging.
      */
     private Semaphore solvedTasksCounter = new Semaphore(0);
+    /**
+     * Used for debugging.
+     */
+    private Semaphore errorTasksCounter = new Semaphore(0);
 
     public static void main(String[] args) {
         ComponentStarter.main(new String[] { NifSystemAdapter.class.getCanonicalName() });
@@ -94,6 +99,19 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         // Create the annotation system
         systemUrl = generateSystemUrl(systemUrl);
         annotator = new AdaptedNIFBasedAnnotatorWebservice(systemUrl, "NIF-based-system");
+        // Wait for annotator to work
+        Document document = new DocumentImpl("This is a text document.", "http://example.org/test-doc");
+        boolean noResponse = true;
+        LOGGER.info("Waiting for the service to be available.");
+        while (noResponse) {
+            try {
+                annotator.request(document);
+                noResponse = false;
+            } catch (Exception e) {
+                Thread.sleep(1000);
+            }
+        }
+        LOGGER.info("Service seems to be available. Initialization done.");
     }
 
     private void createSlaveNodes() throws Exception {
@@ -166,6 +184,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
             solvedTasksCounter.release();
         } catch (Exception e) {
             LOGGER.error("Got exception while processing task.", e);
+            errorTasksCounter.release();
         }
     }
 
@@ -199,7 +218,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
     public void close() throws IOException {
         if (slaveNodes != null) {
             // wait for the slaves to terminate (we don't have to terminate them
-            // since they should do this by themselfs
+            // since they should do this by themselves
             try {
                 slaveTerminationSemaphore.acquire(slaveNodes.size());
             } catch (InterruptedException e) {
@@ -217,8 +236,8 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         } catch (InterruptedException e) {
             // nothing to do
         }
-        LOGGER.info("NIF System adapter closing after {} tasks have been received and {} tasks have been answered.",
-                receivedTasksCounter.availablePermits(), solvedTasksCounter.availablePermits());
+        LOGGER.info("NIF System adapter closing after {} tasks have been received, {} tasks have been answered and {} caused errors.",
+                receivedTasksCounter.availablePermits(), solvedTasksCounter.availablePermits(), errorTasksCounter.availablePermits());
         super.close();
     }
 }
