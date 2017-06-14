@@ -49,6 +49,10 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
      * Used for debugging.
      */
     private Semaphore solvedTasksCounter = new Semaphore(0);
+    /**
+     * Used for debugging.
+     */
+    private Semaphore errorTasksCounter = new Semaphore(0);
 
     public static void main(String[] args) {
         ComponentStarter.main(new String[] { NifSystemAdapter.class.getCanonicalName() });
@@ -180,6 +184,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
             solvedTasksCounter.release();
         } catch (Exception e) {
             LOGGER.error("Got exception while processing task.", e);
+            errorTasksCounter.release();
         }
     }
 
@@ -231,8 +236,8 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         } catch (InterruptedException e) {
             // nothing to do
         }
-        LOGGER.info("NIF System adapter closing after {} tasks have been received and {} tasks have been answered.",
-                receivedTasksCounter.availablePermits(), solvedTasksCounter.availablePermits());
+        LOGGER.info("NIF System adapter closing after {} tasks have been received, {} tasks have been answered and {} caused errors.",
+                receivedTasksCounter.availablePermits(), solvedTasksCounter.availablePermits(), errorTasksCounter.availablePermits());
         super.close();
     }
 }
