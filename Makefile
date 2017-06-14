@@ -26,6 +26,8 @@ push:
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilevaluationmodule
 	docker push git.project-hobbit.eu:4567/gerbil/gerbiltestsystem
 	docker push git.project-hobbit.eu:4567/gerbil/gerbilnifsystemadapter
+	docker push git.project-hobbit.eu:4567/gerbil/gerbildatagenerator
+	docker push git.project-hobbit.eu:4567/gerbil/gerbiltaskgenerator
 	docker push git.project-hobbit.eu:4567/conrads/bengaltaskgenerator
 	docker push git.project-hobbit.eu:4567/conrads/bengaldatagenerator
 
