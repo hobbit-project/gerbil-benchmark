@@ -19,6 +19,7 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
 
     @Test
     public void checkErrorCountTest() throws Exception {
+        @SuppressWarnings("resource")
         GerbilEvaluationModuleTest eval = new GerbilEvaluationModuleTest();
         eval.type = ExperimentType.A2KB;
         eval.generateMatcher();
@@ -45,7 +46,7 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
         this.generateEvaluators();
         this.generateRetriever();
 
-        this.phases = 3;
+        this.phases = 4;
         this.docsPerPhase = 2;
 
         byte[] file1 = FileUtils.readFileToByteArray(new File("src/test/resources/test.nif"));
@@ -60,10 +61,10 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
         // errors = 0
 
         // Phase 1
-        this.evaluateResponse(file1, file2, 103L, 151L);
+        this.evaluateResponse(file1, file2, 103L, 156L);
         this.evaluateResponse(file2, file1, 101L, 201L);
         // F1 sum=0.0
-        // duration = 100
+        // duration = 100 + 53
         // beta = 0.0
         // errors = 0
 
@@ -71,15 +72,23 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
         this.evaluateResponse(file2, file2, 299L, 301L);
         this.evaluateResponse(file1, emptyResonse, 201L, 0L);
         // F1 sum=1.0
-        // duration = 100
-        // beta = 10
+        // duration = 2
+        // beta = 500
         // errors = 1
+
+        // Phase 3
+        this.evaluateResponse(file2, emptyResonse, 401L, 0L);
+        this.evaluateResponse(file1, emptyResonse, 401L, 0L);
+        // F1 sum=0.0
+        // duration = 0
+        // beta = 0
+        // errors = 2
 
         // overall
         // F1 sum = 3.0
-        // duration = 300
-        // beta = 3 * 1000 / 300 = 10
-        // errors = 1
+        // duration = 175
+        // beta = 3 * 1000 / 175 = 10
+        // errors = 3
 
         Model m = this.summarizeEvaluation();
         String modelString = m.toString();
@@ -94,27 +103,34 @@ public class GerbilEvaluationModuleTest extends GerbilEvaluationModule {
 
         phase = GERBIL2.getPhaseResource(experimentUri, 1);
         Assert.assertNotNull("Phase 1 missing in " + modelString, RdfHelper.getStringValue(m, phase, GERBIL2.duration));
-        Assert.assertEquals(100, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
+        Assert.assertEquals(153, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
         Assert.assertEquals(0.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.f1ScorePoints)), 0.0001);
         Assert.assertEquals(0.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
         Assert.assertEquals(0, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL.errorCount)));
 
         phase = GERBIL2.getPhaseResource(experimentUri, 2);
         Assert.assertNotNull("Phase 2 missing in " + modelString, RdfHelper.getStringValue(m, phase, GERBIL2.duration));
-        Assert.assertEquals(100, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
+        Assert.assertEquals(2, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
         Assert.assertEquals(1.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.f1ScorePoints)), 0.0001);
-        Assert.assertEquals(10.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
+        Assert.assertEquals(500.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
         Assert.assertEquals(1, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL.errorCount)));
+
+        phase = GERBIL2.getPhaseResource(experimentUri, 3);
+        Assert.assertNotNull("Phase 3 missing in " + modelString, RdfHelper.getStringValue(m, phase, GERBIL2.duration));
+        Assert.assertEquals(0, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
+        Assert.assertEquals(0.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.f1ScorePoints)), 0.0001);
+        Assert.assertEquals(0.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
+        Assert.assertEquals(2, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL.errorCount)));
 
         phase = m.getResource(experimentUri);
-        Assert.assertEquals(300, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
+        Assert.assertEquals(175, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL2.duration)));
         Assert.assertEquals(3.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.f1ScorePoints)), 0.0001);
-        Assert.assertEquals(10.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
-        Assert.assertEquals(1, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL.errorCount)));
+        Assert.assertEquals(3000.0 / 175.0, Double.parseDouble(RdfHelper.getStringValue(m, phase, GERBIL2.beta)), 0.0001);
+        Assert.assertEquals(3, Long.parseLong(RdfHelper.getStringValue(m, phase, GERBIL.errorCount)));
 
-        // 10ms + 10ms + 48ms + 100ms + 2ms
-        // = 170ms / 5 = 34
-        Assert.assertEquals(34.0,
+        // 10ms + 10ms + 53ms + 100ms + 2ms
+        // = 175ms / 5 = 35
+        Assert.assertEquals(35.0,
                 Double.parseDouble(
                         RdfHelper.getStringValue(m, phase, m.getProperty(GERBIL.getURI() + "avgMillisPerDoc"))),
                 0.0001);

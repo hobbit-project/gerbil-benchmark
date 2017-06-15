@@ -4,9 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 import org.aksw.gerbil.annotator.AnnotatorConfigurationImpl;
 import org.aksw.gerbil.annotator.decorator.ErrorCountingAnnotatorDecorator;
@@ -60,7 +59,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     private static final Logger LOGGER = LoggerFactory.getLogger(GerbilEvaluationModule.class);
 
     public static final String EXPERIMENT_TYPE_KEY = "gerbil.experimentType";
-    
+
     private static final String HTTP_SAME_AS_RETRIEVAL_DOMAIN_KEY = "org.aksw.gerbil.semantic.sameas.impl.http.HTTPBasedSameAsRetriever.domain";
     private static final String WIKIPEDIA_BASED_SAME_AS_RETRIEVAL_DOMAIN_KEY = "org.aksw.gerbil.semantic.sameas.impl.wiki.WikipediaApiBasedSingleUriSameAsRetriever.domain";
     private static final String SAME_AS_CACHE_FILE_KEY = "org.aksw.gerbil.semantic.sameas.CachingSameAsRetriever.cacheFile";
@@ -68,7 +67,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     protected NIFParser reader = new TurtleNIFParser();
     private List<Document> expectedDocuments = new ArrayList<Document>();
     private List<Document> receivedDocuments = new ArrayList<Document>();
-//    private Evaluator<? extends Marking> evaluator;
+    // private Evaluator<? extends Marking> evaluator;
     private List<Evaluator<?>> evaluators = new ArrayList<Evaluator<?>>();
     protected ExperimentType type;
     protected Matching matching;
@@ -82,7 +81,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     public static final String COUNT = "DOCS_PER_PHASE";
     protected boolean isBengal = false;
 
-    private SortedSet<StressTestDocumentResult> stressTestData = new TreeSet<StressTestDocumentResult>();
+    private List<StressTestDocumentResult> stressTestData = new ArrayList<StressTestDocumentResult>();
 
     protected int phases = 0;
     protected int docsPerPhase = 0;
@@ -159,42 +158,42 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
     }
 
     protected void generateEvaluators() {
-	Model model = ModelFactory.createDefaultModel();
-	try {
-	    
-	    model.read(new FileInputStream("Musicbrainz.ttl"), "http://purl.org/ontology/", "TTL");
-	    model.read(new FileInputStream("DBpediaTypes.ttl"), "http://dbpedia.org/ontology/", "TTL");
-	} catch (FileNotFoundException e) {
-	    LOGGER.error("Could not open Type hierarchies");
-	}
-	SubClassInferencer inferencer = new SimpleSubClassInferencer(model);
+        Model model = ModelFactory.createDefaultModel();
+        try {
+
+            model.read(new FileInputStream("Musicbrainz.ttl"), "http://purl.org/ontology/", "TTL");
+            model.read(new FileInputStream("DBpediaTypes.ttl"), "http://dbpedia.org/ontology/", "TTL");
+        } catch (FileNotFoundException e) {
+            LOGGER.error("Could not open Type hierarchies");
+        }
+        SubClassInferencer inferencer = new SimpleSubClassInferencer(model);
         EvaluatorFactory factory = new EvaluatorFactory(inferencer);
-//        evaluator = factory.createEvaluator(type, new ExperimentTaskConfiguration(null, null, type, matching), null);
-//        evaluators.add(evaluator);
+        // evaluator = factory.createEvaluator(type, new
+        // ExperimentTaskConfiguration(null, null, type, matching), null);
+        // evaluators.add(evaluator);
         factory.addEvaluators(evaluators, new ExperimentTaskConfiguration(null, null, type, matching), null);
     }
 
     @Override
     protected void evaluateResponse(byte[] expectedData, byte[] receivedData, long taskSentTimestamp,
             long responseReceivedTimestamp) throws Exception {
-	Document receivedDocument = new DocumentImpl();
-        Document expectedDocument = new DocumentImpl(); 
+        Document receivedDocument = new DocumentImpl();
+        Document expectedDocument = new DocumentImpl();
         if (receivedData == null || receivedData.length == 0) {
             this.errorCount++;
             receivedData = new byte[0];
         } else {
             runtimes.add(responseReceivedTimestamp - taskSentTimestamp);
-            receivedDocument =  parseDocument(receivedData);
+            receivedDocument = parseDocument(receivedData);
         }
-        if(expectedData == null || expectedData.length==0){
+        if (expectedData == null || expectedData.length == 0) {
             expectedData = new byte[0];
 
-        }
-        else{
+        } else {
             expectedDocument = parseDocument(expectedData);
 
         }
-         
+
         if (expectedData.length > 0) {
             SameAsRetrieverUtils.addSameURIsToMarkings(globalRetriever, expectedDocument.getMarkings());
         }
@@ -203,8 +202,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         }
         expectedDocuments.add(expectedDocument);
         receivedDocuments.add(receivedDocument);
-        LOGGER.info("exp: "+expectedDocument);
-        LOGGER.info("recv"+receivedDocument);
+        LOGGER.info("exp: " + expectedDocument);
+        LOGGER.info("recv" + receivedDocument);
         if (isBengal) {
             if (receivedData.length == 0) {
                 stressTestData
@@ -224,57 +223,57 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
 
     @Override
     protected Model summarizeEvaluation() throws Exception {
-	LOGGER.info("expected: "+this.expectedDocuments.toString());
-	LOGGER.info("received: "+this.receivedDocuments.toString());
-	
-	EvaluationResult evalResult = evaluate(expectedDocuments, receivedDocuments);
-        
+        LOGGER.info("expected: " + this.expectedDocuments.toString());
+        LOGGER.info("received: " + this.receivedDocuments.toString());
+
+        EvaluationResult evalResult = evaluate(expectedDocuments, receivedDocuments);
+
         ExperimentTaskResult expResult = new ExperimentTaskResult("", "", type, matching, new double[6],
                 ExperimentDAO.TASK_FINISHED, 0, System.currentTimeMillis());
         transformResults(evalResult, expResult);
 
         if (isBengal) {
+            // sort the received data ascending
+            Collections.sort(stressTestData);
             phaseResults = new StressTestPhaseResult[phases];
             int count = 0;
             int phase = 0;
-            long startOfPhase = 0;
-            long endOfPhase = Long.MIN_VALUE;
-            long endOfTest = Long.MIN_VALUE;
+            long duration = 0;
+            long durationSum = 0;
+            long overallDurationSum = 0;
             double f1ScoreSumPhase = 0;
             double overallF1ScoreSum = 0;
             int errorCount = 0;
             for (StressTestDocumentResult r : stressTestData) {
-                if (count == 0) {
-                    startOfPhase = r.startTime;
-                }
                 ++count;
                 if (r.error) {
                     ++errorCount;
                 } else {
-                    if (r.endTime > endOfPhase) {
-                        endOfPhase = r.endTime;
-                    }
-                    if (r.endTime > endOfTest) {
-                        endOfTest = r.endTime;
+                    duration = r.endTime - r.startTime;
+                    if(duration < 0) {
+                        LOGGER.error("Got a negative duration. It will be set to 0.");
+                    } else {
+                        durationSum += duration;
+                        overallDurationSum += duration;
                     }
                 }
                 f1ScoreSumPhase += r.f1;
                 overallF1ScoreSum += r.f1;
                 if (count == docsPerPhase) {
-                    phaseResults[phase] = createPhaseResult(startOfPhase, endOfPhase, f1ScoreSumPhase, errorCount);
+                    phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount);
                     count = 0;
                     ++phase;
                     f1ScoreSumPhase = 0;
-                    endOfPhase = Long.MIN_VALUE;
+                    durationSum = 0;
                     errorCount = 0;
                 }
             }
             if (count > 0) {
                 LOGGER.warn("Got an unfinished phase #{} (count == {} while {} docs per phase have been expected)",
                         phase, count, docsPerPhase);
-                phaseResults[phase] = createPhaseResult(startOfPhase, endOfPhase, f1ScoreSumPhase, errorCount);
+                phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount);
             }
-            overallStressResult = createPhaseResult(stressTestData.first().startTime, endOfTest, overallF1ScoreSum, 0);
+            overallStressResult = createPhaseResult(overallDurationSum, overallF1ScoreSum, 0);
         }
 
         // DataIDGenerator generator = new
@@ -286,19 +285,18 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         return generateModel(expResult);
     }
 
-    private StressTestPhaseResult createPhaseResult(long startOfPhase, long endOfPhase, double f1ScoreSumPhase,
-            int errors) {
-        long duration = 0;
+    private StressTestPhaseResult createPhaseResult(long durationSum, double f1ScoreSumPhase, int errors) {
         double beta = 0;
-        if (endOfPhase > 0) {
-            duration = endOfPhase - startOfPhase;
-            if (duration == 0) {
+        if (durationSum == 0) {
+            if (f1ScoreSumPhase > 0) {
                 LOGGER.error("Got a duration of 0. Setting it to 1ms.");
-                duration = 1;
+                durationSum = 1;
             }
-            beta = (f1ScoreSumPhase * 1000d) / duration;
         }
-        return new StressTestPhaseResult(duration, f1ScoreSumPhase, beta, errors);
+        if (durationSum > 0) {
+            beta = (f1ScoreSumPhase * 1000d) / durationSum;
+        }
+        return new StressTestPhaseResult(durationSum, f1ScoreSumPhase, beta, errors);
     }
 
     @SuppressWarnings("deprecation")
@@ -413,11 +411,10 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             double[] arr = new double[6];
             SubTaskResult subtask = (SubTaskResult) result;
             ExperimentTaskConfiguration config = subtask.getConfiguration();
-            config.annotatorConfig = new AnnotatorConfigurationImpl("...", true,null,null, type);
-            config.datasetConfig = new DatasetConfigurationImpl("...", true, null, null, type, null,globalRetriever);
-           
-            ExperimentTaskResult subTask = new ExperimentTaskResult(config,
-                   arr, ExperimentDAO.TASK_FINISHED, 0);
+            config.annotatorConfig = new AnnotatorConfigurationImpl("...", true, null, null, type);
+            config.datasetConfig = new DatasetConfigurationImpl("...", true, null, null, type, null, globalRetriever);
+
+            ExperimentTaskResult subTask = new ExperimentTaskResult(config, arr, ExperimentDAO.TASK_FINISHED, 0);
             List<EvaluationResult> tempResults = ((EvaluationResultContainer) result).getResults();
             for (EvaluationResult tempResult : tempResults) {
                 transformResults(tempResult, subTask);
@@ -472,7 +469,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             return;
         } else if (result instanceof IntEvaluationResult) {
             if (result.getName().equals(ErrorCountingAnnotatorDecorator.ERROR_COUNT_RESULT_NAME)) {
-                expResult.errorCount = errorCount;//((IntEvaluationResult) result).getValueAsInt();
+                expResult.errorCount = errorCount;// ((IntEvaluationResult)
+                                                  // result).getValueAsInt();
                 return;
             }
             int id = ResultNameToIdMapping.getInstance().getResultId(result.getName());
@@ -488,7 +486,6 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         Model model = createDefaultModel();
         Resource experiment = model.getResource(experimentUri);
 
-        
         model.addLiteral(experiment, GERBIL.macroPrecision, result.getMacroPrecision());
         model.addLiteral(experiment, GERBIL.macroRecall, result.getMacroRecall());
         model.addLiteral(experiment, GERBIL.macroF1, result.getMacroF1Measure());
@@ -497,23 +494,23 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         model.addLiteral(experiment, GERBIL.microF1, result.getMicroF1Measure());
         model.addLiteral(experiment, GERBIL.errorCount, result.errorCount + this.errorCount);
 
-        if(result.getNumberOfSubTasks()>0){
-            for(ExperimentTaskResult subResult : result.getSubTasks()){
-        	Resource subRes = model.getResource(experimentUri+"_"+subResult.type.getName());
-            
-        	model.add(subRes, GERBIL.subExperimentOf, experiment);
-        	model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
-        	model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
-        	model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());
-        	model.addLiteral(subRes, GERBIL.microPrecision, subResult.getMicroPrecision());
-        	model.addLiteral(subRes, GERBIL.microRecall, subResult.getMicroRecall());
-        	model.addLiteral(subRes, GERBIL.microF1, subResult.getMicroF1Measure());
-        	model.addLiteral(subRes, GERBIL.errorCount, subResult.errorCount + this.errorCount);
-        	model.add(subRes, GERBIL.experimentType, GERBIL.getExperimentTypeResource(subResult.type));
-            
+        if (result.getNumberOfSubTasks() > 0) {
+            for (ExperimentTaskResult subResult : result.getSubTasks()) {
+                Resource subRes = model.getResource(experimentUri + "_" + subResult.type.getName());
+
+                model.add(subRes, GERBIL.subExperimentOf, experiment);
+                model.addLiteral(subRes, GERBIL.macroPrecision, subResult.getMacroPrecision());
+                model.addLiteral(subRes, GERBIL.macroRecall, subResult.getMacroRecall());
+                model.addLiteral(subRes, GERBIL.macroF1, subResult.getMacroF1Measure());
+                model.addLiteral(subRes, GERBIL.microPrecision, subResult.getMicroPrecision());
+                model.addLiteral(subRes, GERBIL.microRecall, subResult.getMicroRecall());
+                model.addLiteral(subRes, GERBIL.microF1, subResult.getMicroF1Measure());
+                model.addLiteral(subRes, GERBIL.errorCount, subResult.errorCount + this.errorCount);
+                model.add(subRes, GERBIL.experimentType, GERBIL.getExperimentTypeResource(subResult.type));
+
             }
         }
-        
+
         long durationSum = 0;
         double avgMillisPerDoc = 0;
         if (runtimes.buffer.length > 0) {
@@ -523,20 +520,20 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             avgMillisPerDoc = durationSum / (double) runtimes.elementsCount;
         }
         model.addLiteral(experiment, model.getProperty(GERBIL.getURI() + "avgMillisPerDoc"), avgMillisPerDoc);
-        
+
         if (isBengal) {
             for (int i = 0; i < phases; i++) {
                 if (phaseResults[i] != null) {
                     Resource phase = GERBIL2.getPhaseResource(experimentUri, i);
                     model.add(experiment, GERBIL2.hasPhase, phase);
-                    model.addLiteral(phase, GERBIL2.duration, phaseResults[i].duration);
+                    model.addLiteral(phase, GERBIL2.duration, phaseResults[i].durationSum);
                     model.addLiteral(phase, GERBIL2.f1ScorePoints, phaseResults[i].f1ScoreSum);
                     model.addLiteral(phase, GERBIL2.beta, phaseResults[i].beta);
                     model.addLiteral(phase, GERBIL.errorCount, phaseResults[i].errors);
                 }
             }
             if (overallStressResult != null) {
-                model.addLiteral(experiment, GERBIL2.duration, overallStressResult.duration);
+                model.addLiteral(experiment, GERBIL2.duration, overallStressResult.durationSum);
                 model.addLiteral(experiment, GERBIL2.f1ScorePoints, overallStressResult.f1ScoreSum);
                 model.addLiteral(experiment, GERBIL2.beta, overallStressResult.beta);
                 // we don't have to add error here
