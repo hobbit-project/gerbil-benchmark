@@ -237,6 +237,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             Collections.sort(stressTestData);
             phaseResults = new StressTestPhaseResult[phases];
             int count = 0;
+            int overallCount = 0;
             int phase = 0;
             long duration = 0;
             long durationSum = 0;
@@ -244,13 +245,16 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             double f1ScoreSumPhase = 0;
             double overallF1ScoreSum = 0;
             int errorCount = 0;
+            int overallErrorCount = 0;
             for (StressTestDocumentResult r : stressTestData) {
                 ++count;
+                ++overallCount;
                 if (r.error) {
                     ++errorCount;
+                    ++overallErrorCount;
                 } else {
                     duration = r.endTime - r.startTime;
-                    if(duration < 0) {
+                    if (duration < 0) {
                         LOGGER.error("Got a negative duration. It will be set to 0.");
                     } else {
                         durationSum += duration;
@@ -260,7 +264,7 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
                 f1ScoreSumPhase += r.f1;
                 overallF1ScoreSum += r.f1;
                 if (count == docsPerPhase) {
-                    phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount);
+                    phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount, count);
                     count = 0;
                     ++phase;
                     f1ScoreSumPhase = 0;
@@ -271,9 +275,10 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
             if (count > 0) {
                 LOGGER.warn("Got an unfinished phase #{} (count == {} while {} docs per phase have been expected)",
                         phase, count, docsPerPhase);
-                phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount);
+                phaseResults[phase] = createPhaseResult(durationSum, f1ScoreSumPhase, errorCount, count);
             }
-            overallStressResult = createPhaseResult(overallDurationSum, overallF1ScoreSum, 0);
+            overallStressResult = createPhaseResult(overallDurationSum, overallF1ScoreSum, overallErrorCount,
+                    overallCount);
         }
 
         // DataIDGenerator generator = new
@@ -285,7 +290,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
         return generateModel(expResult);
     }
 
-    private StressTestPhaseResult createPhaseResult(long durationSum, double f1ScoreSumPhase, int errors) {
+    private StressTestPhaseResult createPhaseResult(long durationSum, double f1ScoreSumPhase, int errors,
+            int docCount) {
         double beta = 0;
         if (durationSum == 0) {
             if (f1ScoreSumPhase > 0) {
@@ -293,10 +299,15 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
                 durationSum = 1;
             }
         }
+        double avgDurationPerDoc = 0;
         if (durationSum > 0) {
             beta = (f1ScoreSumPhase * 1000d) / durationSum;
+            docCount -= errors;
+            if (docCount > 0) {
+                avgDurationPerDoc = durationSum / (double) docCount;
+            }
         }
-        return new StressTestPhaseResult(durationSum, f1ScoreSumPhase, beta, errors);
+        return new StressTestPhaseResult(durationSum, f1ScoreSumPhase, beta, errors, avgDurationPerDoc);
     }
 
     @SuppressWarnings("deprecation")
@@ -530,6 +541,8 @@ public class GerbilEvaluationModule extends AbstractEvaluationModule {
                     model.addLiteral(phase, GERBIL2.f1ScorePoints, phaseResults[i].f1ScoreSum);
                     model.addLiteral(phase, GERBIL2.beta, phaseResults[i].beta);
                     model.addLiteral(phase, GERBIL.errorCount, phaseResults[i].errors);
+                    model.addLiteral(phase, model.getProperty(GERBIL.getURI() + "avgMillisPerDoc"),
+                            phaseResults[i].avgMillisPerDoc);
                 }
             }
             if (overallStressResult != null) {
