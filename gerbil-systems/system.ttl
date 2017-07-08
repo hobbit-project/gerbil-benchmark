@@ -199,7 +199,7 @@ gsys:NERD-MLWS	a	hobbit:SystemInstance;
 			                        gerbil2:GerbilApiC2KB,
 			                        gerbil2:GerbilApiD2KB,
 			                        gerbil2:GerbilApiERec;
-			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems/nerd".
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
             
 gsys:NERFGUNWS	a	hobbit:SystemInstance;
 			rdfs:label	"NERFGUN webservice"@en;
