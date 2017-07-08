@@ -1,0 +1,270 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gsys: <http://gerbil.org/systems/> .
+@prefix gerbil2: <http://w3id.org/gerbil/hobbit/vocab#> .
+@prefix gerbil: <http://w3id.org/gerbil/vocab#> .
+@prefix hobbit: <http://w3id.org/hobbit/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+gsys:AgdistisWS	a	hobbit:SystemInstance;
+			rdfs:label	"AGDISTIS webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the AGDISTIS webservice"@en;
+			gsys:name "AGDISTIS";
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:AidaSystemWS1	a	hobbit:SystemInstance;
+			rdfs:label	"AIDA webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the AIDA webservice"@en;
+			gsys:name "AIDA";
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+		
+gsys:AidaSystemWS2	a	hobbit:SystemInstance;
+			rdfs:label	"AIDA webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the AIDA webservice"@en;
+			gsys:name "AIDA";
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:BabelfyWS	a	hobbit:SystemInstance;
+			rdfs:label	"Babelfy webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the Babelfy webservice"@en;
+			gsys:name "Babelfy";
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:SpotlightSystem1	a	hobbit:SystemInstance;
+			rdfs:label	"DBpedia Spotlight webservice"@en;
+			gsys:name "DBpedia Spotlight";
+			rdfs:comment	"System for the Gerbil Benchmark using the DBpedia Spotlight webservice"@en;
+            gerbil:experimentType   gerbil:OKE2015_Task1;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiRT2KB,
+			                        gerbil2:GerbilApiOKE2015T1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:SpotlightSystem2	a	hobbit:SystemInstance;
+			rdfs:label	"DBpedia Spotlight webservice"@en;
+			gsys:name "DBpedia Spotlight";
+			rdfs:comment	"System for the Gerbil Benchmark using the DBpedia Spotlight webservice"@en;
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiETyping;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:SpotlightSystem3	a	hobbit:SystemInstance;
+			rdfs:label	"DBpedia Spotlight webservice"@en;
+			gsys:name "DBpedia Spotlight";
+			rdfs:comment	"System for the Gerbil Benchmark using the DBpedia Spotlight webservice"@en;
+            gerbil:experimentType   gerbil:ERec;
+			hobbit:implementsAPI	gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:DexterWS	a	hobbit:SystemInstance;
+			rdfs:label	"Dexter webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the Dexter webservice"@en;
+			gsys:name "Dexter";
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:DoSeRWS	a	hobbit:SystemInstance;
+			rdfs:label	"DoSeR webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the DoSeR webservice"@en;
+			gsys:name "DoSeR";
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:Entityclassifier-euWS	a	hobbit:SystemInstance;
+			rdfs:label	"Entityclassifier.eu NER webservice"@en;
+			rdfs:comment	"System for the Gerbil Benchmark using the Entityclassifier.eu NER webservice"@en;
+			gsys:name "Entityclassifier.eu NER";
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:FREDWS	a	hobbit:SystemInstance;
+			rdfs:label	"FRED webservice"@en;
+			gsys:name "FRED";
+			rdfs:comment	"System for the Gerbil Benchmark using the FRED webservice"@en;
+            gerbil:experimentType   gerbil:OKE2015_Task1;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec,
+			                        gerbil2:GerbilApiETyping,
+			                        gerbil2:GerbilApiRT2KB,
+			                        gerbil2:GerbilApiOKE2015T1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FREMEWS-OKE2015T1	a	hobbit:SystemInstance;
+			rdfs:label	"FREME NER webservice"@en;
+			gsys:name "FREME NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the FREME NER webservice"@en;
+            gerbil:experimentType   gerbil:OKE2015_Task1;
+			hobbit:implementsAPI	gerbil2:GerbilApiRT2KB,
+			                        gerbil2:GerbilApiOKE2015T1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FREMEWS-A2KB	a	hobbit:SystemInstance;
+			rdfs:label	"FREME NER webservice"@en;
+			gsys:name "FREME NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the FREME NER webservice"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiC2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FREMEWS-D2KB	a	hobbit:SystemInstance;
+			rdfs:label	"FREME NER webservice"@en;
+			gsys:name "FREME NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the FREME NER webservice"@en;
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FREMEWS-ERec	a	hobbit:SystemInstance;
+			rdfs:label	"FREME NER webservice"@en;
+			gsys:name "FREME NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the FREME NER webservice"@en;
+            gerbil:experimentType   gerbil:ERec;
+			hobbit:implementsAPI	gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FREMEWS-ETyping	a	hobbit:SystemInstance;
+			rdfs:label	"FREME NER webservice"@en;
+			gsys:name "FREME NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the FREME NER webservice"@en;
+            gerbil:experimentType   gerbil:ETyping;
+			hobbit:implementsAPI	gerbil2:GerbilApiETyping;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:FOXWS	a	hobbit:SystemInstance;
+			rdfs:label	"FOX webservice"@en;
+			gsys:name "FOX";
+			rdfs:comment	"System for the Gerbil Benchmark using the FOX webservice"@en;
+            gerbil:experimentType   gerbil:OKE2015_Task1;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec,
+			                        gerbil2:GerbilApiETyping,
+			                        gerbil2:GerbilApiRT2KB,
+			                        gerbil2:GerbilApiOKE2015T1;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:KeaWS-A2KB	a	hobbit:SystemInstance;
+			rdfs:label	"Kea webservice"@en;
+			gsys:name "Kea";
+			rdfs:comment	"System for the Gerbil Benchmark using the Kea webservice"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:KeaWS-D2KB	a	hobbit:SystemInstance;
+			rdfs:label	"Kea webservice"@en;
+			gsys:name "Kea";
+			rdfs:comment	"System for the Gerbil Benchmark using the Kea webservice"@en;
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:NERD-MLWS	a	hobbit:SystemInstance;
+			rdfs:label	"NERD-ML webservice"@en;
+			gsys:name "NERD-ML";
+			rdfs:comment	"System for the Gerbil Benchmark using the NERD-ML webservice"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems/nerd".
+            
+gsys:NERFGUNWS	a	hobbit:SystemInstance;
+			rdfs:label	"NERFGUN webservice"@en;
+			gsys:name "NERFGUN";
+			rdfs:comment	"System for the Gerbil Benchmark using the NERFGUN webservice"@en;
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+            
+gsys:PBOHWS	a	hobbit:SystemInstance;
+			rdfs:label	"PBOH webservice"@en;
+			gsys:name "PBOH";
+			rdfs:comment	"System for the Gerbil Benchmark using the PBOH webservice"@en;
+            gerbil:experimentType   gerbil:D2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiD2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:TagMe2WS-A2KB	a	hobbit:SystemInstance;
+			rdfs:label	"TagMe 2 webservice"@en;
+			gsys:name "TagMe 2";
+			rdfs:comment	"System for the Gerbil Benchmark using the TagMe 2 webservice"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
+gsys:TagMe2WS-ERec	a	hobbit:SystemInstance;
+			rdfs:label	"TagMe 2 webservice"@en;
+			gsys:name "TagMe 2";
+			rdfs:comment	"System for the Gerbil Benchmark using the TagMe 2 webservice"@en;;
+            gerbil:experimentType   gerbil:ERec;
+			hobbit:implementsAPI    gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:WATWS	a	hobbit:SystemInstance;
+			rdfs:label	"WAT webservice"@en;
+			gsys:name "WAT";
+			rdfs:comment	"System for the Gerbil Benchmark using the WAT webservice"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:xLisaNERWS	a	hobbit:SystemInstance;
+			rdfs:label	"xLisa webservice using NER"@en;
+			gsys:name "xLisa-NER";
+			rdfs:comment	"System for the Gerbil Benchmark using the xLisa webservice using the NER model"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+
+gsys:xLisaNGRAMWS	a	hobbit:SystemInstance;
+			rdfs:label	"xLisa webservice using NGRAM"@en;
+			gsys:name "xLisa-NGRAM";
+			rdfs:comment	"System for the Gerbil Benchmark using the xLisa webservice using the NGRAM model"@en;
+            gerbil:experimentType   gerbil:A2KB;
+			hobbit:implementsAPI	gerbil2:GerbilApiA2KB,
+			                        gerbil2:GerbilApiD2KB,
+			                        gerbil2:GerbilApiC2KB,
+			                        gerbil2:GerbilApiERec;
+			hobbit:imageName	"git.project-hobbit.eu:4567/conrads/gerbilsystems".
+			
