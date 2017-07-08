@@ -35,7 +35,7 @@ build-systems:
 	cd gerbil-systems && mvn clean package -U -Dmaven.test.skip=true
 
 dockerize-systems:
-	cd gerbil-systems && docker build -f gerbil_systems.docker -t git.project-hobbit.eu:4567/conrads/gerbilsystems/image .
+	cd gerbil-systems && docker build -f gerbil_systems.docker -t git.project-hobbit.eu:4567/conrads/gerbilsystems .
 
 push-systems: 
 	docker push git.project-hobbit.eu:4567/conrads/gerbilsystems
