@@ -18,9 +18,13 @@ import org.aksw.gerbil.datatypes.ExperimentType;
 import org.aksw.gerbil.exceptions.GerbilException;
 import org.aksw.gerbil.semantic.vocabs.GERBIL;
 import org.aksw.gerbil.transfer.nif.Document;
+import org.aksw.gerbil.transfer.nif.data.DocumentImpl;
 import org.aksw.gerbil.web.config.AdapterList;
 import org.aksw.gerbil.web.config.AnnotatorsConfig;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.hobbit.benchmark.gerbil.adapters.GerbilSystemAdapter;
@@ -152,4 +156,28 @@ public class SimpleAdapter implements HobbitAnnotator, Closeable {
         annotator.close();
     }
 
+    /**
+     * Simple main method for testing a single adapter.
+     * 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
+        Model systems = ModelFactory.createDefaultModel();
+        systems.read("system.ttl");
+        Model systemModel = ModelFactory.createDefaultModel();
+        ResIterator systemIterator = systems.listSubjectsWithProperty(RDF.type, HOBBIT.SystemInstance);
+        Resource system;
+        while (systemIterator.hasNext()) {
+            system = systemIterator.next();
+            if (system.getURI().equals("http://gerbil.org/systems/BabelfyWS")) {
+                systemModel.add(systems.listStatements(system, null, (RDFNode) null));
+            }
+        }
+        SimpleAdapter adapter = SimpleAdapter.create(systemModel);
+        
+        Document document = new DocumentImpl("Barack Obama met Angela Merkel in Berlin", "http://example.org/doc1");
+        System.out.println(adapter.annotate(document));
+        adapter.close();
+    }
 }
