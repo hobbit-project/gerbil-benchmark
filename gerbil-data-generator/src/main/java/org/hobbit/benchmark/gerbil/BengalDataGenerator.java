@@ -236,30 +236,33 @@ public class BengalDataGenerator extends AbstractDataGenerator {
 //	}
     
     private List<Document> generateCorpus2(int task, String endpoint, long seed, int numberOfDocuments) throws FileNotFoundException{
-	List<Document> ret=new ArrayList<Document> ();
-	File f=null;
-    f = new File(path+ task + "task" + getGeneratorId() + ".nif");
-//	switch(task){
-//	case 1:
-//	    break;
-//	case 2:
-//	    f = new File(path+"task2.nif");
-//	    break;
-//	case 3:
-//	    f = new File(path+"task3.nif");
-//	    break;
-//	}
-	List<Document> allDocuments = parser.parseNIF(new FileReader(f));
-	Collections.sort(allDocuments, new DocumentComparator());
-
-	int startDoc = Long.valueOf(seed%allDocuments.size()).intValue();
-	for(int i=0;i<numberOfDocuments;i++){
-	    if(startDoc>=allDocuments.size()){startDoc=0;}
-	    ret.add(allDocuments.get(startDoc++));
-	}
-	
-	return ret;
-	
+        List<Document> ret=new ArrayList<Document> ();
+        File f = null;
+        f = (numberOfDocuments <= 140) ? new File(path+ task + "task" + getGeneratorId() + ".nif") : new File(path + "B11_bengal_hybrid_10000.ttl");
+        //	switch(task){
+        //	case 1:
+        //	    break;
+        //	case 2:
+        //	    f = new File(path+"task2.nif");
+        //	    break;
+        //	case 3:
+        //	    f = new File(path+"task3.nif");
+        //	    break;
+        //	}
+        List<Document> allDocuments = parser.parseNIF(new FileReader(f));
+        Collections.sort(allDocuments, new DocumentComparator());
+        
+        // If we have to use the large dataset, make sure that the datagenerators start at different positions.
+        if(numberOfDocuments <= 140) {
+            seed += allDocuments.size() / getNumberOfGenerators();
+        }
+        int startDoc = Long.valueOf(seed % allDocuments.size()).intValue();
+        // FIXME This could be done easier using allDocuments.subList(fromIndex, toIndex)
+        for(int i=0;i<numberOfDocuments;i++){
+            if(startDoc>=allDocuments.size()){startDoc=0;}
+            ret.add(allDocuments.get(startDoc++));
+        }
+        return ret;
     }
     
 //    private static List<Document> generateCorpus(int task, String endpoint, long seed, int numberOfDocuments){
