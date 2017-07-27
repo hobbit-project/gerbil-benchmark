@@ -257,6 +257,7 @@ public class BengalDataGenerator extends AbstractDataGenerator {
             seed += allDocuments.size() / getNumberOfGenerators();
         }
         int startDoc = Long.valueOf(seed % allDocuments.size()).intValue();
+        LOGGER.info("Loaded {} documents. Starting with document {}...", allDocuments.size(), startDoc);
         // FIXME This could be done easier using allDocuments.subList(fromIndex, toIndex)
         for(int i=0;i<numberOfDocuments;i++){
             if(startDoc>=allDocuments.size()){startDoc=0;}
