@@ -77,6 +77,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         }
         // Get the system image name
         String systemImage = RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.instanceImageName);
+        
         if (systemImage == null) {
             LOGGER.warn("Couldn't load system image name. It is assumed that no system container has to be started.");
             // throw new IllegalArgumentException("Couldn't load system image
@@ -86,6 +87,13 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         if (systemUrl == null) {
             throw new IllegalArgumentException("Couldn't load webservice url. Aborting.");
         }
+        
+        String systemHeader = RdfHelper.getStringValue(systemParamModel, null, NIF_SYS.additionalHeader);
+        if(systemHeader == null) {
+        	//no heeader set it to an empty string
+        	systemHeader="";
+        }
+
 
         // If this is the master, create the additional adapters if they are
         // needed
@@ -98,7 +106,7 @@ public class NifSystemAdapter extends AbstractSystemAdapter {
         }
         // Create the annotation system
         systemUrl = generateSystemUrl(systemUrl);
-        annotator = new AdaptedNIFBasedAnnotatorWebservice(systemUrl, "NIF-based-system");
+        annotator = new AdaptedNIFBasedAnnotatorWebservice(systemUrl, "NIF-based-system", systemHeader);
         // Wait for annotator to work
         Document document = new DocumentImpl("This is a text document.", "http://example.org/test-doc");
         boolean noResponse = true;

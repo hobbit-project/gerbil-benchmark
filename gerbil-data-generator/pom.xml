@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.hobbit</groupId>
 	<artifactId>gerbil-data-generator</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,7 +48,7 @@
 		<dependency>
 			<groupId>org.hobbit.gerbil</groupId>
 			<artifactId>commons</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
         <!-- <dependency>
 			<groupId>org.aksw.simba</groupId>

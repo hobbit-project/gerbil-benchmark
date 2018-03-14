@@ -2,7 +2,7 @@ FROM java
 
 ADD indexes /gerbil/indexes
 
-ADD target/gerbil-evaluation-module-0.0.1-SNAPSHOT.jar /gerbil/gerbil.jar
+ADD target/gerbil-evaluation-module-0.0.2-SNAPSHOT.jar /gerbil/gerbil.jar
 
 ADD Musicbrainz.ttl /gerbil/Musicbrainz.ttl
 ADD DBpediaTypes.ttl /gerbil/DBpediaTypes.ttl

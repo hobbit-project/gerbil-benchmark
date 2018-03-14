@@ -9,7 +9,9 @@ import org.aksw.gerbil.transfer.nif.NIFDocumentCreator;
 import org.aksw.gerbil.transfer.nif.NIFDocumentParser;
 import org.aksw.gerbil.transfer.nif.TurtleNIFDocumentCreator;
 import org.aksw.gerbil.transfer.nif.TurtleNIFDocumentParser;
+import org.aksw.gerbil.utils.DocumentTextEditRevoker;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -33,6 +35,10 @@ public class AdaptedNIFBasedAnnotatorWebservice extends NIFBasedAnnotatorWebserv
     public AdaptedNIFBasedAnnotatorWebservice(String url, String name) {
         super(url, name);
     }
+    
+    public AdaptedNIFBasedAnnotatorWebservice(String url, String name, String additionalHeader) {
+    	super(url, name, additionalHeader);
+    }
 
     /**
      * Overrides the original request method since we don't need HTTP
@@ -53,8 +59,11 @@ public class AdaptedNIFBasedAnnotatorWebservice extends NIFBasedAnnotatorWebserv
         request.addHeader(HttpHeaders.CONTENT_TYPE, nifCreator.getHttpContentType() + ";charset=UTF-8");
         request.addHeader(HttpHeaders.ACCEPT, nifParser.getHttpContentType());
         request.addHeader(HttpHeaders.ACCEPT_CHARSET, "UTF-8");
-
+        for(Header header : getAdditionalHeader()) {
+        	request.addHeader(header);
+        }
         entity = null;
+        Document resultDoc = null;
         CloseableHttpResponse response = null;
         try {
             response = sendRequest(request, true);
@@ -62,7 +71,7 @@ public class AdaptedNIFBasedAnnotatorWebservice extends NIFBasedAnnotatorWebserv
             entity = response.getEntity();
             // read response and parse NIF
             try {
-                document = nifParser.getDocumentFromNIFStream(entity.getContent());
+                resultDoc = nifParser.getDocumentFromNIFStream(entity.getContent());
             } catch (Exception e) {
                 LOGGER.error("Couldn't parse the response.", e);
                 throw new GerbilException("Couldn't parse the response.", e, ErrorTypes.UNEXPECTED_EXCEPTION);
@@ -76,7 +85,7 @@ public class AdaptedNIFBasedAnnotatorWebservice extends NIFBasedAnnotatorWebserv
             }
             IOUtils.closeQuietly(response);
         }
-        return document;
+        return DocumentTextEditRevoker.revokeTextEdits(resultDoc, document.getText());
     }
 
     @Override

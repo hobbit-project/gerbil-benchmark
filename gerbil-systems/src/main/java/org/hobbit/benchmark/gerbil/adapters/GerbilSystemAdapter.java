@@ -24,6 +24,7 @@ import org.hobbit.benchmark.gerbil.systems.impl.TagMeWrapper;
 import org.hobbit.benchmark.gerbil.systems.impl.XLisaWrapper;
 import org.hobbit.core.components.AbstractSystemAdapter;
 import org.hobbit.core.rabbit.RabbitMQUtils;
+import org.hobbit.utils.rdf.RdfHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,8 +44,10 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
         @Override
         public void init() throws Exception {
     		super.init();
+            String systemName = RdfHelper.getStringValue(systemParamModel, null, name);
+            System.out.println("Got the following System: "+systemName);
     		//FIXME get systemName from 
-    		String systemName="xLisaNGRAM";
+//    		String systemName="xLisaNGRAM";
     		switch(systemName){
     		case "Aida-AC2KB-ERec":
     		    annotator = new AIDAWrapper("https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate", false);
@@ -56,7 +59,8 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		    annotator = new AgdistisWrapper("139.18.2.164", "8080");
     		    break;
     		case "FOX":
-    		    annotator = new FOXWrapper("http://139.18.2.164:4444/call/ner/entities");
+    			//TODO 
+    		    annotator = new FOXWrapper("http://fox-demo.aksw.org/fox");
     		    break;
     		case "FRED":
     		    annotator = new FREDWrapper("http://wit.istc.cnr.it/stlab-tools/fred");
@@ -65,13 +69,13 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		    annotator = new NERDWrapper("http://nerd.eurecom.fr/api/");
     		    break;
     		case "Spotlight-ACRT2KB-OKET1":
-    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org:2222/rest/", 0);
+    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org/en", 0);
     		    break;
     		case "Spotlight-D2KB-ETyping":
-    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org:2222/rest/", 1);
+    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org/en", 1);
     		    break;
     		case "Spotlight-ERec":
-    		    annotator = new SpotlightWrapper("http://spotlight.sztaki.hu:2222/rest/", 2);
+    		    annotator = new SpotlightWrapper("http://model.dbpedia-spotlight.org/en", 2);
     		    break;
     		case "TagMe-ACD2KB":
     		    annotator = new TagMeWrapper("https://tagme.d4science.org/tagme/tag", "https://tagme.d4science.org/tagme/spot", true);
@@ -85,6 +89,9 @@ public class GerbilSystemAdapter extends AbstractSystemAdapter {
     		case "xLisaNGRAM":
     		    annotator = new XLisaWrapper("en","en","dbedia","NGRAM");
     		    break;
+    		default:
+    			LOGGER.error("Could not load annotator system with name {}", systemName);
+    			throw new Exception("UKNOWN ANNOTATOR SYSTEM "+systemName);
     		}
     	
         }

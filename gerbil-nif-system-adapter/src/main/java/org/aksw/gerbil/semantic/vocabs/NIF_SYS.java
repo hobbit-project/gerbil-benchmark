@@ -66,6 +66,7 @@ public class NIF_SYS {
     public static final Property instanceImageName = property("instanceImageName");
     public static final Property numberOfInstances = property("numberOfInstances");
     public static final Property webserviceUrl = property("webserviceUrl");
+    public static final Property additionalHeader = property("additionalHeader");
     // public static final Property dataset = property("dataset");
     // public static final Property experimentType = property("experimentType");
     // public static final Property errorCount = property("errorCount");

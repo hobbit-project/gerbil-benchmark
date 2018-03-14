@@ -21,56 +21,57 @@ import org.slf4j.LoggerFactory;
 
 public class GerbilDataGenerator extends AbstractDataGenerator {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GerbilDataGenerator.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(GerbilDataGenerator.class);
 
-    private String datasetName;
-    private NIFWriter writer = new TurtleNIFWriter();
-    private ExperimentType experimentType;
-    private List<DatasetConfiguration> configs;
-    
-    @Override
-    public void init() throws Exception {
-	LOGGER.info("Starting initialization of Gerbil Data Generator");
-	super.init();
-	Map<String, String> envVariables = System.getenv();
-	
-	createConfigurations(envVariables.get(CONSTANTS.GERBIL_DATASET_TO_TEST_NAME), ExperimentType.valueOf(envVariables.get(CONSTANTS.GERBIL_EXPERIMENT_TYPE)));
-    }
-    
-    public void createConfigurations(String datasetName, ExperimentType experimentType){
-	this.datasetName = datasetName;
-	this.experimentType = experimentType;
-	LOGGER.info("Using dataset {{}} and experimentType {{}}", datasetName, experimentType);
+	private String datasetName;
+	private NIFWriter writer = new TurtleNIFWriter();
+	private ExperimentType experimentType;
+	private List<DatasetConfiguration> configs;
 
-	SameAsRetriever retriever = null;
-	EntityCheckerManager entityCheckerManager = null;
-	configs = DatasetsConfig.datasets(entityCheckerManager, retriever).getAdaptersForName(datasetName);
-	
-	LOGGER.info("Initialization of Gerbil Data Generator done.");
-    }
+	@Override
+	public void init() throws Exception {
+		LOGGER.info("Starting initialization of Gerbil Data Generator");
+		super.init();
+		Map<String, String> envVariables = System.getenv();
 
-    @Override
-    protected void generateData() throws Exception {
-
-	LOGGER.info("Got the following configurations: {{}}", configs);
-	for(DatasetConfiguration config : configs) {
-	    LOGGER.info("Starting with config {{}}", config.getName());
-	    byte[] data;
-	    for (Document document : config.getDataset(experimentType).getInstances()) {
-		data = RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document)));
-		sendDataToTaskGenerator(data);
-	    }
+		createConfigurations(envVariables.get(CONSTANTS.GERBIL_DATASET_TO_TEST_NAME),
+				ExperimentType.valueOf(envVariables.get(CONSTANTS.GERBIL_EXPERIMENT_TYPE)));
 	}
-    }
-    
-    public void testData() throws GerbilException{
-	LOGGER.info("Got the following configurations: {{}}", configs);
-	for(DatasetConfiguration config : configs) {
-	    LOGGER.info("Starting with config {{}}", config.getName());
-	    for (Document document : config.getDataset(experimentType).getInstances()) {
-		LOGGER.info("FOUND: "+document.getText());
-	    }
+
+	public void createConfigurations(String datasetName, ExperimentType experimentType) {
+		this.datasetName = datasetName;
+		this.experimentType = experimentType;
+		LOGGER.info("Using dataset {{}} and experimentType {{}}", datasetName, experimentType);
+
+		SameAsRetriever retriever = null;
+		EntityCheckerManager entityCheckerManager = null;
+		configs = DatasetsConfig.datasets(entityCheckerManager, retriever).getAdaptersForName(datasetName);
+
+		LOGGER.info("Initialization of Gerbil Data Generator done.");
 	}
-    }
+
+	@Override
+	protected void generateData() throws Exception {
+
+		LOGGER.info("Got the following configurations: {{}}", configs);
+		for (DatasetConfiguration config : configs) {
+			LOGGER.info("Starting with config {{}}", config.getName());
+			byte[] data;
+			for (Document document : config.getDataset(experimentType).getInstances()) {
+				data = RabbitMQUtils.writeString(writer.writeNIF(Arrays.asList(document)));
+				sendDataToTaskGenerator(data);
+			}
+		}
+	}
+
+	public void testData() throws GerbilException {
+		LOGGER.info("Got the following configurations: {{}}", configs);
+		for (DatasetConfiguration config : configs) {
+			LOGGER.info("Starting with config {{}}", config.getName());
+			for (Document document : config.getDataset(experimentType).getInstances()) {
+				LOGGER.info("FOUND: " + document.getText());
+			}
+		}
+	}
 
 }
